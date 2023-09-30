@@ -1,0 +1,40 @@
+@import url("colors.css");
+
+.navHolder {
+  display: flex;
+  justify-content: center;
+  background-color: var(--black);
+}
+
+.nav {
+  padding-top: 35px;
+  padding-bottom: 35px;
+  color: var(--white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 943px;
+  max-width: 943px;
+  border-bottom: solid 1px var(--white);
+}
+
+.nav a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.navLinks {
+  display: flex;
+  gap: 34px;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 25px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
