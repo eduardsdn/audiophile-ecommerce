@@ -1,5 +1,6 @@
 import HeaderCSS from "../styles/header.module.css";
 import cartImg from "../assets/shared/desktop/icon-cart.svg";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   return (
@@ -10,16 +11,16 @@ export default function Header() {
         </a>
         <ul className={HeaderCSS.navLinks}>
           <li>
-            <a href="/home">HOME</a>
+            <Link to="/">HOME</Link>
           </li>
           <li>
-            <a href="/headphones">HEADPHONES</a>
+            <Link to="/headphones">HEADPHONES</Link>
           </li>
           <li>
-            <a href="/speakers">SPEAKERS</a>
+            <Link to="/speakers">SPEAKERS</Link>
           </li>
           <li>
-            <a href="/earphones">EARPHONES</a>
+            <Link to="/earphones">EARPHONES</Link>
           </li>
         </ul>
         <img src={cartImg} alt="" />
