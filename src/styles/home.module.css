@@ -1,8 +1,17 @@
 @import url("colors.css");
 
+.container {
+  max-width: 1110px;
+  margin: 0 auto;
+  background-color: var(--offWhite);
+  /* padding: 0 10px; */
+}
+
 .homeHolder {
-  display: flex;
-  justify-content: center;
+  /* padding-left: 165px;
+  padding-right: 165px; */
+  /* display: flex;
+  justify-content: center; */
   background-color: var(--offWhite);
 }
 

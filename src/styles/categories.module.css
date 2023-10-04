@@ -1,27 +1,29 @@
 @import url("colors.css");
 
-.categories {
-  display: flex;
-  justify-content: center;
-
-  margin-top: 120px;
-  /* !!! */
+.container {
+  max-width: 1110px;
+  margin: 0 auto;
 }
 
 .categoriesCards {
+  padding-top: 120px;
   display: flex;
   gap: 30px;
 }
 
 .categoriesCard {
+  /* width: 350px; */
+  /* max-width: 350px; */
   background-color: var(--gray);
   border-radius: 8px;
   position: relative;
-  padding: 116px 108px 30px 108px;
+  /* padding: 116px 108px 30px 108px; */
+  height: 204px;
+  width: 350px;
 }
 
 .categoriesCardImg {
-  width: 200.947px;
+  max-width: 200.947px;
   position: absolute;
   top: -70px;
 }
@@ -44,6 +46,7 @@
 }
 
 .categoriesCardTextContent {
+  margin-top: 116px;
   display: flex;
   flex-direction: column;
   align-items: center;
