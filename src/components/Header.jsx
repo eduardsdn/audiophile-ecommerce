@@ -24,6 +24,7 @@ export default function Header() {
           </li>
         </ul>
         <img src={cartImg} alt="" />
+        {/* Has to be link to the cart */}
       </nav>
     </div>
   );

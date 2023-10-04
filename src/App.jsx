@@ -10,7 +10,7 @@ function App() {
       <Header></Header>
       <div className={AppCSS.container}>
         <Routes>
-          <Route path="/home" element={<Home />}></Route>
+          <Route path="/" element={<Home />}></Route>
           <Route path="/headphones" element={<Headphones />}></Route>
         </Routes>
       </div>

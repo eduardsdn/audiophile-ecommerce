@@ -15,7 +15,7 @@
   align-items: center;
   width: 943px;
   max-width: 943px;
-  border-bottom: solid 1px var(--white);
+  border-bottom: solid 1px var(--gray);
 }
 
 .nav a {
