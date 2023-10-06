@@ -1,0 +1,47 @@
+@import url("colors.css");
+
+.container {
+  max-width: 1110px;
+  margin: 0 auto;
+}
+
+.companyDescription {
+  margin-top: 165px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.textContent {
+  max-width: 445px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.textContentTitle {
+  color: var(--black);
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 110%;
+  letter-spacing: 1.429px;
+  text-transform: uppercase;
+}
+
+.textContentTitleHighlight {
+  color: var(--darkOrange);
+}
+
+.textContentText {
+  color: var(--black);
+  font-size: 0.9rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 166.6%;
+}
+
+.descriptionImg {
+  /* width: 400px; */
+  border-radius: 8px;
+}

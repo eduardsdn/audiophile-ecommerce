@@ -1,6 +1,7 @@
 import HomeCSS from "../styles/home.module.css";
 import imageHero from "../assets/home/desktop/image-hero.jpg";
 import Categories from "../components/Categories";
+import CompanyDescription from "../components/CompanyDescription";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
           <img src={imageHero} className={HomeCSS.heroImg} alt="" />
         </div> */}
         <Categories></Categories>
+        <CompanyDescription></CompanyDescription>
       </div>
     </div>
   );
