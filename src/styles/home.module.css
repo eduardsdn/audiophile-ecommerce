@@ -4,27 +4,69 @@
   max-width: 1110px;
   margin: 0 auto;
   background-color: var(--offWhite);
-  /* padding: 0 10px; */
 }
 
 .homeHolder {
-  /* padding-left: 165px;
-  padding-right: 165px; */
-  /* display: flex;
-  justify-content: center; */
   background-color: var(--offWhite);
 }
 
 .homeHero {
-  /* display: flex;
-  justify-content: center; */
   color: var(--white);
-}
-
-.imgHero {
-  object-fit: cover;
+  background-color: #191919;
+  max-height: 562px;
+  position: relative;
 }
 
 .homeHeroTextContent {
   position: absolute;
+  top: 128px;
+}
+
+.homeHeroNewProduct {
+  color: rgb(158, 154, 154);
+  font-size: 0.87rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+}
+
+.homeHeroName {
+  max-width: 396px;
+  font-size: 3.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 103%;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.homeHeroDescription {
+  margin-top: 24px;
+  max-width: 349px;
+  font-size: 0.93rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 166.667%;
+}
+
+.seeProductButton {
+  cursor: pointer;
+  margin-top: 40px;
+  font-size: 0.81rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background-color: var(--darkOrange);
+  padding: 15px 30px;
+  color: var(--white);
+  border: none;
+}
+
+.imgHero {
+  min-height: 561px;
+  min-width: 1110px;
 }

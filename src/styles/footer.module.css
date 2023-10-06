@@ -1,6 +1,7 @@
 @import url("colors.css");
 
 .container {
+  position: relative;
   max-width: 1110px;
   margin: 0 auto;
 }
@@ -66,4 +67,14 @@
 .footerSocialLinks {
   display: flex;
   gap: 16px;
+}
+
+hr {
+  width: 100px;
+  height: 4px;
+  background-color: var(--darkOrange);
+  border: inherit;
+  position: absolute;
+  top: -8px;
+  left: 0;
 }

@@ -9,6 +9,7 @@ export default function Footer() {
   return (
     <footer className={FooterCSS.footer}>
       <div className={FooterCSS.container}>
+        <hr />
         <nav className={FooterCSS.nav}>
           <a href="/" className={FooterCSS.logo}>
             audiophile

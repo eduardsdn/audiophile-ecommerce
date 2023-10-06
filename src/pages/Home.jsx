@@ -7,8 +7,8 @@ import Footer from "../components/Footer";
 export default function Home() {
   return (
     <div className={HomeCSS.homeHolder}>
-      <div className={HomeCSS.container}>
-        {/* <div className={HomeCSS.homeHero}>
+      <div className={HomeCSS.homeHero}>
+        <div className={HomeCSS.container}>
           <div className={HomeCSS.homeHeroTextContent}>
             <p className={HomeCSS.homeHeroNewProduct}>NEW PRODUCT</p>
             <h1 className={HomeCSS.homeHeroName}>XX99 Mark II Headphones</h1>
@@ -16,10 +16,12 @@ export default function Home() {
               Experience natural, lifelike audio and exceptional build quality
               made for the passionate music enthusiast.
             </p>
-            <button>SEE PRODUCT</button>
+            <button className={HomeCSS.seeProductButton}>SEE PRODUCT</button>
           </div>
-          <img src={imageHero} className={HomeCSS.heroImg} alt="" />
-        </div> */}
+          <img src={imageHero} className={HomeCSS.imgHero} alt="" />
+        </div>
+      </div>
+      <div className={HomeCSS.container}>
         <Categories></Categories>
         <CompanyDescription></CompanyDescription>
       </div>
