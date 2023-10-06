@@ -2,6 +2,7 @@ import HomeCSS from "../styles/home.module.css";
 import imageHero from "../assets/home/desktop/image-hero.jpg";
 import Categories from "../components/Categories";
 import CompanyDescription from "../components/CompanyDescription";
+import Footer from "../components/Footer";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
         <Categories></Categories>
         <CompanyDescription></CompanyDescription>
       </div>
+      <Footer></Footer>
     </div>
   );
 }

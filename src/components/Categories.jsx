@@ -6,7 +6,7 @@ import linkArrow from "../assets/shared/desktop/icon-arrow-right.svg";
 
 export default function Categories() {
   return (
-    <div className={CategoriesCSS.categories}>
+    <div className={CategoriesCSS.container}>
       <div className={CategoriesCSS.categoriesCards}>
         <div className={CategoriesCSS.categoriesCard}>
           <img
