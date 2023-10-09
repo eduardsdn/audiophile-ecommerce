@@ -51,22 +51,117 @@
   line-height: 166.667%;
 }
 
-.seeProductButton {
-  cursor: pointer;
+.homeHeroBtn {
   margin-top: 40px;
-  font-size: 0.81rem;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  background-color: var(--darkOrange);
-  padding: 15px 30px;
-  color: var(--white);
-  border: none;
 }
 
 .imgHero {
   min-height: 561px;
   min-width: 1110px;
+}
+
+.homeProducts {
+  margin-top: 168px;
+  display: flex;
+  flex-direction: column;
+}
+
+.homeProductsTop {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 133px;
+  padding-bottom: 124px;
+  padding-right: 95px;
+  background-color: var(--darkOrange);
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+}
+
+.homeProductsTopImg {
+  max-width: 410px;
+  position: absolute;
+  left: 117px;
+  bottom: -15px;
+  z-index: 1;
+}
+
+.homeProductsTopDecor {
+  position: absolute;
+  z-index: 0;
+  right: 28%;
+  top: -35px;
+}
+
+.homeProductsContentTopTitle {
+  max-width: 261px;
+  color: var(--white);
+  font-size: 3.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 103.571%;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.homeProductsContentTopDescription {
+  max-width: 349px;
+  margin-top: 24px;
+  color: var(--white);
+  font-size: 0.93rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 166.666%;
+}
+
+.homeProductsContentTitle {
+  color: var(--black);
+  font-size: 1.75rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.homeProductsTopContentBtn {
+  margin-top: 40px;
+}
+
+.homeProductsMiddle {
+  border-radius: 8px;
+  margin-top: 48px;
+  padding-top: 101px;
+  padding-left: 126px;
+  padding-bottom: 96px;
+  display: flex;
+  justify-content: flex-start;
+  background-image: url(../assets/home/desktop/image-speaker-zx7.jpg);
+}
+
+.homeProductsBtn {
+  margin-top: 32px;
+}
+
+.homeProductsBottom {
+  margin-top: 48px;
+  display: flex;
+  gap: 32px;
+}
+
+.homeProductsBottomImg {
+  border-radius: 8px;
+}
+
+.homeProductsBottomContent {
+  padding-left: 96px;
+  width: 540px;
+  max-width: 540px;
+  /* padding-right: 200px; */
+  background-color: var(--gray);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
 }

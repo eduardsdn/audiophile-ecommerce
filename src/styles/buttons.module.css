@@ -1,0 +1,33 @@
+@import url("colors.css");
+
+.seeProductBtn {
+  cursor: pointer;
+  font-size: 0.81rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 15px 30px;
+}
+
+#orange {
+  background-color: var(--darkOrange);
+  color: var(--white);
+  border: none;
+}
+
+#orange:hover {
+  background-color: var(--orange);
+}
+
+#black {
+  background-color: transparent;
+  color: var(--black);
+  border: 1px solid var(--black);
+}
+
+#black:hover {
+  background-color: var(--black);
+  color: var(--white);
+}
