@@ -4,10 +4,17 @@ import categoriesSpeakersImg from "../assets/shared/desktop/image-category-thumb
 import categoriesEarphonesImg from "../assets/shared/desktop/image-category-thumbnail-earphones.png";
 import linkArrow from "../assets/shared/desktop/icon-arrow-right.svg";
 
-export default function Categories() {
+export default function Categories(props) {
   return (
     <div className={CategoriesCSS.container}>
-      <div className={CategoriesCSS.categoriesCards}>
+      <div
+        className={CategoriesCSS.categoriesCards}
+        id={`${
+          props.mountedOn === "headphones"
+            ? CategoriesCSS.categoriesCardsHeadphones
+            : ""
+        }`}
+      >
         <div className={CategoriesCSS.categoriesCard}>
           <img
             className={CategoriesCSS.categoriesCardImg}

@@ -11,6 +11,10 @@
   gap: 30px;
 }
 
+#categoriesCardsHeadphones {
+  margin-top: 60px;
+}
+
 .categoriesCard {
   /* width: 350px; */
   /* max-width: 350px; */
