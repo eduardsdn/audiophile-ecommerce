@@ -10,8 +10,8 @@ export default function Categories(props) {
       <div
         className={CategoriesCSS.categoriesCards}
         id={`${
-          props.mountedOn === "headphones"
-            ? CategoriesCSS.categoriesCardsHeadphones
+          props.mountedOn === "preview"
+            ? CategoriesCSS.categoriesCardsPreview
             : ""
         }`}
       >

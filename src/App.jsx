@@ -1,6 +1,7 @@
 import Header from "./components/Header";
 import Home from "./pages/Home";
 import Headphones from "./pages/Headphones";
+import Speakers from "./pages/Speakers";
 import AppCSS from "./styles/app.module.css";
 import { Route, Routes } from "react-router-dom";
 import React from "react";
@@ -8,6 +9,9 @@ import React from "react";
 import xx99_2Preview from "./assets/product-xx99-mark-two-headphones/desktop/image-category-page-preview.jpg";
 import xx99_1Preview from "./assets/product-xx99-mark-one-headphones/desktop/image-category-page-preview.jpg";
 import xx59Preview from "./assets/product-xx59-headphones/desktop/image-category-page-preview.jpg";
+
+import zx9Preview from "./assets/product-zx9-speaker/desktop/image-category-page-preview.jpg";
+import zx7Preview from "./assets/product-zx7-speaker/desktop/image-category-page-preview.jpg";
 
 function App() {
   const headphonesPreviewData = React.useState([
@@ -34,6 +38,23 @@ function App() {
     },
   ]);
 
+  const speakersPreviewData = React.useState([
+    {
+      img: zx9Preview,
+      title: "ZX9 SPEAKER",
+      description:
+        "Upgrade your sound system with the all new ZX9 active speaker. It’s a bookshelf speaker system that offers truly wireless connectivity -- creating new possibilities for more pleasing and practical audio setups.",
+      isReverse: false,
+    },
+    {
+      img: zx7Preview,
+      title: "ZX7 SPEAKER",
+      description:
+        "Stream high quality sound wirelessly with minimal loss. The ZX7 bookshelf speaker uses high-end audiophile components that represents the top of the line powered speakers for home or studio use.",
+      isReverse: true,
+    },
+  ]);
+
   return (
     <div className={AppCSS.app}>
       <Header></Header>
@@ -46,9 +67,10 @@ function App() {
               <Headphones headphonesPreviewData={headphonesPreviewData} />
             }
           ></Route>
-          {/* <Route
-            render={() => <Headphones headphonesPreviewContent={headphones} />}
-          ></Route> */}
+          <Route
+            path="/speakers"
+            element={<Speakers speakersPreviewData={speakersPreviewData} />}
+          ></Route>
         </Routes>
       </div>
     </div>
