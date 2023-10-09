@@ -2,6 +2,7 @@ import Header from "./components/Header";
 import Home from "./pages/Home";
 import Headphones from "./pages/Headphones";
 import Speakers from "./pages/Speakers";
+import Earphones from "./pages/Earphones";
 import AppCSS from "./styles/app.module.css";
 import { Route, Routes } from "react-router-dom";
 import React from "react";
@@ -13,6 +14,7 @@ import xx59Preview from "./assets/product-xx59-headphones/desktop/image-category
 import zx9Preview from "./assets/product-zx9-speaker/desktop/image-category-page-preview.jpg";
 import zx7Preview from "./assets/product-zx7-speaker/desktop/image-category-page-preview.jpg";
 
+import yx1Preview from "./assets/product-yx1-earphones/desktop/image-category-page-preview.jpg";
 function App() {
   const headphonesPreviewData = React.useState([
     {
@@ -55,6 +57,16 @@ function App() {
     },
   ]);
 
+  const earphonesPreviewData = React.useState([
+    {
+      img: yx1Preview,
+      title: "YX1 WIRELESS EARPHONES",
+      description:
+        "Tailor your listening experience with bespoke dynamic drivers from the new YX1 Wireless Earphones. Enjoy incredible high-fidelity sound even in noisy environments with its active noise cancellation feature.",
+      isReverse: false,
+    },
+  ]);
+
   return (
     <div className={AppCSS.app}>
       <Header></Header>
@@ -70,6 +82,10 @@ function App() {
           <Route
             path="/speakers"
             element={<Speakers speakersPreviewData={speakersPreviewData} />}
+          ></Route>
+          <Route
+            path="/earphones"
+            element={<Earphones earphonesPreviewData={earphonesPreviewData} />}
           ></Route>
         </Routes>
       </div>

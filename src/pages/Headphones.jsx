@@ -28,7 +28,7 @@ export default function Headphones(props) {
           title={props.headphonesPreviewContent[0].xx99_2.title}
           description={props.headphonesPreviewContent[0].xx99_2.description}
         ></ProductPreview> */}
-        <Categories mountedOn={"headphones"}></Categories>
+        <Categories mountedOn={"preview"}></Categories>
         <CompanyDescription></CompanyDescription>
       </div>
       <Footer></Footer>
