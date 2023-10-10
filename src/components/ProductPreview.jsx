@@ -2,9 +2,14 @@ import ProductPreviewCSS from "../styles/productPreview.module.css";
 import ButtonsCSS from "../styles/buttons.module.css";
 import xx99_2Img from "../assets/product-xx99-mark-two-headphones/desktop/image-category-page-preview.jpg";
 
-export default function productPreview(props) {
-  console.log(props.isReverse);
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
+export default function ProductPreview(props) {
+  const navigate = useNavigate();
+  console.log(props.title.includes("XX99 Mark II"));
+
+  console.log(props.title);
   return (
     <div className={ProductPreviewCSS.container}>
       <div
@@ -23,6 +28,11 @@ export default function productPreview(props) {
           <button
             className={`${ButtonsCSS.seeProductBtn} ${ProductPreviewCSS.productPreviewBtn}`}
             id={ButtonsCSS.orange}
+            onClick={() => {
+              if (props.title.includes("XX99 Mark II")) {
+                navigate("/product/xx992");
+              }
+            }}
           >
             SEE PRODUCT
           </button>

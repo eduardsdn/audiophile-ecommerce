@@ -66,21 +66,3 @@
   letter-spacing: 1.286px;
   text-transform: uppercase;
 }
-
-.categoriesCardShopLinkHolder {
-  margin-top: 15px;
-  display: flex;
-  align-items: center;
-  gap: 13px;
-}
-
-.categoriesCardShopLink {
-  color: rgb(87, 87, 87);
-  font-size: 0.8rem;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  text-decoration: none;
-}

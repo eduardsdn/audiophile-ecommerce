@@ -11,14 +11,7 @@
   position: fixed;
   width: 100%;
   z-index: 2;
-  /* padding-bottom: 103px; */
 }
-
-/* .sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-} */
 
 .nav {
   padding-top: 35px;

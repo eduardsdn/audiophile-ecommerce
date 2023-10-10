@@ -3,6 +3,9 @@ import Home from "./pages/Home";
 import Headphones from "./pages/Headphones";
 import Speakers from "./pages/Speakers";
 import Earphones from "./pages/Earphones";
+
+import ProductHeadphonesXX992 from "./pages/ProductHeadphonesXX992";
+
 import AppCSS from "./styles/app.module.css";
 import { Route, Routes } from "react-router-dom";
 import React from "react";
@@ -86,6 +89,10 @@ function App() {
           <Route
             path="/earphones"
             element={<Earphones earphonesPreviewData={earphonesPreviewData} />}
+          ></Route>
+          <Route
+            path="/product/xx992"
+            element={<ProductHeadphonesXX992 />}
           ></Route>
         </Routes>
       </div>

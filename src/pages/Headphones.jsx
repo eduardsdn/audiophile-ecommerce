@@ -5,7 +5,7 @@ import CompanyDescription from "../components/CompanyDescription";
 import Footer from "../components/Footer";
 
 import React from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 export default function Headphones(props) {
   const { pathname } = useLocation();
