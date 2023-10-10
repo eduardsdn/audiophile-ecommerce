@@ -1,10 +1,19 @@
 import CategoriesCSS from "../styles/categories.module.css";
+import ButtonsCSS from "../styles/buttons.module.css";
 import categoriesHeadphonesImg from "../assets/shared/desktop/image-category-thumbnail-headphones.png";
 import categoriesSpeakersImg from "../assets/shared/desktop/image-category-thumbnail-speakers.png";
 import categoriesEarphonesImg from "../assets/shared/desktop/image-category-thumbnail-earphones.png";
 import linkArrow from "../assets/shared/desktop/icon-arrow-right.svg";
 
+import Headphones from "../pages/Headphones";
+import Speakers from "../pages/Speakers";
+import Earphones from "../pages/Earphones";
+
+import { useNavigate } from "react-router-dom";
+
 export default function Categories(props) {
+  const navigate = useNavigate();
+
   return (
     <div className={CategoriesCSS.container}>
       <div
@@ -24,12 +33,13 @@ export default function Categories(props) {
           />
           <div className={CategoriesCSS.categoriesCardTextContent}>
             <p className={CategoriesCSS.categoriesCardName}>Headphones</p>
-            <div className={CategoriesCSS.categoriesCardShopLinkHolder}>
-              <a href="/" className={CategoriesCSS.categoriesCardShopLink}>
-                Shop
-              </a>
+            <button
+              onClick={() => navigate("/headphones")}
+              className={ButtonsCSS.categoriesCardButton}
+            >
+              shop
               <img src={linkArrow} alt="" />
-            </div>
+            </button>
           </div>
         </div>
         <div className={CategoriesCSS.categoriesCard}>
@@ -41,12 +51,13 @@ export default function Categories(props) {
           />
           <div className={CategoriesCSS.categoriesCardTextContent}>
             <p className={CategoriesCSS.categoriesCardName}>Speakers</p>
-            <div className={CategoriesCSS.categoriesCardShopLinkHolder}>
-              <a href="/" className={CategoriesCSS.categoriesCardShopLink}>
-                Shop
-              </a>
+            <button
+              onClick={() => navigate("/speakers")}
+              className={ButtonsCSS.categoriesCardButton}
+            >
+              shop
               <img src={linkArrow} alt="" />
-            </div>
+            </button>
           </div>
         </div>
         <div className={CategoriesCSS.categoriesCard}>
@@ -58,12 +69,19 @@ export default function Categories(props) {
           />
           <div className={CategoriesCSS.categoriesCardTextContent}>
             <p className={CategoriesCSS.categoriesCardName}>Earphones</p>
-            <div className={CategoriesCSS.categoriesCardShopLinkHolder}>
+            {/* <div className={CategoriesCSS.categoriesCardShopLinkHolder}>
               <a href="/" className={CategoriesCSS.categoriesCardShopLink}>
                 Shop
               </a>
               <img src={linkArrow} alt="" />
-            </div>
+            </div> */}
+            <button
+              onClick={() => navigate("/earphones")}
+              className={ButtonsCSS.categoriesCardButton}
+            >
+              shop
+              <img src={linkArrow} alt="" />
+            </button>
           </div>
         </div>
       </div>

@@ -4,7 +4,16 @@ import ProductPreview from "../components/ProductPreview";
 import CompanyDescription from "../components/CompanyDescription";
 import Footer from "../components/Footer";
 
+import React from "react";
+import { useLocation } from "react-router-dom";
+
 export default function Earphones(props) {
+  const { pathname } = useLocation();
+
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
   return (
     <div className={EarphonesCSS.earphonesHolder}>
       <div className={EarphonesCSS.pageTitle}>Earphones</div>

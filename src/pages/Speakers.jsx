@@ -4,7 +4,16 @@ import ProductPreview from "../components/ProductPreview";
 import CompanyDescription from "../components/CompanyDescription";
 import Footer from "../components/Footer";
 
+import React from "react";
+import { useLocation } from "react-router-dom";
+
 export default function Speakers(props) {
+  const { pathname } = useLocation();
+
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
   return (
     <div className={SpeakersCSS.speakersHolder}>
       <div className={SpeakersCSS.pageTitle}>Speakers</div>
