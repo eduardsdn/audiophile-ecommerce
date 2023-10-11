@@ -18,7 +18,7 @@ export default function Speakers(props) {
     <div className={SpeakersCSS.speakersHolder}>
       <div className={SpeakersCSS.pageTitle}>Speakers</div>
       <div className={SpeakersCSS.container}>
-        {props.speakersPreviewData[0].map(function (speakersProductPreview) {
+        {props.speakersProductsData[0].map(function (speakersProductPreview) {
           return (
             <ProductPreview
               img={speakersProductPreview.img}

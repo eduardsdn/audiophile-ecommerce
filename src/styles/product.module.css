@@ -4,3 +4,140 @@
   max-width: 1110px;
   margin: 0 auto;
 } */
+.product {
+  margin-top: 56px;
+}
+
+.productCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.productCardImg {
+  max-width: 540px;
+}
+
+.newProduct {
+  color: var(--darkOrange);
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+}
+
+.title {
+  margin-top: 16px;
+  max-width: 445px;
+  color: var(--black);
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 110%;
+  letter-spacing: 1.429px;
+  text-transform: uppercase;
+}
+
+.description {
+  margin-top: 32px;
+  max-width: 445px;
+  color: rgb(126, 123, 123);
+  font-size: 0.93rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 25px; /* 166.667% */
+}
+
+.price {
+  margin-top: 32px;
+  color: var(--black);
+  font-size: 1.12rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1.286px;
+  text-transform: uppercase;
+}
+
+.productCardInterface {
+  /* max-width: 296px; */
+}
+
+.productTextContent {
+  margin-top: 160px;
+  display: flex;
+  gap: 125px;
+}
+
+.descriptionTitle,
+.inTheBoxTitle {
+  color: var(--black);
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 112.5%;
+  letter-spacing: 1.143px;
+  text-transform: uppercase;
+}
+
+.descriptionText {
+  margin-top: 32px;
+  max-width: 635px;
+  color: rgb(126, 123, 123);
+  font-size: 0.93rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 166.667%;
+  text-align: left;
+}
+
+#describtionParTwo {
+  margin-top: 25px;
+}
+
+.inTheBoxList {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.inTheBoxItem {
+  display: flex;
+  gap: 24px;
+  max-width: 224px;
+}
+
+.inTheBoxItemAmount {
+  color: var(--darkOrange);
+  font-size: 0.93rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 166.667%;
+}
+
+.inTheBoxItemName {
+  color: rgb(126, 123, 123);
+  font-size: 0.93rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 166.667%;
+}
+
+.productImagesGrid {
+  margin-top: 160px;
+  display: flex;
+  gap: 30px;
+}
+
+.productImagesGridLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+img {
+  border-radius: 8px;
+}

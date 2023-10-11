@@ -19,7 +19,7 @@ export default function Headphones(props) {
     <div className={headphonesCSS.headphonesHolder}>
       <div className={headphonesCSS.pageTitle}>Headphones</div>
       <div className={headphonesCSS.container}>
-        {props.headphonesPreviewData[0].map(function (
+        {props.headphonesProductsData[0].map(function (
           headphonesProductPreview
         ) {
           return (

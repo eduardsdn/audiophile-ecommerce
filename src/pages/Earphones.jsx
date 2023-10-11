@@ -18,7 +18,7 @@ export default function Earphones(props) {
     <div className={EarphonesCSS.earphonesHolder}>
       <div className={EarphonesCSS.pageTitle}>Earphones</div>
       <div className={EarphonesCSS.container}>
-        {props.earphonesPreviewData[0].map(function (earphonesProductPreview) {
+        {props.earphonesProductsData[0].map(function (earphonesProductPreview) {
           return (
             <ProductPreview
               img={earphonesProductPreview.img}
