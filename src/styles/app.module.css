@@ -1,3 +1,6 @@
+@import url("colors.css");
+
 .container {
   padding-top: 103px;
+  /* background-color: var(--offWhite); */
 }

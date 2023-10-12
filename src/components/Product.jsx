@@ -1,17 +1,11 @@
 import ProductCSS from "../styles/product.module.css";
-import ButtonCSS from "../styles/buttons.module.css";
+import ButtonsCSS from "../styles/buttons.module.css";
 
 import prodImg from "../assets/product-xx99-mark-two-headphones/desktop/image-category-page-preview.jpg";
 
-import img1 from "../assets/product-xx99-mark-two-headphones/desktop/image-gallery-1.jpg";
-import img2 from "../assets/product-xx99-mark-two-headphones/desktop/image-gallery-2.jpg";
-import img3 from "../assets/product-xx99-mark-two-headphones/desktop/image-gallery-3.jpg";
-
+import { useState } from "react";
 // HARDCODED VALUES FOR STYLING ONLY
 export default function Product(props) {
-  // console.log(props);
-  // console.log(props.inTheBox);
-
   function splitFeaturesText() {
     let breakWord;
     if (props.title.includes("XX99 Mark II")) {
@@ -31,8 +25,9 @@ export default function Product(props) {
     return props.featuresText.split(breakWord);
   }
 
-  let splitFeatureText = splitFeaturesText();
-  // console.log(splitFeatureText);
+  const [productAmount, setProductAmount] = useState(1);
+  console.log(productAmount);
+
   return (
     <div className={ProductCSS.product}>
       <div className={ProductCSS.productCard}>
@@ -47,8 +42,42 @@ export default function Product(props) {
           <p className={ProductCSS.description}>{props.description}</p>
           <p className={ProductCSS.price}>{`$ ${props.price}`}</p>
           <div className={ProductCSS.productCardInterface}>
-            <input type="number" />
-            <button className={ButtonCSS.seeProductBtn} id={ButtonCSS.orange}>
+            {/* <input type="number" /> */}
+            <div className={ButtonsCSS.inputStepper}>
+              <button
+                id={ButtonsCSS.decrement}
+                onClick={() => {
+                  if (productAmount > 1) {
+                    setProductAmount(function (prevProductAamount) {
+                      return prevProductAamount - 1;
+                    });
+                  }
+                }}
+              >
+                {" "}
+                -{" "}
+              </button>
+              <input
+                className={ButtonsCSS.inputStepperValue}
+                type="number"
+                min="1"
+                max="100"
+                value={productAmount}
+                readOnly={true}
+              />
+              <button
+                id={ButtonsCSS.increment}
+                onClick={() => {
+                  setProductAmount(function (prevProductAamount) {
+                    return prevProductAamount + 1;
+                  });
+                }}
+              >
+                {" "}
+                +{" "}
+              </button>
+            </div>
+            <button className={ButtonsCSS.seeProductBtn} id={ButtonsCSS.orange}>
               Add to cart
             </button>
           </div>
@@ -75,28 +104,6 @@ export default function Product(props) {
         <div className={ProductCSS.inTheBox}>
           <h1 className={ProductCSS.inTheBoxTitle}>In the Box</h1>
           <ul className={ProductCSS.inTheBoxList}>
-            {/* <li className={ProductCSS.inTheBoxItem}>
-              <span className={ProductCSS.inTheBoxItemAmount}>1x</span>
-              <p className={ProductCSS.inTheBoxItemName}>Headphone Unit</p>
-            </li>
-            <li className={ProductCSS.inTheBoxItem}>
-              <span className={ProductCSS.inTheBoxItemAmount}>2x</span>
-              <p className={ProductCSS.inTheBoxItemName}>Replacement Earcups</p>
-            </li>
-            <li className={ProductCSS.inTheBoxItem}>
-              <span className={ProductCSS.inTheBoxItemAmount}>1x</span>
-              <p className={ProductCSS.inTheBoxItemName}>User Manual</p>
-            </li>
-            <li className={ProductCSS.inTheBoxItem}>
-              <span className={ProductCSS.inTheBoxItemAmount}>1x</span>
-              <p className={ProductCSS.inTheBoxItemName}>
-                3.5mm 5m Audio Cable
-              </p>
-            </li>
-            <li className={ProductCSS.inTheBoxItem}>
-              <span className={ProductCSS.inTheBoxItemAmount}>1x</span>
-              <p className={ProductCSS.inTheBoxItemName}>Travel Bag</p>
-            </li> */}
             {props.inTheBox.map(function (listItem) {
               return (
                 <li className={ProductCSS.inTheBoxItem}>

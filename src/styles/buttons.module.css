@@ -56,3 +56,52 @@
 .categoriesCardButton:hover {
   color: var(--darkOrange);
 }
+
+.inputStepper {
+  display: flex;
+}
+
+.inputStepperValue {
+  padding: 15px 0px 15px 0px;
+  max-width: fit-content;
+  display: flex;
+  justify-content: center;
+  border: none;
+  text-align: center;
+  outline: none;
+  background-color: var(--gray);
+  font-weight: 700;
+  color: var(--black);
+  font-size: 0.81rem;
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+  display: none;
+}
+
+#increment {
+  cursor: pointer;
+  padding-right: 20px;
+  padding-left: 10px;
+  background-color: var(--gray);
+  border: none;
+  font-size: 0.81rem;
+  font-weight: 700;
+  color: rgb(126, 123, 123);
+}
+
+#decrement {
+  cursor: pointer;
+  padding-left: 20px;
+  padding-right: 10px;
+  background-color: var(--gray);
+  border: none;
+  font-size: 0.81rem;
+  color: rgb(126, 123, 123);
+  font-weight: 700;
+}
+
+#increment:hover,
+#decrement:hover {
+  color: var(--darkOrange);
+}

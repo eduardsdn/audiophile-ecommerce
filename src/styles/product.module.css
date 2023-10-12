@@ -62,7 +62,9 @@
 }
 
 .productCardInterface {
-  /* max-width: 296px; */
+  margin-top: 47px;
+  display: flex;
+  gap: 16px;
 }
 
 .productTextContent {
