@@ -5,6 +5,8 @@ import Speakers from "./pages/Speakers";
 import Earphones from "./pages/Earphones";
 
 import ProductHeadphonesXX992 from "./pages/ProductHeadphonesXX992";
+import ProductHeadphonesXX991 from "./pages/ProductHeadphonesXX991";
+import ProductHeadphonesXX59 from "./pages/ProductHeadphonesXX59";
 
 import AppCSS from "./styles/app.module.css";
 import { Route, Routes } from "react-router-dom";
@@ -21,10 +23,20 @@ import yx1Img from "./assets/product-yx1-earphones/desktop/image-category-page-p
 import imgDecorXX992_1 from "./assets/product-xx99-mark-two-headphones/desktop/image-gallery-1.jpg";
 import imgDecorXX992_2 from "./assets/product-xx99-mark-two-headphones/desktop/image-gallery-2.jpg";
 import imgDecorXX992_3 from "./assets/product-xx99-mark-two-headphones/desktop/image-gallery-3.jpg";
+
+import imgDecorXX991_1 from "./assets/product-xx99-mark-one-headphones/desktop/image-gallery-1.jpg";
+import imgDecorXX991_2 from "./assets/product-xx99-mark-one-headphones/desktop/image-gallery-2.jpg";
+import imgDecorXX991_3 from "./assets/product-xx99-mark-one-headphones/desktop/image-gallery-3.jpg";
+
+import imgDecorXX59_1 from "./assets/product-xx59-headphones/desktop/image-gallery-1.jpg";
+import imgDecorXX59_2 from "./assets/product-xx59-headphones/desktop/image-gallery-2.jpg";
+import imgDecorXX59_3 from "./assets/product-xx59-headphones/desktop/image-gallery-3.jpg";
+
 function App() {
   // DATA HARDCODED TEMPORARILY
   const headphonesProductsData = React.useState([
     {
+      productId: "xx992",
       img: xx99_2Img,
       title: "XX99 Mark II Headphones",
       description:
@@ -58,6 +70,7 @@ function App() {
       decorImages: [imgDecorXX992_1, imgDecorXX992_2, imgDecorXX992_3],
     },
     {
+      productId: "xx991",
       img: xx99_1Img,
       title: "XX99 Mark I Headphones",
       description:
@@ -66,8 +79,28 @@ function App() {
       price: 1750,
       featuresText:
         "As the headphones all others are measured against, the XX99 Mark I demonstrates over five decades of audio expertise, redefining the critical listening experience. This pair of closed-back headphones are made of industrial, aerospace-grade materials to emphasize durability at a relatively light weight of 11 oz.From the handcrafted microfiber ear cushions to the robust metal headband with inner damping element, the components work together to deliver comfort and uncompromising sound. Its closed-back design delivers up to 27 dB of passive noise cancellation, reducing resonance by reflecting sound to a dedicated absorber. For connectivity, a specially tuned cable is included with a balanced gold connector.",
+      inTheBox: [
+        {
+          itemName: "Headphone Unit",
+          amount: 1,
+        },
+        {
+          itemName: "Replacement Earcups",
+          amount: 2,
+        },
+        {
+          itemName: "User Manual",
+          amount: 1,
+        },
+        {
+          itemName: "3.5mm 5m Audio Cable",
+          amount: 1,
+        },
+      ],
+      decorImages: [imgDecorXX991_1, imgDecorXX991_2, imgDecorXX991_3],
     },
     {
+      productId: "xx59",
       img: xx59Img,
       title: "XX59 Headphones",
       description:
@@ -76,6 +109,25 @@ function App() {
       price: 899,
       featuresText:
         "These headphones have been created from durable, high-quality materials tough enough to take anywhere. Its compact folding design fuses comfort and minimalist style making it perfect for travel. Flawless transmission is assured by the latest wireless technology engineered for audio synchronization with videos. More than a simple pair of headphones, this headset features a pair of built-in microphones for clear, hands-free calling when paired with a compatible smartphone. Controlling music and calls is also intuitive thanks to easy-access touch buttons on the earcups. Regardless of how you use the XX59 headphones, you can do so all day thanks to an impressive 30-hour battery life that can be rapidly recharged via USB-C.",
+      inTheBox: [
+        {
+          itemName: "Headphone Unit",
+          amount: 1,
+        },
+        {
+          itemName: "Replacement Earcups",
+          amount: 2,
+        },
+        {
+          itemName: "User Manual",
+          amount: 1,
+        },
+        {
+          itemName: "3.5mm 5m Audio Cable",
+          amount: 1,
+        },
+      ],
+      decorImages: [imgDecorXX59_1, imgDecorXX59_2, imgDecorXX59_3],
     },
   ]);
 
@@ -120,6 +172,7 @@ function App() {
   Array.prototype.push.apply(productsData, speakersProductsData[0]);
   Array.prototype.push.apply(productsData, earphonesProductsData[0]);
 
+  console.log(headphonesProductsData[0][1]);
   return (
     <div className={AppCSS.app}>
       <Header></Header>
@@ -146,7 +199,25 @@ function App() {
             path="/product/xx992"
             element={
               <ProductHeadphonesXX992
-                x992ProductData={headphonesProductsData[0]}
+                productData={headphonesProductsData[0][0]}
+                productsData={productsData}
+              />
+            }
+          ></Route>
+          <Route
+            path="/product/xx991"
+            element={
+              <ProductHeadphonesXX991
+                productData={headphonesProductsData[0][1]}
+                productsData={productsData}
+              />
+            }
+          ></Route>
+          <Route
+            path="/product/xx59"
+            element={
+              <ProductHeadphonesXX59
+                productData={headphonesProductsData[0][2]}
                 productsData={productsData}
               />
             }

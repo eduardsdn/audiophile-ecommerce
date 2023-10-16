@@ -9,6 +9,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 
 export default function Headphones(props) {
   const { pathname } = useLocation();
+  console.log(props.headphonesProductsData[0]);
 
   React.useEffect(() => {
     window.scrollTo(0, 0);
@@ -24,6 +25,7 @@ export default function Headphones(props) {
         ) {
           return (
             <ProductPreview
+              productId={headphonesProductPreview.productId}
               img={headphonesProductPreview.img}
               title={headphonesProductPreview.title}
               description={headphonesProductPreview.description}

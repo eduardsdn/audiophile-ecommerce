@@ -8,7 +8,7 @@ import Product from "../components/Product";
 import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
-export default function ProductHeadphonesXX992(props) {
+export default function ProductHeadphonesXX59(props) {
   const { pathname } = useLocation();
 
   React.useEffect(() => {
