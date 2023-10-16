@@ -14,7 +14,7 @@ export default function Headphones(props) {
     window.scrollTo(0, 0);
   }, [pathname]);
   // console.log(props.headphonesPreviewContent[0].xx99_2.img);
-  console.log(props);
+  // console.log(props);
   return (
     <div className={headphonesCSS.headphonesHolder}>
       <div className={headphonesCSS.pageTitle}>Headphones</div>

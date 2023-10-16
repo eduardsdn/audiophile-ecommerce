@@ -1,7 +1,8 @@
-import xx992CSS from "../styles/productXX992.module.css";
+import productPageSharedCSS from "../styles/productPageShared.module.css";
 import Categories from "../components/Categories";
 import Footer from "../components/Footer";
 import CompanyDescription from "../components/CompanyDescription";
+import Suggestions from "../components/Suggestions";
 import Product from "../components/Product";
 
 import React from "react";
@@ -15,8 +16,8 @@ export default function ProductHeadphonesXX992(props) {
   }, [pathname]);
   // console.log(props);
   return (
-    <div className={xx992CSS.xx992Holder}>
-      <div className={xx992CSS.container}>
+    <div className={productPageSharedCSS.holder}>
+      <div className={productPageSharedCSS.container}>
         <Product
           productImg={props.x992ProductData[0].img}
           title={props.x992ProductData[0].title}
@@ -25,6 +26,10 @@ export default function ProductHeadphonesXX992(props) {
           featuresText={props.x992ProductData[0].featuresText}
           inTheBox={props.x992ProductData[0].inTheBox}
           decorImages={props.x992ProductData[0].decorImages}
+        />
+        <Suggestions
+          productsData={props.productsData}
+          currentProduct={props.x992ProductData[0].title}
         />
         <Categories />
         <CompanyDescription />

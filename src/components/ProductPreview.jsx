@@ -7,9 +7,9 @@ import { useNavigate } from "react-router-dom";
 
 export default function ProductPreview(props) {
   const navigate = useNavigate();
-  console.log(props.title.includes("XX99 Mark II"));
+  // console.log(props.title.includes("XX99 Mark II"));
 
-  console.log(props.title);
+  // console.log(props.title);
   return (
     <div className={ProductPreviewCSS.container}>
       <div

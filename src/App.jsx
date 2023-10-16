@@ -115,7 +115,11 @@ function App() {
     },
   ]);
 
-  // console.log(headphonesProductsData[0]);
+  let productsData = [];
+  Array.prototype.push.apply(productsData, headphonesProductsData[0]);
+  Array.prototype.push.apply(productsData, speakersProductsData[0]);
+  Array.prototype.push.apply(productsData, earphonesProductsData[0]);
+
   return (
     <div className={AppCSS.app}>
       <Header></Header>
@@ -143,6 +147,7 @@ function App() {
             element={
               <ProductHeadphonesXX992
                 x992ProductData={headphonesProductsData[0]}
+                productsData={productsData}
               />
             }
           ></Route>

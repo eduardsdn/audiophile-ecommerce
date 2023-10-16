@@ -1,0 +1,49 @@
+@import url("colors.css");
+
+.suggestions {
+  margin-top: 160px;
+  display: flex;
+  flex-direction: column;
+}
+
+.suggetionsCards {
+  margin-top: 65px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.suggestionsTitle {
+  align-self: center;
+  color: var(--black);
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 1.143px;
+  text-transform: uppercase;
+}
+
+.suggetionsCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.img {
+  max-width: 350px;
+}
+
+.title {
+  margin-top: 40px;
+  color: var(--black);
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1.714px;
+  text-transform: uppercase;
+}
+
+.suggetionsCardBtn {
+  margin-top: 32px;
+  max-width: 170px;
+}
