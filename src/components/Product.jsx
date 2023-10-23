@@ -25,7 +25,7 @@ export default function Product(props) {
   }
 
   const [productAmount, setProductAmount] = useState(1);
-  console.log(productAmount);
+  console.log(props);
 
   return (
     <div className={ProductCSS.product}>

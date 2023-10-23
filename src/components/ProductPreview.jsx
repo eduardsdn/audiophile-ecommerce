@@ -9,7 +9,7 @@ export default function ProductPreview(props) {
   const navigate = useNavigate();
   // console.log(props.title.includes("XX99 Mark II"));
   console.log(props.title);
-  // console.log(props.title);
+  console.log(props);
   return (
     <div className={ProductPreviewCSS.container}>
       <div
@@ -35,6 +35,12 @@ export default function ProductPreview(props) {
                 navigate("/product/xx991");
               } else if (props.productId === "xx59") {
                 navigate("/product/xx59");
+              } else if (props.productId === "zx9") {
+                navigate("/product/zx9");
+              } else if (props.productId === "zx7") {
+                navigate("/product/zx7");
+              } else if (props.productId === "yx1") {
+                navigate("/product/yx1");
               }
             }}
           >

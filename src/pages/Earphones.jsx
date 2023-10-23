@@ -21,6 +21,7 @@ export default function Earphones(props) {
         {props.earphonesProductsData[0].map(function (earphonesProductPreview) {
           return (
             <ProductPreview
+              productId={earphonesProductPreview.productId}
               img={earphonesProductPreview.img}
               title={earphonesProductPreview.title}
               description={earphonesProductPreview.description}

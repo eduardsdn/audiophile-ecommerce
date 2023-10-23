@@ -7,6 +7,9 @@ import Earphones from "./pages/Earphones";
 import ProductHeadphonesXX992 from "./pages/ProductHeadphonesXX992";
 import ProductHeadphonesXX991 from "./pages/ProductHeadphonesXX991";
 import ProductHeadphonesXX59 from "./pages/ProductHeadphonesXX59";
+import ProductSpeakersZX9 from "./pages/ProductSpeakersZX9";
+import ProductSpeakersZX7 from "./pages/ProductSpeakersZX7";
+import ProductEarphonesYX1 from "./pages/ProductEarphonesYX1";
 
 import AppCSS from "./styles/app.module.css";
 import { Route, Routes } from "react-router-dom";
@@ -31,6 +34,18 @@ import imgDecorXX991_3 from "./assets/product-xx99-mark-one-headphones/desktop/i
 import imgDecorXX59_1 from "./assets/product-xx59-headphones/desktop/image-gallery-1.jpg";
 import imgDecorXX59_2 from "./assets/product-xx59-headphones/desktop/image-gallery-2.jpg";
 import imgDecorXX59_3 from "./assets/product-xx59-headphones/desktop/image-gallery-3.jpg";
+
+import imgDecorZX9_1 from "./assets/product-zx9-speaker/desktop/image-gallery-1.jpg";
+import imgDecorZX9_2 from "./assets/product-zx9-speaker/desktop/image-gallery-2.jpg";
+import imgDecorZX9_3 from "./assets/product-zx9-speaker/desktop/image-gallery-3.jpg";
+
+import imgDecorZX7_1 from "./assets/product-zx7-speaker/desktop/image-gallery-1.jpg";
+import imgDecorZX7_2 from "./assets/product-zx7-speaker/desktop/image-gallery-2.jpg";
+import imgDecorZX7_3 from "./assets/product-zx7-speaker/desktop/image-gallery-3.jpg";
+
+import imgDecorYX1_1 from "./assets/product-yx1-earphones/desktop/image-gallery-1.jpg";
+import imgDecorYX1_2 from "./assets/product-yx1-earphones/desktop/image-gallery-2.jpg";
+import imgDecorYX1_3 from "./assets/product-yx1-earphones/desktop/image-gallery-3.jpg";
 
 function App() {
   // DATA HARDCODED TEMPORARILY
@@ -133,6 +148,7 @@ function App() {
 
   const speakersProductsData = React.useState([
     {
+      productId: "zx9",
       img: zx9Img,
       title: "ZX9 SPEAKER",
       description:
@@ -141,8 +157,32 @@ function App() {
       price: 4500,
       featuresText:
         "Connect via Bluetooth or nearly any wired source. This speaker features optical, digital coaxial, USB Type-B, stereo RCA, and stereo XLR inputs, allowing you to have up to five wired source devices connected for easy switching. Improved bluetooth technology offers near lossless audio quality at up to 328ft (100m).Discover clear, more natural sounding highs than the competition with ZX9’s signature planar diaphragm tweeter. Equally important is its powerful room-shaking bass courtesy of a 6.5” aluminum alloy bass unit. You’ll be able to enjoy equal sound quality whether in a large room or small den. Furthermore, you will experience new sensations from old songs since it can respond to even the subtle waveforms.",
+      inTheBox: [
+        {
+          itemName: "Speaker Unit",
+          amount: 2,
+        },
+        {
+          itemName: "Speaker Cloth Panel",
+          amount: 2,
+        },
+        {
+          itemName: "User Manual",
+          amount: 1,
+        },
+        {
+          itemName: "3.5mm 10m Audio Cable",
+          amount: 1,
+        },
+        {
+          itemName: "10m Optical Cable",
+          amount: 1,
+        },
+      ],
+      decorImages: [imgDecorZX9_1, imgDecorZX9_2, imgDecorZX9_3],
     },
     {
+      productId: "zx7",
       img: zx7Img,
       title: "ZX7 SPEAKER",
       description:
@@ -151,11 +191,31 @@ function App() {
       price: 3500,
       featuresText:
         "Reap the advantages of a flat diaphragm tweeter cone. This provides a fast response rate and excellent high frequencies that lower tiered bookshelf speakers cannot provide. The woofers are made from aluminum that produces a unique and clear sound. XLR inputs allow you to connect to a mixer for more advanced usage. The ZX7 speaker is the perfect blend of stylish design and high performance. It houses an encased MDF wooden enclosure which minimises acoustic resonance. Dual connectivity allows pairing through bluetooth or traditional optical and RCA input. Switch input sources and control volume at your finger tips with the included wireless remote. This versatile speaker is equipped to deliver an authentic listening experience.",
+      inTheBox: [
+        {
+          itemName: "Speaker Unit",
+          amount: 2,
+        },
+        {
+          itemName: "Speaker Cloth Panel",
+          amount: 2,
+        },
+        {
+          itemName: "User Manual",
+          amount: 1,
+        },
+        {
+          itemName: "3.5mm 7.5m Audio Cable",
+          amount: 1,
+        },
+      ],
+      decorImages: [imgDecorZX7_1, imgDecorZX7_2, imgDecorZX7_3],
     },
   ]);
 
   const earphonesProductsData = React.useState([
     {
+      productId: "yx1",
       img: yx1Img,
       title: "YX1 WIRELESS EARPHONES",
       description:
@@ -164,6 +224,29 @@ function App() {
       price: 599,
       featuresText:
         " Experience unrivalled stereo sound thanks to innovative acoustic technology. With improved ergonomics designed for full day wearing, these revolutionary earphones have been finely crafted to provide you with the perfect fit, delivering complete comfort all day long while enjoying exceptional noise isolation and truly immersive sound. The YX1 Wireless Earphones features customizable controls for volume, music, calls, and voice assistants built into both earbuds. The new 7-hour battery life can be extended up to 28 hours with the charging case, giving you uninterrupted play time. Exquisite craftsmanship with a splash resistant design now available in an all new white and grey color scheme as well as the popular classic black.",
+      inTheBox: [
+        {
+          itemName: "Earphone Unit",
+          amount: 2,
+        },
+        {
+          itemName: "Multi-size Earplugs",
+          amount: 6,
+        },
+        {
+          itemName: "User Manual",
+          amount: 1,
+        },
+        {
+          itemName: "USB-C Charging Cable",
+          amount: 1,
+        },
+        {
+          itemName: "Travel Pouch",
+          amount: 1,
+        },
+      ],
+      decorImages: [imgDecorYX1_1, imgDecorYX1_2, imgDecorYX1_3],
     },
   ]);
 
@@ -172,7 +255,6 @@ function App() {
   Array.prototype.push.apply(productsData, speakersProductsData[0]);
   Array.prototype.push.apply(productsData, earphonesProductsData[0]);
 
-  console.log(headphonesProductsData[0][1]);
   return (
     <div className={AppCSS.app}>
       <Header></Header>
@@ -218,6 +300,33 @@ function App() {
             element={
               <ProductHeadphonesXX59
                 productData={headphonesProductsData[0][2]}
+                productsData={productsData}
+              />
+            }
+          ></Route>
+          <Route
+            path="/product/zx9"
+            element={
+              <ProductSpeakersZX9
+                productData={speakersProductsData[0][0]}
+                productsData={productsData}
+              />
+            }
+          ></Route>
+          <Route
+            path="/product/zx7"
+            element={
+              <ProductSpeakersZX7
+                productData={speakersProductsData[0][1]}
+                productsData={productsData}
+              />
+            }
+          ></Route>
+          <Route
+            path="/product/yx1"
+            element={
+              <ProductEarphonesYX1
+                productData={earphonesProductsData[0][0]}
                 productsData={productsData}
               />
             }

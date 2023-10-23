@@ -21,6 +21,7 @@ export default function Speakers(props) {
         {props.speakersProductsData[0].map(function (speakersProductPreview) {
           return (
             <ProductPreview
+              productId={speakersProductPreview.productId}
               img={speakersProductPreview.img}
               title={speakersProductPreview.title}
               description={speakersProductPreview.description}
