@@ -7,8 +7,12 @@ import Footer from "../components/Footer";
 import React from "react";
 import { useLocation } from "react-router-dom";
 
-export default function Speakers(props) {
+import { useSelector } from "react-redux";
+
+export default function Speakers() {
   const { pathname } = useLocation();
+
+  const speakersProducts = useSelector((state) => state.speakersProducts);
 
   React.useEffect(() => {
     window.scrollTo(0, 0);
@@ -18,14 +22,14 @@ export default function Speakers(props) {
     <div className={SpeakersCSS.speakersHolder}>
       <div className={SpeakersCSS.pageTitle}>Speakers</div>
       <div className={SpeakersCSS.container}>
-        {props.speakersProductsData[0].map(function (speakersProductPreview) {
+        {speakersProducts.map(function (speakersProduct) {
           return (
             <ProductPreview
-              productId={speakersProductPreview.productId}
-              img={speakersProductPreview.img}
-              title={speakersProductPreview.title}
-              description={speakersProductPreview.description}
-              isReverse={speakersProductPreview.isReverse}
+              productId={speakersProduct.productId}
+              img={speakersProduct.img}
+              title={speakersProduct.title}
+              description={speakersProduct.description}
+              isReverse={speakersProduct.isReverse}
             />
           );
         })}

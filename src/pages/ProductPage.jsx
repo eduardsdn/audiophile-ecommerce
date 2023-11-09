@@ -7,7 +7,7 @@ import Product from "../components/Product";
 
 import React from "react";
 import { useSelector } from "react-redux";
-import { useLocation, useParams, useNavigate } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 
 export default function ProductPage() {
   const { productId } = useParams();

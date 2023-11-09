@@ -5,8 +5,7 @@ import CompanyDescription from "../components/CompanyDescription";
 import Footer from "../components/Footer";
 
 import React from "react";
-import { useLocation, useNavigate } from "react-router-dom";
-
+import { useLocation } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 export default function Headphones() {

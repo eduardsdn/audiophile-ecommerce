@@ -4,12 +4,12 @@ import Headphones from "./pages/Headphones";
 import Speakers from "./pages/Speakers";
 import Earphones from "./pages/Earphones";
 
-import ProductHeadphonesXX992 from "./pages/ProductHeadphonesXX992";
-import ProductHeadphonesXX991 from "./pages/ProductHeadphonesXX991";
-import ProductHeadphonesXX59 from "./pages/ProductHeadphonesXX59";
-import ProductSpeakersZX9 from "./pages/ProductSpeakersZX9";
-import ProductSpeakersZX7 from "./pages/ProductSpeakersZX7";
-import ProductEarphonesYX1 from "./pages/ProductEarphonesYX1";
+// import ProductHeadphonesXX992 from "./pages/ProductHeadphonesXX992";
+// import ProductHeadphonesXX991 from "./pages/ProductHeadphonesXX991";
+// import ProductHeadphonesXX59 from "./pages/ProductHeadphonesXX59";
+// import ProductSpeakersZX9 from "./pages/ProductSpeakersZX9";
+// import ProductSpeakersZX7 from "./pages/ProductSpeakersZX7";
+// import ProductEarphonesYX1 from "./pages/ProductEarphonesYX1";
 
 import ProductPage from "./pages/ProductPage";
 
@@ -265,13 +265,7 @@ function App() {
       <div className={AppCSS.container}>
         <Routes>
           <Route path="/" element={<Home />}></Route>
-          <Route
-            path="/headphones"
-            element={
-              <Headphones />
-              // headphonesProductsData={headphonesProductsData}
-            }
-          ></Route>
+          <Route path="/headphones" element={<Headphones />}></Route>
           <Route
             path="/speakers"
             element={<Speakers speakersProductsData={speakersProductsData} />}
@@ -282,54 +276,7 @@ function App() {
               <Earphones earphonesProductsData={earphonesProductsData} />
             }
           ></Route>
-          {/* <Route
-            path="/product/xx992"
-            element={
-              <ProductHeadphonesXX992 productsData={productsData} />
-              // productData={headphonesProductsData[0][0]}
-            }
-          ></Route>
-          <Route
-            path="/product/xx991"
-            element={
-              <ProductHeadphonesXX991 productsData={productsData} />
-              // productData={headphonesProductsData[0][1]}
-            }
-          ></Route>
-          <Route
-            path="/product/xx59"
-            element={
-              <ProductHeadphonesXX59 productsData={productsData} />
-              // productData={headphonesProductsData[0][2]}
-            }
-          ></Route> */}
-          <Route
-            path="/product/zx9"
-            element={
-              <ProductSpeakersZX9
-                productData={speakersProductsData[0][0]}
-                productsData={productsData}
-              />
-            }
-          ></Route>
-          {/* <Route
-            path="/product/zx7"
-            element={
-              <ProductSpeakersZX7
-                productData={speakersProductsData[0][1]}
-                productsData={productsData}
-              />
-            }
-          ></Route>
-          <Route
-            path="/product/yx1"
-            element={
-              <ProductEarphonesYX1
-                productData={earphonesProductsData[0][0]}
-                productsData={productsData}
-              />
-            }
-          ></Route> */}
+
           <Route
             exact
             path="products/:productId"

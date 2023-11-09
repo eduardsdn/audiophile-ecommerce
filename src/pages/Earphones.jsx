@@ -6,9 +6,12 @@ import Footer from "../components/Footer";
 
 import React from "react";
 import { useLocation } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 export default function Earphones(props) {
   const { pathname } = useLocation();
+
+  const earphonesProducts = useSelector((state) => state.earphonesProducts);
 
   React.useEffect(() => {
     window.scrollTo(0, 0);
@@ -18,14 +21,14 @@ export default function Earphones(props) {
     <div className={EarphonesCSS.earphonesHolder}>
       <div className={EarphonesCSS.pageTitle}>Earphones</div>
       <div className={EarphonesCSS.container}>
-        {props.earphonesProductsData[0].map(function (earphonesProductPreview) {
+        {earphonesProducts.map(function (earphonesProduct) {
           return (
             <ProductPreview
-              productId={earphonesProductPreview.productId}
-              img={earphonesProductPreview.img}
-              title={earphonesProductPreview.title}
-              description={earphonesProductPreview.description}
-              isReverse={earphonesProductPreview.isReverse}
+              productId={earphonesProduct.productId}
+              img={earphonesProduct.img}
+              title={earphonesProduct.title}
+              description={earphonesProduct.description}
+              isReverse={earphonesProduct.isReverse}
             />
           );
         })}
