@@ -9,7 +9,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 
 import { useSelector } from "react-redux";
 
-export default function Headphones(props) {
+export default function Headphones() {
   const { pathname } = useLocation();
   // console.log(props.headphonesProductsData[0]);
 
@@ -36,11 +36,6 @@ export default function Headphones(props) {
             />
           );
         })}
-        {/* <ProductPreview
-          img={props.headphonesPreviewContent[0].xx99_2.img}
-          title={props.headphonesPreviewContent[0].xx99_2.title}
-          description={props.headphonesPreviewContent[0].xx99_2.description}
-        ></ProductPreview> */}
         <Categories mountedOn={"preview"}></Categories>
         <CompanyDescription></CompanyDescription>
       </div>

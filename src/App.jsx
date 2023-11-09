@@ -11,6 +11,8 @@ import ProductSpeakersZX9 from "./pages/ProductSpeakersZX9";
 import ProductSpeakersZX7 from "./pages/ProductSpeakersZX7";
 import ProductEarphonesYX1 from "./pages/ProductEarphonesYX1";
 
+import ProductPage from "./pages/ProductPage";
+
 import AppCSS from "./styles/app.module.css";
 import { Route, Routes } from "react-router-dom";
 import React from "react";
@@ -255,6 +257,8 @@ function App() {
   Array.prototype.push.apply(productsData, speakersProductsData[0]);
   Array.prototype.push.apply(productsData, earphonesProductsData[0]);
 
+  // console.log(productsData);
+
   return (
     <div className={AppCSS.app}>
       <Header></Header>
@@ -278,7 +282,7 @@ function App() {
               <Earphones earphonesProductsData={earphonesProductsData} />
             }
           ></Route>
-          <Route
+          {/* <Route
             path="/product/xx992"
             element={
               <ProductHeadphonesXX992 productsData={productsData} />
@@ -298,7 +302,7 @@ function App() {
               <ProductHeadphonesXX59 productsData={productsData} />
               // productData={headphonesProductsData[0][2]}
             }
-          ></Route>
+          ></Route> */}
           <Route
             path="/product/zx9"
             element={
@@ -308,7 +312,7 @@ function App() {
               />
             }
           ></Route>
-          <Route
+          {/* <Route
             path="/product/zx7"
             element={
               <ProductSpeakersZX7
@@ -325,6 +329,11 @@ function App() {
                 productsData={productsData}
               />
             }
+          ></Route> */}
+          <Route
+            exact
+            path="products/:productId"
+            element={<ProductPage />}
           ></Route>
         </Routes>
       </div>
