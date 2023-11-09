@@ -10,7 +10,6 @@ import { useSelector } from "react-redux";
 
 export default function Headphones() {
   const { pathname } = useLocation();
-  // console.log(props.headphonesProductsData[0]);
 
   const headphonesProducts = useSelector((state) => state.headphonesProducts);
 
