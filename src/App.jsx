@@ -264,7 +264,8 @@ function App() {
           <Route
             path="/headphones"
             element={
-              <Headphones headphonesProductsData={headphonesProductsData} />
+              <Headphones />
+              // headphonesProductsData={headphonesProductsData}
             }
           ></Route>
           <Route
@@ -280,28 +281,22 @@ function App() {
           <Route
             path="/product/xx992"
             element={
-              <ProductHeadphonesXX992
-                productData={headphonesProductsData[0][0]}
-                productsData={productsData}
-              />
+              <ProductHeadphonesXX992 productsData={productsData} />
+              // productData={headphonesProductsData[0][0]}
             }
           ></Route>
           <Route
             path="/product/xx991"
             element={
-              <ProductHeadphonesXX991
-                productData={headphonesProductsData[0][1]}
-                productsData={productsData}
-              />
+              <ProductHeadphonesXX991 productsData={productsData} />
+              // productData={headphonesProductsData[0][1]}
             }
           ></Route>
           <Route
             path="/product/xx59"
             element={
-              <ProductHeadphonesXX59
-                productData={headphonesProductsData[0][2]}
-                productsData={productsData}
-              />
+              <ProductHeadphonesXX59 productsData={productsData} />
+              // productData={headphonesProductsData[0][2]}
             }
           ></Route>
           <Route

@@ -7,29 +7,32 @@ import Footer from "../components/Footer";
 import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
+import { useSelector } from "react-redux";
+
 export default function Headphones(props) {
   const { pathname } = useLocation();
-  console.log(props.headphonesProductsData[0]);
+  // console.log(props.headphonesProductsData[0]);
+
+  const headphonesProducts = useSelector((state) => state.headphonesProducts);
 
   React.useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
-  // console.log(props.headphonesPreviewContent[0].xx99_2.img);
-  // console.log(props);
+
+  console.log(headphonesProducts);
+
   return (
     <div className={headphonesCSS.headphonesHolder}>
       <div className={headphonesCSS.pageTitle}>Headphones</div>
       <div className={headphonesCSS.container}>
-        {props.headphonesProductsData[0].map(function (
-          headphonesProductPreview
-        ) {
+        {headphonesProducts.map(function (headphonesProduct) {
           return (
             <ProductPreview
-              productId={headphonesProductPreview.productId}
-              img={headphonesProductPreview.img}
-              title={headphonesProductPreview.title}
-              description={headphonesProductPreview.description}
-              isReverse={headphonesProductPreview.isReverse}
+              productId={headphonesProduct.productId}
+              img={headphonesProduct.img}
+              title={headphonesProduct.title}
+              description={headphonesProduct.description}
+              isReverse={headphonesProduct.isReverse}
             />
           );
         })}
