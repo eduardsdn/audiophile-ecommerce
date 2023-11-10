@@ -1,5 +1,6 @@
 import ProductCSS from "../styles/product.module.css";
 import ButtonsCSS from "../styles/buttons.module.css";
+import Suggestions from "./Suggestions";
 import prodImg from "../assets/product-xx99-mark-two-headphones/desktop/image-category-page-preview.jpg";
 
 import { useState } from "react";

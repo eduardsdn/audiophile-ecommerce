@@ -21,7 +21,7 @@ export default function Categories(props) {
         id={`${
           props.mountedOn === "preview"
             ? CategoriesCSS.categoriesCardsPreview
-            : ""
+            : CategoriesCSS.categoriesCardsProduct
         }`}
       >
         <div className={CategoriesCSS.categoriesCard}>

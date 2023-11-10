@@ -9,7 +9,11 @@ import Categories from "../components/Categories";
 import CompanyDescription from "../components/CompanyDescription";
 import Footer from "../components/Footer";
 
+import { useNavigate } from "react-router-dom";
+
 export default function Home() {
+  const navigate = useNavigate();
+
   return (
     <div className={HomeCSS.homeHolder}>
       <div className={HomeCSS.homeHero}>
@@ -24,6 +28,9 @@ export default function Home() {
             <button
               className={`${ButtonsCSS.seeProductBtn} ${HomeCSS.homeHeroBtn}`}
               id={ButtonsCSS.orange}
+              onClick={() => {
+                navigate(`/products/xx992`);
+              }}
             >
               see product
             </button>
@@ -56,6 +63,9 @@ export default function Home() {
               <button
                 className={`${ButtonsCSS.seeProductBtn} ${HomeCSS.homeProductsTopContentBtn}`}
                 id={ButtonsCSS.black}
+                onClick={() => {
+                  navigate(`/products/zx9`);
+                }}
               >
                 See product
               </button>
@@ -67,6 +77,9 @@ export default function Home() {
               <button
                 className={`${ButtonsCSS.seeProductBtn} ${HomeCSS.homeProductsBtn}`}
                 id={ButtonsCSS.black}
+                onClick={() => {
+                  navigate(`/products/zx7`);
+                }}
               >
                 see product
               </button>
@@ -85,6 +98,9 @@ export default function Home() {
               <button
                 className={`${ButtonsCSS.seeProductBtn} ${HomeCSS.homeProductsBtn}`}
                 id={ButtonsCSS.black}
+                onClick={() => {
+                  navigate(`/products/yx1`);
+                }}
               >
                 see product
               </button>
