@@ -58,6 +58,7 @@
 .imgHero {
   min-height: 561px;
   min-width: 1110px;
+  border-radius: 0;
 }
 
 .homeProducts {

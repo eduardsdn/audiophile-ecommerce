@@ -40,7 +40,10 @@ export default function ProductPage() {
           inTheBox={product.inTheBox}
           decorImages={product.decorImages}
         />
-        <Suggestions productsData={products} currentProduct={product.title} />
+        <Suggestions
+          productsData={products}
+          currentProduct={product.productId}
+        />
         <Categories />
         <CompanyDescription />
       </div>

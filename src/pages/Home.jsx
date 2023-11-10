@@ -39,7 +39,7 @@ export default function Home() {
         </div>
       </div>
       <div className={HomeCSS.container}>
-        <Categories></Categories>
+        <Categories mountedOn={"preview"}></Categories>
         <div className={HomeCSS.homeProducts}>
           <div className={HomeCSS.homeProductsTop}>
             <img
