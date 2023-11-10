@@ -13,6 +13,8 @@ export default function ProductPage() {
   const { productId } = useParams();
   const { pathname } = useLocation();
 
+  const products = useSelector((state) => state.products);
+
   const product = useSelector((state) =>
     state.products.find((product) => product.productId === productId)
   );
@@ -38,10 +40,7 @@ export default function ProductPage() {
           inTheBox={product.inTheBox}
           decorImages={product.decorImages}
         />
-        {/* <Suggestions
-          productsData={props.productsData}
-          currentProduct={props.productData.title}
-        /> */}
+        <Suggestions productsData={products} currentProduct={product.title} />
         <Categories />
         <CompanyDescription />
       </div>
