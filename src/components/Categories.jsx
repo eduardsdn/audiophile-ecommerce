@@ -5,10 +5,6 @@ import categoriesSpeakersImg from "../assets/shared/desktop/image-category-thumb
 import categoriesEarphonesImg from "../assets/shared/desktop/image-category-thumbnail-earphones.png";
 import linkArrow from "../assets/shared/desktop/icon-arrow-right.svg";
 
-import Headphones from "../pages/Headphones";
-import Speakers from "../pages/Speakers";
-import Earphones from "../pages/Earphones";
-
 import { useNavigate } from "react-router-dom";
 
 export default function Categories(props) {

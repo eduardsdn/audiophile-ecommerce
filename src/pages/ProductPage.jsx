@@ -32,6 +32,7 @@ export default function ProductPage() {
     <div className={productPageSharedCSS.holder}>
       <div className={productPageSharedCSS.container}>
         <Product
+          productId={product.productId}
           productImg={product.img}
           title={product.title}
           description={product.description}

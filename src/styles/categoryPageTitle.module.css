@@ -1,14 +1,3 @@
-@import url("colors.css");
-
-.container {
-  max-width: 1110px;
-  margin: 0 auto;
-}
-
-.earphonesHolder {
-  background-color: var(--offWhite);
-}
-
 .pageTitle {
   padding-top: 98px;
   padding-bottom: 98px;

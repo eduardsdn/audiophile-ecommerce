@@ -4,8 +4,25 @@ import Suggestions from "./Suggestions";
 import prodImg from "../assets/product-xx99-mark-two-headphones/desktop/image-category-page-preview.jpg";
 
 import { useState } from "react";
-// HARDCODED VALUES FOR STYLING ONLY
+import { useDispatch } from "react-redux";
+import { addProduct } from "../state/cartSlice";
+
+// NEEDS TO BE REFACTORED
 export default function Product(props) {
+  const [productAmount, setProductAmount] = useState(1);
+  const dispatch = useDispatch();
+
+  console.log(props);
+
+  function onAddToCartClick() {
+    dispatch(
+      addProduct({
+        id: props.productId,
+        amount: productAmount,
+      })
+    );
+  }
+
   function splitFeaturesText() {
     let breakWord;
     if (props.title.includes("XX99 Mark II")) {
@@ -24,9 +41,6 @@ export default function Product(props) {
 
     return props.featuresText.split(breakWord);
   }
-
-  const [productAmount, setProductAmount] = useState(1);
-  console.log(props);
 
   return (
     <div className={ProductCSS.product}>
