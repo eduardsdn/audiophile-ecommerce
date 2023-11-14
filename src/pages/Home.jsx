@@ -1,8 +1,6 @@
 import HomeCSS from "../styles/home.module.css";
 import ButtonsCSS from "../styles/buttons.module.css";
-import imageHero from "../assets/home/desktop/image-hero.jpg";
 import imageSpeakerZX9 from "../assets/home/desktop/image-speaker-zx9.png";
-import imageSpeakerZX7 from "../assets/home/desktop/image-speaker-zx7.jpg";
 import imageEarphonesYX1 from "../assets/home/desktop/image-earphones-yx1.jpg";
 import patterCircles from "../assets/home/desktop/pattern-circles.svg";
 import Categories from "../components/Categories";
@@ -35,10 +33,8 @@ export default function Home() {
               see product
             </button>
           </div>
-          <img src={imageHero} className={HomeCSS.imgHero} alt="" />
         </div>
       </div>
-      {/* <div className={HomeCSS.container}> */}
       <Categories />
       <div className={HomeCSS.homeProducts}>
         <div className={HomeCSS.homeProductsTop}>
@@ -104,7 +100,6 @@ export default function Home() {
         </div>
       </div>
       <CompanyDescription></CompanyDescription>
-      {/* </div> */}
       <Footer></Footer>
     </div>
   );
