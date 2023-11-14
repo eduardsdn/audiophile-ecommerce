@@ -1,6 +1,6 @@
 @import url("colors.css");
 
-.container {
+.footerContentHolder {
   position: relative;
   max-width: 1110px;
   margin: 0 auto;
@@ -11,6 +11,9 @@
   padding-bottom: 46px;
   background-color: var(--offBlack);
   color: var(--white);
+  width: 100vw;
+  position: relative;
+  left: calc(-50vw + 50%);
 }
 
 .nav {

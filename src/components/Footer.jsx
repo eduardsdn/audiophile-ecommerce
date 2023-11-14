@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 export default function Footer() {
   return (
     <footer className={FooterCSS.footer}>
-      <div className={FooterCSS.container}>
+      <div className={FooterCSS.footerContentHolder}>
         <hr />
         <nav className={FooterCSS.nav}>
           <a href="/" className={FooterCSS.logo}>

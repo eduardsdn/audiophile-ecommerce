@@ -1,10 +1,5 @@
 @import url("colors.css");
 
-.container {
-  max-width: 1110px;
-  margin: 0 auto;
-}
-
 .companyDescription {
   margin-top: 165px;
   display: flex;

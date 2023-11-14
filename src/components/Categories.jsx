@@ -11,61 +11,59 @@ export default function Categories(props) {
   const navigate = useNavigate();
 
   return (
-    <div className={CategoriesCSS.container}>
-      <div className={CategoriesCSS.categoriesCards}>
-        <div className={CategoriesCSS.categoriesCard}>
-          <img
-            className={CategoriesCSS.categoriesCardImg}
-            id={CategoriesCSS.headphonesImg}
-            src={categoriesHeadphonesImg}
-            alt=""
-          />
-          <div className={CategoriesCSS.categoriesCardTextContent}>
-            <p className={CategoriesCSS.categoriesCardName}>Headphones</p>
-            <button
-              onClick={() => navigate("/headphones")}
-              className={ButtonsCSS.categoriesCardButton}
-            >
-              shop
-              <img src={linkArrow} alt="" />
-            </button>
-          </div>
+    <div className={CategoriesCSS.categoriesCards}>
+      <div className={CategoriesCSS.categoriesCard}>
+        <img
+          className={CategoriesCSS.categoriesCardImg}
+          id={CategoriesCSS.headphonesImg}
+          src={categoriesHeadphonesImg}
+          alt=""
+        />
+        <div className={CategoriesCSS.categoriesCardTextContent}>
+          <p className={CategoriesCSS.categoriesCardName}>Headphones</p>
+          <button
+            onClick={() => navigate("/headphones")}
+            className={ButtonsCSS.categoriesCardButton}
+          >
+            shop
+            <img src={linkArrow} alt="" />
+          </button>
         </div>
-        <div className={CategoriesCSS.categoriesCard}>
-          <img
-            className={CategoriesCSS.categoriesCardImg}
-            id={CategoriesCSS.speakersImg}
-            src={categoriesSpeakersImg}
-            alt=""
-          />
-          <div className={CategoriesCSS.categoriesCardTextContent}>
-            <p className={CategoriesCSS.categoriesCardName}>Speakers</p>
-            <button
-              onClick={() => navigate("/speakers")}
-              className={ButtonsCSS.categoriesCardButton}
-            >
-              shop
-              <img src={linkArrow} alt="" />
-            </button>
-          </div>
+      </div>
+      <div className={CategoriesCSS.categoriesCard}>
+        <img
+          className={CategoriesCSS.categoriesCardImg}
+          id={CategoriesCSS.speakersImg}
+          src={categoriesSpeakersImg}
+          alt=""
+        />
+        <div className={CategoriesCSS.categoriesCardTextContent}>
+          <p className={CategoriesCSS.categoriesCardName}>Speakers</p>
+          <button
+            onClick={() => navigate("/speakers")}
+            className={ButtonsCSS.categoriesCardButton}
+          >
+            shop
+            <img src={linkArrow} alt="" />
+          </button>
         </div>
-        <div className={CategoriesCSS.categoriesCard}>
-          <img
-            className={CategoriesCSS.categoriesCardImg}
-            id={CategoriesCSS.earphonesImg}
-            src={categoriesEarphonesImg}
-            alt=""
-          />
-          <div className={CategoriesCSS.categoriesCardTextContent}>
-            <p className={CategoriesCSS.categoriesCardName}>Earphones</p>
-            <button
-              onClick={() => navigate("/earphones")}
-              className={ButtonsCSS.categoriesCardButton}
-            >
-              shop
-              <img src={linkArrow} alt="" />
-            </button>
-          </div>
+      </div>
+      <div className={CategoriesCSS.categoriesCard}>
+        <img
+          className={CategoriesCSS.categoriesCardImg}
+          id={CategoriesCSS.earphonesImg}
+          src={categoriesEarphonesImg}
+          alt=""
+        />
+        <div className={CategoriesCSS.categoriesCardTextContent}>
+          <p className={CategoriesCSS.categoriesCardName}>Earphones</p>
+          <button
+            onClick={() => navigate("/earphones")}
+            className={ButtonsCSS.categoriesCardButton}
+          >
+            shop
+            <img src={linkArrow} alt="" />
+          </button>
         </div>
       </div>
     </div>

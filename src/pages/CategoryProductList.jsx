@@ -1,4 +1,3 @@
-import categoryProductListCSS from "../styles/categoryProductList.module.css";
 import Categories from "../components/Categories";
 import CategotyPageTitle from "../components/CategoryPageTitle";
 import ProductPreview from "../components/ProductPreview";
@@ -32,9 +31,8 @@ export default function CategoryProductList(props) {
   }, [pathname]);
 
   return (
-    <div className={categoryProductListCSS.holder}>
+    <div>
       <CategotyPageTitle categoryTitle={categoryTitle} />
-      {/* <div className={categoryProductListCSS.container}> */}
       {products.map(function (product) {
         return (
           <ProductPreview
@@ -48,7 +46,6 @@ export default function CategoryProductList(props) {
       })}
       <Categories mountedOn={"preview"}></Categories>
       <CompanyDescription></CompanyDescription>
-      {/* </div> */}
       <Footer></Footer>
     </div>
   );

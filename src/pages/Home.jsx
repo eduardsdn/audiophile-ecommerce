@@ -13,7 +13,7 @@ export default function Home() {
   const navigate = useNavigate();
 
   return (
-    <div className={HomeCSS.homeHolder}>
+    <div>
       <div className={HomeCSS.homeHeroHolder}>
         <div className={HomeCSS.homeHero}>
           <div className={HomeCSS.homeHeroTextContent}>
