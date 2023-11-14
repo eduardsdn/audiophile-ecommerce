@@ -34,21 +34,21 @@ export default function CategoryProductList(props) {
   return (
     <div className={categoryProductListCSS.holder}>
       <CategotyPageTitle categoryTitle={categoryTitle} />
-      <div className={categoryProductListCSS.container}>
-        {products.map(function (product) {
-          return (
-            <ProductPreview
-              productId={product.productId}
-              img={product.img}
-              title={product.title}
-              description={product.description}
-              isReverse={product.isReverse}
-            />
-          );
-        })}
-        <Categories mountedOn={"preview"}></Categories>
-        <CompanyDescription></CompanyDescription>
-      </div>
+      {/* <div className={categoryProductListCSS.container}> */}
+      {products.map(function (product) {
+        return (
+          <ProductPreview
+            productId={product.productId}
+            img={product.img}
+            title={product.title}
+            description={product.description}
+            isReverse={product.isReverse}
+          />
+        );
+      })}
+      <Categories mountedOn={"preview"}></Categories>
+      <CompanyDescription></CompanyDescription>
+      {/* </div> */}
       <Footer></Footer>
     </div>
   );

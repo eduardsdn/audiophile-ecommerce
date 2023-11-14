@@ -1,24 +1,43 @@
 @import url("colors.css");
 
-.container {
+/* .container {
   max-width: 1110px;
   margin: 0 auto;
-  background-color: var(--offWhite);
-}
+} */
 
-.homeHolder {
+/* .homeHolder {
   background-color: var(--offWhite);
-}
+} */
 
-.homeHero {
-  color: var(--white);
+.homeHeroHolder {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  position: relative;
+  left: calc(-50vw + 50%);
+  background-color: #191919;
+  /* color: var(--white);
   background-color: #191919;
   max-height: 562px;
+  
+  left: calc(-50vw + 50%);
+  position: relative; */
+  /* position: absolute; */
+}
+
+.imgHero {
+  max-width: 1110px;
   position: relative;
+  /* left: calc(-50vw + 75%); */
+  /* position: relative; */
+  /* max-width: 729px; */
 }
 
 .homeHeroTextContent {
+  color: var(--white);
   position: absolute;
+  z-index: 1;
   top: 128px;
 }
 

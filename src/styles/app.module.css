@@ -6,4 +6,6 @@
 
 .container {
   padding-top: 103px;
+  max-width: 1110px;
+  margin: 0 auto;
 }
