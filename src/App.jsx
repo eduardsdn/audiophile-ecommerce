@@ -1,8 +1,6 @@
 import Header from "./components/Header";
 import Home from "./pages/Home";
-// import Headphones from "./pages/Headphones";
-// import Speakers from "./pages/Speakers";
-// import Earphones from "./pages/Earphones";
+
 import CategoryProductList from "./pages/CategoryProductList";
 import ProductPage from "./pages/ProductPage";
 
@@ -17,9 +15,6 @@ function App() {
       <div className={AppCSS.container}>
         <Routes>
           <Route path="/" element={<Home />}></Route>
-          {/* <Route path="/headphones" element={<Headphones />}></Route>
-          <Route path="/speakers" element={<Speakers />}></Route>
-          <Route path="/earphones" element={<Earphones />}></Route> */}
           <Route
             path="/headphones"
             element={<CategoryProductList category="headphones" />}

@@ -12,14 +12,7 @@ export default function Categories(props) {
 
   return (
     <div className={CategoriesCSS.container}>
-      <div
-        className={CategoriesCSS.categoriesCards}
-        id={`${
-          props.mountedOn === "preview"
-            ? CategoriesCSS.categoriesCardsPreview
-            : CategoriesCSS.categoriesCardsProduct
-        }`}
-      >
+      <div className={CategoriesCSS.categoriesCards}>
         <div className={CategoriesCSS.categoriesCard}>
           <img
             className={CategoriesCSS.categoriesCardImg}
@@ -65,12 +58,6 @@ export default function Categories(props) {
           />
           <div className={CategoriesCSS.categoriesCardTextContent}>
             <p className={CategoriesCSS.categoriesCardName}>Earphones</p>
-            {/* <div className={CategoriesCSS.categoriesCardShopLinkHolder}>
-              <a href="/" className={CategoriesCSS.categoriesCardShopLink}>
-                Shop
-              </a>
-              <img src={linkArrow} alt="" />
-            </div> */}
             <button
               onClick={() => navigate("/earphones")}
               className={ButtonsCSS.categoriesCardButton}

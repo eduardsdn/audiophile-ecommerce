@@ -1,4 +1,4 @@
-import productPageSharedCSS from "../styles/productPageShared.module.css";
+import productPageCSS from "../styles/productPage.module.css";
 import Categories from "../components/Categories";
 import Footer from "../components/Footer";
 import CompanyDescription from "../components/CompanyDescription";
@@ -29,8 +29,8 @@ export default function ProductPage() {
   }
 
   return (
-    <div className={productPageSharedCSS.holder}>
-      <div className={productPageSharedCSS.container}>
+    <div className={productPageCSS.holder}>
+      <div className={productPageCSS.container}>
         <Product
           productId={product.productId}
           productImg={product.img}

@@ -1,9 +1,9 @@
 @import url("colors.css");
 
-.container {
+/* .container {
   max-width: 1110px;
   margin: 0 auto;
-}
+} */
 
 .categoriesCards {
   padding-top: 200px;
@@ -20,12 +20,9 @@
 }
 
 .categoriesCard {
-  /* width: 350px; */
-  /* max-width: 350px; */
   background-color: var(--gray);
   border-radius: 8px;
   position: relative;
-  /* padding: 116px 108px 30px 108px; */
   height: 204px;
   width: 350px;
 }

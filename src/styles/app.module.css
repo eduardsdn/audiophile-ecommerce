@@ -1,6 +1,9 @@
 @import url("colors.css");
 
+.app {
+  background-color: var(--offWhite);
+}
+
 .container {
   padding-top: 103px;
-  /* background-color: var(--offWhite); */
 }
