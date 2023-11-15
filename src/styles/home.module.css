@@ -12,7 +12,9 @@
 
 .homeHero {
   z-index: 1;
-  width: 1110px;
+  width: 1090px;
+  padding-left: 20px;
+  padding-right: 10px;
   height: 632px;
   background-image: url("../assets/home/desktop/image-hero.jpg");
   background-size: 1110px 570px;
@@ -150,17 +152,19 @@
 .homeProductsBottom {
   margin-top: 48px;
   display: flex;
+  justify-content: space-between;
   gap: 32px;
 }
 
 .homeProductsBottomImg {
   border-radius: 8px;
+  flex-shrink: 1;
+  max-width: 100%;
 }
 
 .homeProductsBottomContent {
   padding-left: 96px;
   width: 540px;
-  max-width: 540px;
   background-color: var(--gray);
   border-radius: 8px;
   display: flex;

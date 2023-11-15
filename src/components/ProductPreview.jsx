@@ -16,7 +16,7 @@ export default function ProductPreview(props) {
         src={props.img}
         alt=""
       />
-      <div className={ProductPreviewCSS.ProductPreviewCSSContent}>
+      <div className={ProductPreviewCSS.ProductPreviewContent}>
         <p className={ProductPreviewCSS.newProduct}>NEW PRODUCT</p>
         <h1 className={ProductPreviewCSS.title}>{props.title}</h1>
         <p className={ProductPreviewCSS.description}>{props.description}</p>
