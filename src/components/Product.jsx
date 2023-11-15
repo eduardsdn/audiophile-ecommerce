@@ -4,24 +4,30 @@ import Suggestions from "./Suggestions";
 import prodImg from "../assets/product-xx99-mark-two-headphones/desktop/image-category-page-preview.jpg";
 
 import { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { nanoid } from "@reduxjs/toolkit";
 import { addProduct } from "../state/cartSlice";
 
 // NEEDS TO BE REFACTORED
 export default function Product(props) {
   const [productAmount, setProductAmount] = useState(1);
   const dispatch = useDispatch();
+  const cart = useSelector((state) => state.cart);
 
-  console.log(props);
+  console.log(cart);
+  // console.log(props);
 
   function onAddToCartClick() {
     dispatch(
       addProduct({
         id: props.productId,
+        price: props.price,
         amount: productAmount,
       })
     );
   }
+
+  console.log();
 
   function splitFeaturesText() {
     let breakWord;
@@ -91,7 +97,13 @@ export default function Product(props) {
                 +{" "}
               </button>
             </div>
-            <button className={ButtonsCSS.seeProductBtn} id={ButtonsCSS.orange}>
+            <button
+              className={ButtonsCSS.seeProductBtn}
+              id={ButtonsCSS.orange}
+              onClick={() => {
+                onAddToCartClick();
+              }}
+            >
               Add to cart
             </button>
           </div>
