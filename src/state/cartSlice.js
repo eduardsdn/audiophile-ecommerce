@@ -20,6 +20,18 @@ const cartSlice = createSlice({
 
       console.log(current(state));
     },
+    // removeProduct(state, action) {
+    //   if (
+    //     state.filter(
+    //       (product) => product.productId === action.payload.productId
+    //     ).length > 0
+    //   ) {
+    //     const indexOfExistingProduct = state.findIndex(
+    //       (product) => product.productId === action.payload.productId
+    //     );
+    //     state.splice(indexOfExistingProduct, 1)
+    //   }
+    // },
   },
 });
 

@@ -1,9 +1,16 @@
 import HeaderCSS from "../styles/header.module.css";
-
 import cartImg from "../assets/shared/desktop/icon-cart.svg";
+
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+
+import CartDropdown from "./CartDropdown";
 
 export default function Header() {
+  const navigate = useNavigate();
+  const [cartIsShown, setCartIsShown] = useState(false);
+
   return (
     <div className={HeaderCSS.navWrapper}>
       <div className={HeaderCSS.headerNavHolder}>
@@ -25,10 +32,19 @@ export default function Header() {
               <Link to="/earphones">EARPHONES</Link>
             </li>
           </ul>
-          <img src={cartImg} alt="" />
+          <img
+            className={HeaderCSS.cartIcon}
+            src={cartImg}
+            alt=""
+            onClick={() => {
+              setCartIsShown(!cartIsShown);
+            }}
+          />
           {/* Has to be link to the cart */}
         </nav>
+        {cartIsShown && <CartDropdown />}
       </div>
+      {/* {cartIsShown && <CartDropdown />} */}
     </div>
   );
 }

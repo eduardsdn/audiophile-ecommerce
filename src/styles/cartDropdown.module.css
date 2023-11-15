@@ -1,0 +1,34 @@
+@import url("colors.css");
+
+.cartDropdown {
+  padding: 32px;
+  top: 129px;
+  right: 0px;
+  position: absolute;
+  width: 377px;
+  height: 488px;
+  border-radius: 8px;
+  border: 1px solid gray;
+  background-color: var(--white);
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  color: var(--black);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.removeAllBtn {
+  font-size: 15px;
+  color: rgb(126, 123, 123);
+  text-decoration: underline;
+  cursor: pointer;
+  background-color: inherit;
+  border: 0px;
+}
