@@ -14,13 +14,13 @@ export default function Product(props) {
   const dispatch = useDispatch();
   const cart = useSelector((state) => state.cart);
 
-  console.log(cart);
+  // console.log(cart);
   // console.log(props);
 
   function onAddToCartClick() {
     dispatch(
       addProduct({
-        id: props.productId,
+        productId: props.productId,
         price: props.price,
         amount: productAmount,
       })

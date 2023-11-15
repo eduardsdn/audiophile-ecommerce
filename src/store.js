@@ -20,14 +20,14 @@ const rootReducer = combineReducers({
 const persistConfig = {
   key: "root",
   storage,
-  whitelist: ["cart"],
+  whitelist: ["cart"], // Only cart state gets saved in local storage
 };
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 
 const store = configureStore({
   reducer: persistedReducer,
-  // middleware: [thunk],
+  middleware: [thunk],
 });
 
 export const persistor = persistStore(store);

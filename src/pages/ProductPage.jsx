@@ -18,7 +18,7 @@ export default function ProductPage() {
     state.products.find((product) => product.productId === productId)
   );
 
-  console.log(product);
+  // console.log(product);
   React.useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
