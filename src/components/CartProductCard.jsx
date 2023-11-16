@@ -12,9 +12,9 @@ export default function CartProductCard(props) {
         </div>
       </div>
 
-      <div className={ButtonsCSS.inputStepper}>
+      <div className={ButtonsCSS.cartInputStepper}>
         <button
-          id={ButtonsCSS.decrement}
+          className={ButtonsCSS.cartDecrement}
           // onClick={() => {
           //   if (productAmount > 1) {
           //     setProductAmount(function (prevProductAamount) {
@@ -27,7 +27,7 @@ export default function CartProductCard(props) {
           -{" "}
         </button>
         <input
-          className={ButtonsCSS.inputStepperValue}
+          className={ButtonsCSS.cartInputStepperValue}
           type="number"
           min="1"
           max="100"
@@ -35,7 +35,7 @@ export default function CartProductCard(props) {
           readOnly={true}
         />
         <button
-          id={ButtonsCSS.increment}
+          className={ButtonsCSS.cartIncrement}
           // onClick={() => {
           //   setProductAmount(function (prevProductAamount) {
           //     return prevProductAamount + 1;

@@ -110,28 +110,42 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .cartInputStepper {
   display: flex;
-  max-width: 96px;
-  max-height: 32px;
+  /* max-width: 96px;
+  max-height: 32px; */
 }
 
 .cartIncrement {
   cursor: pointer;
-  padding-right: 20px;
-  padding-left: 10px;
+  padding-right: 12px;
+  padding-left: 5px;
   background-color: var(--gray);
   border: none;
-  font-size: 0.81rem;
+  font-size: 13px;
   font-weight: 700;
   color: rgb(126, 123, 123);
 }
 
+.cartInputStepperValue {
+  padding: 7px 0px 7px 0px;
+  max-width: fit-content;
+  display: flex;
+  justify-content: center;
+  border: none;
+  text-align: center;
+  outline: none;
+  background-color: var(--gray);
+  font-weight: 700;
+  color: var(--black);
+  font-size: 0.81rem;
+}
+
 .cartDecrement {
   cursor: pointer;
-  padding-left: 20px;
-  padding-right: 10px;
+  padding-left: 12px;
+  padding-right: 5px;
   background-color: var(--gray);
   border: none;
-  font-size: 0.81rem;
+  font-size: 13px;
   color: rgb(126, 123, 123);
   font-weight: 700;
 }

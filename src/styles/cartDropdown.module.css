@@ -40,3 +40,28 @@
   flex-direction: column;
   gap: 24px;
 }
+
+.total {
+  margin-top: 32px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.totalText {
+  color: rgb(126, 123, 123);
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.totalNumber {
+  color: rgb(126, 123, 123);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.checkoutBtn {
+  margin-top: 24px;
+  width: 100%;
+}

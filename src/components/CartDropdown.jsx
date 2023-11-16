@@ -1,4 +1,5 @@
 import CartDropdownCSS from "../styles/cartDropdown.module.css";
+import ButtonsCSS from "../styles/buttons.module.css";
 import CartProductCard from "./CartProductCard";
 
 import { useEffect, useState } from "react";
@@ -63,6 +64,17 @@ export default function CartDropdown() {
           );
         })}
       </div>
+      <div className={CartDropdownCSS.total}>
+        <p className={CartDropdownCSS.totalText}>TOTAL</p>
+        <p className={CartDropdownCSS.totalNumber}>$ 4327</p>
+      </div>
+
+      <button
+        className={`${ButtonsCSS.seeProductBtn} ${CartDropdownCSS.checkoutBtn}`}
+        id={ButtonsCSS.orange}
+      >
+        CHECKOUT
+      </button>
     </div>
   );
 }
