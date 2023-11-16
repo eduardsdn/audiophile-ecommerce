@@ -5,12 +5,19 @@ import CartProductCard from "./CartProductCard";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
+import { removeAllProducts } from "../state/cartSlice";
+
 export default function CartDropdown() {
   const cart = useSelector((state) => state.cart);
   const products = useSelector((state) => state.products);
 
+  const dispatch = useDispatch();
+
   let numberOfItemsInCart = countProducts(); // PUT INSIDE STATE???
   let productsInCart = getProductsInCart(); // PUT INSIDE STATE???
+  let total = getTotal();
+
+  // getTotal();
 
   function getProductsInCart() {
     let itemsInCart = [];
@@ -40,8 +47,22 @@ export default function CartDropdown() {
     return numberOfProducts; // return number of products
   }
 
+  function getTotal() {
+    let total = 0; // if there are NO products in the cart set total to 0
+    if (cart.length !== 0) {
+      // if there ARE products in the cart calculate total
+      let productsTotals = cart.map(
+        (product) => product.amount * product.price // get total for every individual product type in the cart
+      );
+      total = productsTotals.reduce(
+        (accumulator, currentValue) => accumulator + currentValue // sum all of individual totals
+      );
+    }
+    return total;
+  }
+
   console.log(cart);
-  console.log(productsInCart);
+  // console.log(productsInCart);
 
   return (
     <div className={CartDropdownCSS.cartDropdown}>
@@ -49,8 +70,14 @@ export default function CartDropdown() {
         <h1
           className={CartDropdownCSS.title}
         >{`CART (${numberOfItemsInCart})`}</h1>
-        <button className={CartDropdownCSS.removeAllBtn}>Remove all</button>
-        {/* Clear cart state on click here */}
+        <button
+          className={CartDropdownCSS.removeAllBtn}
+          onClick={() => {
+            dispatch(removeAllProducts());
+          }}
+        >
+          Remove all
+        </button>
       </div>
       <div className={CartDropdownCSS.cartProductCards}>
         {productsInCart.map((product) => {
@@ -67,7 +94,7 @@ export default function CartDropdown() {
       </div>
       <div className={CartDropdownCSS.total}>
         <p className={CartDropdownCSS.totalText}>TOTAL</p>
-        <p className={CartDropdownCSS.totalNumber}>$ 4327</p>
+        <p className={CartDropdownCSS.totalNumber}>$ {total}</p>
       </div>
 
       <button

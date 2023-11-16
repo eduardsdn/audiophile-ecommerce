@@ -20,18 +20,6 @@ const cartSlice = createSlice({
 
       console.log(current(state));
     },
-    // removeProduct(state, action) {
-    //   if (
-    //     state.filter(
-    //       (product) => product.productId === action.payload.productId
-    //     ).length > 0
-    //   ) {
-    //     const indexOfExistingProduct = state.findIndex(
-    //       (product) => product.productId === action.payload.productId
-    //     );
-    //     state.splice(indexOfExistingProduct, 1)
-    //   }
-    // },
     addProductInsideCart(state, action) {
       const indexOfProductInCart = state.findIndex(
         (product) => product.productId === action.payload.productId // find index of product in the cart and increase its amount by 1
@@ -46,10 +34,17 @@ const cartSlice = createSlice({
         state.splice(indexOfProductInCart, 1);
       } else state[indexOfProductInCart].amount--;
     },
+    removeAllProducts(state) {
+      return [];
+    },
   },
 });
 
-export const { addProduct, addProductInsideCart, removeProductInsideCart } =
-  cartSlice.actions;
+export const {
+  addProduct,
+  addProductInsideCart,
+  removeProductInsideCart,
+  removeAllProducts,
+} = cartSlice.actions;
 
 export default cartSlice.reducer;

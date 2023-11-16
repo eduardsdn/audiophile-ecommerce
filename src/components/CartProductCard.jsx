@@ -11,10 +11,6 @@ export default function CartProductCard(props) {
   const cart = useSelector((state) => state.cart);
   const dispatch = useDispatch();
 
-  //   function addInsideCart() {
-
-  //   }
-
   return (
     <div className={cartProductCardCSS.cartProductCard}>
       <div className={cartProductCardCSS.content}>
