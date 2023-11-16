@@ -32,9 +32,24 @@ const cartSlice = createSlice({
     //     state.splice(indexOfExistingProduct, 1)
     //   }
     // },
+    addProductInsideCart(state, action) {
+      const indexOfProductInCart = state.findIndex(
+        (product) => product.productId === action.payload.productId // find index of product in the cart and increase its amount by 1
+      );
+      state[indexOfProductInCart].amount++;
+    },
+    removeProductInsideCart(state, action) {
+      const indexOfProductInCart = state.findIndex(
+        (product) => product.productId === action.payload.productId // find index of product in the cart ....
+      );
+      if (action.payload.amount < 2) {
+        state.splice(indexOfProductInCart, 1);
+      } else state[indexOfProductInCart].amount--;
+    },
   },
 });
 
-export const { addProduct } = cartSlice.actions;
+export const { addProduct, addProductInsideCart, removeProductInsideCart } =
+  cartSlice.actions;
 
 export default cartSlice.reducer;

@@ -1,7 +1,20 @@
 import cartProductCardCSS from "../styles/cartProductCard.module.css";
 import ButtonsCSS from "../styles/buttons.module.css";
 
+import { useDispatch, useSelector } from "react-redux";
+import {
+  addProductInsideCart,
+  removeProductInsideCart,
+} from "../state/cartSlice";
+
 export default function CartProductCard(props) {
+  const cart = useSelector((state) => state.cart);
+  const dispatch = useDispatch();
+
+  //   function addInsideCart() {
+
+  //   }
+
   return (
     <div className={cartProductCardCSS.cartProductCard}>
       <div className={cartProductCardCSS.content}>
@@ -15,13 +28,14 @@ export default function CartProductCard(props) {
       <div className={ButtonsCSS.cartInputStepper}>
         <button
           className={ButtonsCSS.cartDecrement}
-          // onClick={() => {
-          //   if (productAmount > 1) {
-          //     setProductAmount(function (prevProductAamount) {
-          //       return prevProductAamount - 1;
-          //     });
-          //   }
-          // }}
+          onClick={() => {
+            dispatch(
+              removeProductInsideCart({
+                productId: props.productId,
+                amount: props.amount,
+              })
+            );
+          }}
         >
           {" "}
           -{" "}
@@ -36,11 +50,14 @@ export default function CartProductCard(props) {
         />
         <button
           className={ButtonsCSS.cartIncrement}
-          // onClick={() => {
-          //   setProductAmount(function (prevProductAamount) {
-          //     return prevProductAamount + 1;
-          //   });
-          // }}
+          onClick={() => {
+            dispatch(
+              addProductInsideCart({
+                productId: props.productId,
+              })
+            );
+            console.log(cart);
+          }}
         >
           {" "}
           +{" "}

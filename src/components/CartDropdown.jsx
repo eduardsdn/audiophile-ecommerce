@@ -56,6 +56,7 @@ export default function CartDropdown() {
         {productsInCart.map((product) => {
           return (
             <CartProductCard
+              productId={product.productId}
               img={product.img}
               title={product.title}
               price={product.price}
