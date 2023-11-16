@@ -1,16 +1,35 @@
 import CartDropdownCSS from "../styles/cartDropdown.module.css";
+import CartProductCard from "./CartProductCard";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 export default function CartDropdown() {
   const cart = useSelector((state) => state.cart);
-  console.log(cart);
+  const products = useSelector((state) => state.products);
+
+  let numberOfItemsInCart = countProducts(); // PUT INSIDE STATE???
+  let productsInCart = getProductsInCart(); // PUT INSIDE STATE???
+
+  function getProductsInCart() {
+    let itemsInCart = [];
+    cart.forEach((item) => {
+      let filtProd = products.filter(
+        //  filter out corresponding product object from products
+        (product) => product.productId === item.productId
+      )[0];
+      filtProd = {
+        //  add amount proprety which comes from cart state to it
+        ...filtProd,
+        amount: item.amount,
+      };
+      itemsInCart.push(filtProd); //  populate new array with this object iteratively
+    });
+    return itemsInCart;
+  }
 
   function countProducts() {
     let productsAmounts = cart.map(({ productId, price, ...amount }) => amount); // get array of amounts
-    console.log(productsAmounts);
-
     const initialValue = 0;
     const numberOfProducts = productsAmounts.reduce(
       //sum array of amounts
@@ -20,10 +39,8 @@ export default function CartDropdown() {
     return numberOfProducts; // return number of products
   }
 
-  // countProducts();
-  const [numberOfItemsInCart, setNumberOfItemsInCart] = useState(countProducts); //set state by calling countProducts (good idea???)
-  // DOES NOT UPDATE INSTANTLY WHEN ADDING NEW PRODUCT !!!
-  console.log(numberOfItemsInCart);
+  console.log(cart);
+  console.log(productsInCart);
 
   return (
     <div className={CartDropdownCSS.cartDropdown}>
@@ -35,11 +52,14 @@ export default function CartDropdown() {
         {/* Clear cart state on click here */}
       </div>
       <div className={CartDropdownCSS.cartProductCards}>
-        {cart.map((product) => {
+        {productsInCart.map((product) => {
           return (
-            <div>
-              {product.productId}, {product.amount}
-            </div>
+            <CartProductCard
+              img={product.img}
+              title={product.title}
+              price={product.price}
+              amount={product.amount}
+            />
           );
         })}
       </div>

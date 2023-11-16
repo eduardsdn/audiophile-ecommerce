@@ -36,6 +36,7 @@ export default function CategoryProductList(props) {
       {products.map(function (product) {
         return (
           <ProductPreview
+            key={product.productId} // Is the key correct?
             productId={product.productId}
             img={product.img}
             title={product.title}

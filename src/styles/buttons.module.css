@@ -59,6 +59,8 @@
 
 .inputStepper {
   display: flex;
+  /* max-width: 96px;
+  max-height: 32px; */
 }
 
 .inputStepperValue {
@@ -103,5 +105,38 @@ input[type="number"]::-webkit-inner-spin-button {
 
 #increment:hover,
 #decrement:hover {
+  color: var(--darkOrange);
+}
+
+.cartInputStepper {
+  display: flex;
+  max-width: 96px;
+  max-height: 32px;
+}
+
+.cartIncrement {
+  cursor: pointer;
+  padding-right: 20px;
+  padding-left: 10px;
+  background-color: var(--gray);
+  border: none;
+  font-size: 0.81rem;
+  font-weight: 700;
+  color: rgb(126, 123, 123);
+}
+
+.cartDecrement {
+  cursor: pointer;
+  padding-left: 20px;
+  padding-right: 10px;
+  background-color: var(--gray);
+  border: none;
+  font-size: 0.81rem;
+  color: rgb(126, 123, 123);
+  font-weight: 700;
+}
+
+.cartIncrement:hover,
+.cartDecrement:hover {
   color: var(--darkOrange);
 }

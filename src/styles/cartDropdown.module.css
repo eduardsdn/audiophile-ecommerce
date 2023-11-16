@@ -6,9 +6,10 @@
   right: 0px;
   position: absolute;
   width: 377px;
-  height: 488px;
+  /* height: 488px; */
   border-radius: 8px;
-  border: 1px solid gray;
+  /* border: 1px solid gray; */
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   background-color: var(--white);
 }
 
@@ -31,4 +32,11 @@
   cursor: pointer;
   background-color: inherit;
   border: 0px;
+}
+
+.cartProductCards {
+  margin-top: 31px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }

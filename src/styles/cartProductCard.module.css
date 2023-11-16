@@ -1,0 +1,36 @@
+@import url("colors.css");
+
+.cartProductCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.image {
+  width: 64px;
+  height: 64px;
+  border-radius: 8px;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.textContent {
+}
+
+.title {
+  color: var(--black);
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.price {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  color: rgb(126, 123, 123);
+}
