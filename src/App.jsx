@@ -9,9 +9,26 @@ import { Route, Routes } from "react-router-dom";
 import React from "react";
 
 function App() {
+  const [cartIsShown, setCartIsShown] = React.useState(false);
+
+  function toggleCartIsShown() {
+    setCartIsShown(!cartIsShown);
+  }
+
   return (
     <div className={AppCSS.app}>
-      <Header></Header>
+      {cartIsShown && (
+        <div
+          className={AppCSS.cartBackplate}
+          onClick={() => {
+            toggleCartIsShown();
+          }}
+        ></div>
+      )}
+      <Header
+        cartIsShown={cartIsShown}
+        toggleCartIsShown={toggleCartIsShown}
+      ></Header>
       <div className={AppCSS.container}>
         <Routes>
           <Route path="/" element={<Home />}></Route>

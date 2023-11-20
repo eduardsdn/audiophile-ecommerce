@@ -7,7 +7,7 @@ import { useState } from "react";
 
 import CartDropdown from "./CartDropdown";
 
-export default function Header() {
+export default function Header(props) {
   const navigate = useNavigate();
   const [cartIsShown, setCartIsShown] = useState(false);
 
@@ -37,12 +37,12 @@ export default function Header() {
             src={cartImg}
             alt=""
             onClick={() => {
-              setCartIsShown(!cartIsShown);
+              props.toggleCartIsShown();
             }}
           />
           {/* Has to be link to the cart */}
         </nav>
-        {cartIsShown && <CartDropdown />}
+        {props.cartIsShown && <CartDropdown />}
       </div>
       {/* {cartIsShown && <CartDropdown />} */}
     </div>
