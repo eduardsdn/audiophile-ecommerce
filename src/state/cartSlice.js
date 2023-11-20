@@ -19,6 +19,7 @@ const cartSlice = createSlice({
           (product) => product.productId === action.payload.productId // find index of existing product and increase its amount in the cart by amount provided by action payload
         );
         state[indexOfExistingProduct].amount += action.payload.amount;
+        console.log(action.payload);
       } else state.push(action.payload); // otherwise, if this product does not exist in the cart push the whole product object provided by action payload
 
       console.log(current(state));

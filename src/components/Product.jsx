@@ -15,7 +15,7 @@ export default function Product(props) {
   const cart = useSelector((state) => state.cart);
 
   // console.log(cart);
-  // console.log(props);
+  console.log(props);
 
   function onAddToCartClick() {
     dispatch(
@@ -23,11 +23,10 @@ export default function Product(props) {
         productId: props.productId,
         price: props.price,
         amount: productAmount,
+        prodImg: prodImg,
       })
     );
   }
-
-  console.log();
 
   function splitFeaturesText() {
     let breakWord;
