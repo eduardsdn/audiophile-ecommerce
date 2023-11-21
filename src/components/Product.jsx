@@ -15,15 +15,16 @@ export default function Product(props) {
   const cart = useSelector((state) => state.cart);
 
   // console.log(cart);
-  console.log(props);
+  // console.log(props);
 
   function onAddToCartClick() {
     dispatch(
       addProduct({
+        title: props.title,
         productId: props.productId,
         price: props.price,
         amount: productAmount,
-        prodImg: prodImg,
+        productImg: props.productImg,
       })
     );
   }

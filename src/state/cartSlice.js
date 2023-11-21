@@ -2,6 +2,7 @@ import { createSlice, current } from "@reduxjs/toolkit";
 
 const initialState = {
   products: [],
+  numberOfItems: 0,
   total: 0,
 };
 
@@ -9,7 +10,8 @@ const cartSlice = createSlice({
   name: "cart",
   initialState,
   reducers: {
-    addProduct(state, action) {
+    addProduct(state = initialState, action) {
+      console.log(current(state));
       if (
         state.filter(
           (product) => product.productId === action.payload.productId // if there already exist such product in the cart
@@ -22,7 +24,7 @@ const cartSlice = createSlice({
         console.log(action.payload);
       } else state.push(action.payload); // otherwise, if this product does not exist in the cart push the whole product object provided by action payload
 
-      console.log(current(state));
+      // console.log(current(state));
     },
     addProductInsideCart(state, action) {
       const indexOfProductInCart = state.findIndex(

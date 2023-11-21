@@ -9,32 +9,12 @@ import { removeAllProducts } from "../state/cartSlice";
 
 export default function CartDropdown() {
   const cart = useSelector((state) => state.cart);
-  const products = useSelector((state) => state.products);
+  // const products = useSelector((state) => state.products);
 
   const dispatch = useDispatch();
 
   let numberOfItemsInCart = countProducts(); // PUT INSIDE STATE???
-  let productsInCart = getProductsInCart(); // PUT INSIDE STATE???
   let total = getTotal();
-
-  // getTotal();
-
-  function getProductsInCart() {
-    let itemsInCart = [];
-    cart.forEach((item) => {
-      let filtProd = products.filter(
-        //  filter out corresponding product object from products
-        (product) => product.productId === item.productId
-      )[0];
-      filtProd = {
-        //  add amount proprety which comes from cart state to it
-        ...filtProd,
-        amount: item.amount,
-      };
-      itemsInCart.push(filtProd); //  populate new array with this object iteratively
-    });
-    return itemsInCart;
-  }
 
   function countProducts() {
     let productsAmounts = cart.map(({ productId, price, ...amount }) => amount); // get array of amounts
@@ -80,11 +60,11 @@ export default function CartDropdown() {
         </button>
       </div>
       <div className={CartDropdownCSS.cartProductCards}>
-        {productsInCart.map((product) => {
+        {cart.map((product) => {
           return (
             <CartProductCard
               productId={product.productId}
-              img={product.img}
+              img={product.productImg}
               title={product.title}
               price={product.price}
               amount={product.amount}
