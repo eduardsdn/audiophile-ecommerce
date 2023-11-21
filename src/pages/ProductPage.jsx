@@ -42,7 +42,6 @@ export default function ProductPage() {
       <Suggestions productsData={products} currentProduct={product.productId} />
       <Categories />
       <CompanyDescription />
-      <Footer />
     </div>
   );
 }

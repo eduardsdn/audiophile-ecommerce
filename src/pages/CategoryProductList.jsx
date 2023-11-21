@@ -47,7 +47,6 @@ export default function CategoryProductList(props) {
       })}
       <Categories mountedOn={"preview"}></Categories>
       <CompanyDescription></CompanyDescription>
-      <Footer></Footer>
     </div>
   );
 }

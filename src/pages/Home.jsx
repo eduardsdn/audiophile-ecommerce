@@ -100,7 +100,6 @@ export default function Home() {
         </div>
       </div>
       <CompanyDescription></CompanyDescription>
-      <Footer></Footer>
     </div>
   );
 }
