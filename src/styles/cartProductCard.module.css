@@ -34,3 +34,12 @@
   font-weight: 700;
   color: rgb(126, 123, 123);
 }
+
+.mountedOnSumAmount {
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  color: var(--black);
+  text-align: end;
+  width: 100px;
+}

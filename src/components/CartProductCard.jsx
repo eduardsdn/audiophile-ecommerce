@@ -20,45 +20,50 @@ export default function CartProductCard(props) {
           <p className={cartProductCardCSS.price}>$ {props.price}</p>
         </div>
       </div>
-
-      <div className={ButtonsCSS.cartInputStepper}>
-        <button
-          className={ButtonsCSS.cartDecrement}
-          onClick={() => {
-            dispatch(
-              removeProductInsideCart({
-                productId: props.productId,
-                amount: props.amount,
-              })
-            );
-          }}
-        >
-          {" "}
-          -{" "}
-        </button>
-        <input
-          className={ButtonsCSS.cartInputStepperValue}
-          type="number"
-          min="1"
-          max="100"
-          value={props.amount}
-          readOnly={true}
-        />
-        <button
-          className={ButtonsCSS.cartIncrement}
-          onClick={() => {
-            dispatch(
-              addProductInsideCart({
-                productId: props.productId,
-              })
-            );
-            console.log(cart);
-          }}
-        >
-          {" "}
-          +{" "}
-        </button>
-      </div>
+      {props.isMountedOnSummary ? (
+        <div className={cartProductCardCSS.mountedOnSumAmount}>
+          x{props.amount}
+        </div>
+      ) : (
+        <div className={ButtonsCSS.cartInputStepper}>
+          <button
+            className={ButtonsCSS.cartDecrement}
+            onClick={() => {
+              dispatch(
+                removeProductInsideCart({
+                  productId: props.productId,
+                  amount: props.amount,
+                })
+              );
+            }}
+          >
+            {" "}
+            -{" "}
+          </button>
+          <input
+            className={ButtonsCSS.cartInputStepperValue}
+            type="number"
+            min="1"
+            max="100"
+            value={props.amount}
+            readOnly={true}
+          />
+          <button
+            className={ButtonsCSS.cartIncrement}
+            onClick={() => {
+              dispatch(
+                addProductInsideCart({
+                  productId: props.productId,
+                })
+              );
+              console.log(cart);
+            }}
+          >
+            {" "}
+            +{" "}
+          </button>
+        </div>
+      )}
     </div>
   );
 }

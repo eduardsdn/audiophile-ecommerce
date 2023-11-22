@@ -141,10 +141,7 @@ export default function CheckoutForm() {
           <div className={CheckoutFormCSS.paymentMethodHolder}>
             <label htmlFor="payment_method">Payment method</label>
             <div className={CheckoutFormCSS.paymentMethodInputs}>
-              <div
-                className={CheckoutFormCSS.radioHolder}
-                onClick={() => handleChange()}
-              >
+              <div className={CheckoutFormCSS.radioHolder}>
                 <input
                   onChange={handleChange}
                   type="radio"

@@ -42,7 +42,9 @@ export default function Header(props) {
           />
           {/* Has to be link to the cart */}
         </nav>
-        {props.cartIsShown && <CartDropdown />}
+        {props.cartIsShown && (
+          <CartDropdown toggleCartIsShown={props.toggleCartIsShown} />
+        )}
       </div>
       {/* {cartIsShown && <CartDropdown />} */}
     </div>

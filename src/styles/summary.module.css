@@ -1,0 +1,70 @@
+@import url("colors.css");
+
+.summary {
+  padding: 32px;
+  width: 350px;
+  height: fit-content;
+  /* height: 488px; */
+  border-radius: 8px;
+  /* border: 1px solid gray; */
+  /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
+  background-color: var(--white);
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  color: var(--black);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.removeAllBtn {
+  font-size: 15px;
+  color: rgb(126, 123, 123);
+  text-decoration: underline;
+  cursor: pointer;
+  background-color: inherit;
+  border: 0px;
+}
+
+.cartProductCards {
+  margin-top: 31px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.total {
+  margin-top: 32px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.totalText {
+  color: rgb(126, 123, 123);
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.totalNumber {
+  color: rgb(126, 123, 123);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.checkoutBtn {
+  margin-top: 24px;
+  width: 100%;
+}
+
+.continueBtn {
+  margin-top: 32px;
+  width: 100%;
+}

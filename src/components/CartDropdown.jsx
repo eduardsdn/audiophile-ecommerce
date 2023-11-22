@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 
 import { removeAllProducts } from "../state/cartSlice";
 
-export default function CartDropdown() {
+export default function CartDropdown(props) {
   const cart = useSelector((state) => state.cart);
   // const products = useSelector((state) => state.products);
 
@@ -83,6 +83,7 @@ export default function CartDropdown() {
         className={`${ButtonsCSS.seeProductBtn} ${CartDropdownCSS.checkoutBtn}`}
         id={ButtonsCSS.orange}
         onClick={() => {
+          props.toggleCartIsShown();
           navigate("/checkout");
         }}
       >
