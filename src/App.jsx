@@ -4,6 +4,7 @@ import Footer from "./components/Footer";
 
 import CategoryProductList from "./pages/CategoryProductList";
 import ProductPage from "./pages/ProductPage";
+import Checkout from "./pages/Checkout";
 
 import AppCSS from "./styles/app.module.css";
 import { Route, Routes } from "react-router-dom";
@@ -50,6 +51,7 @@ function App() {
             path="products/:productId"
             element={<ProductPage />}
           ></Route>
+          <Route path="/checkout" element={<Checkout />}></Route>
         </Routes>
       </div>
       <Footer></Footer>

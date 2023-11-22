@@ -1,0 +1,100 @@
+@import url("colors.css");
+
+input[type="radio" i] {
+  margin: 0;
+}
+
+.checkoutFormHolder {
+  max-width: 730px;
+  padding: 54px 48px 48px 48px;
+  background-color: var(--white);
+  border-radius: 8px;
+}
+
+.title {
+  font-size: 32px;
+  color: var(--black);
+  font-weight: 700;
+}
+
+.billingDetails {
+  margin-top: 41px;
+}
+
+.subTitle {
+  color: var(--darkOrange);
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.textInputHolder {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  color: var(--black);
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 9px;
+}
+
+.textInput {
+  padding-top: 18px;
+  padding-bottom: 18px;
+  padding-left: 24px;
+  font-size: 14px;
+  border-radius: 8px;
+  border: 1px solid #cfcfcf;
+}
+
+.shortInput {
+  width: 309px;
+}
+
+.wrappedInputs {
+  column-gap: 16px;
+  row-gap: 24px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.shippingInfoWrappedInputs {
+  margin-top: 24px;
+}
+
+.shippingInfo {
+  margin-top: 53px;
+  margin-bottom: 61px;
+}
+
+.radioLabel {
+  margin-bottom: 0;
+}
+
+.radioHolder {
+  gap: 16px;
+  width: 309px;
+  height: 56px;
+  background-color: var(--white);
+  display: flex;
+  align-items: center;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  padding-left: 24px;
+  font-size: 14px;
+  border-radius: 8px;
+  border: 1px solid #cfcfcf;
+}
+
+.paymentMethodHolder {
+  display: flex;
+  justify-content: space-between;
+}
+
+.paymentMethodInputs {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+}

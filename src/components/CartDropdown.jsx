@@ -4,6 +4,7 @@ import CartProductCard from "./CartProductCard";
 
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 import { removeAllProducts } from "../state/cartSlice";
 
@@ -11,6 +12,7 @@ export default function CartDropdown() {
   const cart = useSelector((state) => state.cart);
   // const products = useSelector((state) => state.products);
 
+  const navigate = useNavigate();
   const dispatch = useDispatch();
 
   let numberOfItemsInCart = countProducts(); // PUT INSIDE STATE???
@@ -80,6 +82,9 @@ export default function CartDropdown() {
       <button
         className={`${ButtonsCSS.seeProductBtn} ${CartDropdownCSS.checkoutBtn}`}
         id={ButtonsCSS.orange}
+        onClick={() => {
+          navigate("/checkout");
+        }}
       >
         CHECKOUT
       </button>
