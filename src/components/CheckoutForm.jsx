@@ -44,6 +44,7 @@ export default function CheckoutForm() {
                 value={formData.name}
                 id="name"
                 placeholder="Alexei Ward"
+                required
               />
             </div>
             <div className={CheckoutFormCSS.textInputHolder}>
@@ -56,6 +57,7 @@ export default function CheckoutForm() {
                 value={formData.email}
                 id="email"
                 placeholder="alexei@mail.com"
+                required
               />
             </div>
             <div className={CheckoutFormCSS.textInputHolder}>
@@ -68,6 +70,7 @@ export default function CheckoutForm() {
                 value={formData.phone}
                 id="phone"
                 placeholder="+1 202-555-0136"
+                required
               />
             </div>
           </div>
@@ -85,6 +88,7 @@ export default function CheckoutForm() {
               value={formData.address}
               id="address"
               placeholder="1137 Williams Avenue"
+              required
             />
           </div>
           <div
@@ -100,6 +104,7 @@ export default function CheckoutForm() {
                 value={formData.zipCode}
                 id="zip"
                 placeholder="10001"
+                required
               />
             </div>
             <div className={CheckoutFormCSS.textInputHolder}>
@@ -112,6 +117,7 @@ export default function CheckoutForm() {
                 value={formData.city}
                 id="email"
                 placeholder="New York"
+                required
               />
             </div>
             <div className={CheckoutFormCSS.textInputHolder}>
@@ -124,6 +130,7 @@ export default function CheckoutForm() {
                 value={formData.country}
                 id="country"
                 placeholder="United States"
+                required
               />
             </div>
           </div>
@@ -134,7 +141,10 @@ export default function CheckoutForm() {
           <div className={CheckoutFormCSS.paymentMethodHolder}>
             <label htmlFor="payment_method">Payment method</label>
             <div className={CheckoutFormCSS.paymentMethodInputs}>
-              <div className={CheckoutFormCSS.radioHolder}>
+              <div
+                className={CheckoutFormCSS.radioHolder}
+                onClick={() => handleChange()}
+              >
                 <input
                   onChange={handleChange}
                   type="radio"
