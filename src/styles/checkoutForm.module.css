@@ -98,3 +98,9 @@ label {
   flex-direction: column;
   row-gap: 16px;
 }
+
+.eMoneyDetails {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
+}

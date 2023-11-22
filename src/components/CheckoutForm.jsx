@@ -11,6 +11,8 @@ export default function CheckoutForm() {
     city: "",
     country: "",
     paymentMethod: "",
+    e_money_num: "",
+    e_money_pin: "",
   });
 
   function handleChange(event) {
@@ -138,7 +140,7 @@ export default function CheckoutForm() {
                   type="radio"
                   id="e-money"
                   name="paymentMethod"
-                  value="e-Money"
+                  value="e-money"
                 />
                 <label className={CheckoutFormCSS.radioLabel} htmlFor="e-money">
                   e-Money
@@ -158,6 +160,34 @@ export default function CheckoutForm() {
               </div>
             </div>
           </div>
+          {formData.paymentMethod === "e-money" ? (
+            <div className={CheckoutFormCSS.eMoneyDetails}>
+              <div className={CheckoutFormCSS.textInputHolder}>
+                <label htmlFor="e_money_num">e-Money Number</label>
+                <input
+                  onChange={handleChange}
+                  className={`${CheckoutFormCSS.textInput} ${CheckoutFormCSS.shortInput}`}
+                  type="num"
+                  name="e_money_num"
+                  value={formData.e_money_num}
+                  id="e_money_num"
+                  placeholder="238521993"
+                />
+              </div>
+              <div className={CheckoutFormCSS.textInputHolder}>
+                <label htmlFor="e_money_pin">e-Money PIN</label>
+                <input
+                  onChange={handleChange}
+                  className={`${CheckoutFormCSS.textInput} ${CheckoutFormCSS.shortInput}`}
+                  type="number"
+                  name="e_money_pin"
+                  value={formData.e_money_pin}
+                  id="e_money_pin"
+                  placeholder="6891"
+                />
+              </div>
+            </div>
+          ) : null}
         </div>
       </form>
     </div>
