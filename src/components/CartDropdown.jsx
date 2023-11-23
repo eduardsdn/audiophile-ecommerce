@@ -44,7 +44,6 @@ export default function CartDropdown(props) {
   }
 
   console.log(cart);
-  // console.log(productsInCart);
 
   return (
     <div className={CartDropdownCSS.cartDropdown}>
@@ -83,8 +82,11 @@ export default function CartDropdown(props) {
         className={`${ButtonsCSS.seeProductBtn} ${CartDropdownCSS.checkoutBtn}`}
         id={ButtonsCSS.orange}
         onClick={() => {
-          props.toggleCartIsShown();
-          navigate("/checkout");
+          if (cart.length > 0) {
+            // If cart has products checkout is available
+            props.toggleCartIsShown();
+            navigate("/checkout");
+          }
         }}
       >
         CHECKOUT
