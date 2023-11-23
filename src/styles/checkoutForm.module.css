@@ -4,6 +4,10 @@ input[type="radio" i] {
   margin: 0;
 }
 
+input:focus {
+  outline-color: var(--darkOrange);
+}
+
 .checkoutFormHolder {
   max-width: 730px;
   padding: 54px 48px 48px 48px;

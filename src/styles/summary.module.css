@@ -39,21 +39,44 @@
   gap: 24px;
 }
 
-.total {
+.total,
+.shipping,
+.vat,
+.grandTotal {
   margin-top: 32px;
   display: flex;
   justify-content: space-between;
 }
 
-.totalText {
-  color: rgb(126, 123, 123);
+.shipping,
+.vat {
+  margin-top: 8px;
+}
+
+.grandTotal {
+  margin-top: 24px;
+}
+
+.grandTotalValue {
+  color: var(--darkOrange);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.totalText,
+.shippingText,
+.vatText,
+.grandTotalText {
+  color: var(--black);
   font-size: 15px;
   font-style: normal;
   font-weight: 500;
 }
 
-.totalNumber {
-  color: rgb(126, 123, 123);
+.totalValue,
+.shippingValue,
+.vatValue {
+  color: var(--black);
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
