@@ -3,7 +3,7 @@
 .app {
   background-color: var(--offWhite);
 }
-
+/* branch responsiveness */
 .container {
   padding-top: 103px;
   max-width: 1110px;
