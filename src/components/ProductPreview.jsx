@@ -17,7 +17,7 @@ export default function ProductPreview(props) {
         alt=""
       />
       <div className={ProductPreviewCSS.ProductPreviewContent}>
-        <p className={ProductPreviewCSS.newProduct}>NEW PRODUCT</p>
+        {/* <p className={ProductPreviewCSS.newProduct}>NEW PRODUCT</p> */}
         <h1 className={ProductPreviewCSS.title}>{props.title}</h1>
         <p className={ProductPreviewCSS.description}>{props.description}</p>
         <button
