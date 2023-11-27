@@ -40,8 +40,13 @@
   font-weight: 700;
 }
 
+.iconHamburgerMenu {
+  display: none;
+}
+
 .navLinks {
   display: flex;
+  align-items: center;
   gap: 34px;
   font-size: 13px;
   font-style: normal;
@@ -53,4 +58,21 @@
 
 .cartIcon {
   cursor: pointer;
+}
+
+.logoHolder {
+  display: flex;
+  align-items: center;
+  gap: 42px;
+}
+
+@media (max-width: 768px) {
+  .iconHamburgerMenu {
+    display: block;
+    border-radius: 0px;
+  }
+
+  .navLinks {
+    display: none;
+  }
 }

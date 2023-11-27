@@ -1,5 +1,6 @@
 import HeaderCSS from "../styles/header.module.css";
 import cartImg from "../assets/shared/desktop/icon-cart.svg";
+import iconHamburger from "../assets/shared/tablet/icon-hamburger.svg";
 
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
@@ -15,9 +16,16 @@ export default function Header(props) {
     <div className={HeaderCSS.navWrapper}>
       <div className={HeaderCSS.headerNavHolder}>
         <nav className={HeaderCSS.nav}>
-          <a href="/" className={HeaderCSS.logo}>
-            audiophile
-          </a>
+          <div className={HeaderCSS.logoHolder}>
+            <img
+              className={HeaderCSS.iconHamburgerMenu}
+              src={iconHamburger}
+              alt=""
+            />
+            <a href="/" className={HeaderCSS.logo}>
+              audiophile
+            </a>
+          </div>
           <ul className={HeaderCSS.navLinks}>
             <li>
               <Link to="/">HOME</Link>

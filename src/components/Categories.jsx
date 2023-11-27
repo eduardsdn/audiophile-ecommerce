@@ -13,12 +13,14 @@ export default function Categories(props) {
   return (
     <div className={CategoriesCSS.categoriesCards}>
       <div className={CategoriesCSS.categoriesCard}>
-        <img
-          className={CategoriesCSS.categoriesCardImg}
-          id={CategoriesCSS.headphonesImg}
-          src={categoriesHeadphonesImg}
-          alt=""
-        />
+        <div className={CategoriesCSS.categiriesCardImgHolder}>
+          <img
+            className={CategoriesCSS.categoriesCardImg}
+            id={CategoriesCSS.headphonesImg}
+            src={categoriesHeadphonesImg}
+            alt=""
+          />
+        </div>
         <div className={CategoriesCSS.categoriesCardTextContent}>
           <p className={CategoriesCSS.categoriesCardName}>Headphones</p>
           <button
@@ -31,12 +33,14 @@ export default function Categories(props) {
         </div>
       </div>
       <div className={CategoriesCSS.categoriesCard}>
-        <img
-          className={CategoriesCSS.categoriesCardImg}
-          id={CategoriesCSS.speakersImg}
-          src={categoriesSpeakersImg}
-          alt=""
-        />
+        <div className={CategoriesCSS.categiriesCardImgHolder}>
+          <img
+            className={CategoriesCSS.categoriesCardImg}
+            id={CategoriesCSS.speakersImg}
+            src={categoriesSpeakersImg}
+            alt=""
+          />
+        </div>
         <div className={CategoriesCSS.categoriesCardTextContent}>
           <p className={CategoriesCSS.categoriesCardName}>Speakers</p>
           <button
@@ -49,12 +53,14 @@ export default function Categories(props) {
         </div>
       </div>
       <div className={CategoriesCSS.categoriesCard}>
-        <img
-          className={CategoriesCSS.categoriesCardImg}
-          id={CategoriesCSS.earphonesImg}
-          src={categoriesEarphonesImg}
-          alt=""
-        />
+        <div className={CategoriesCSS.categiriesCardImgHolder}>
+          <img
+            className={CategoriesCSS.categoriesCardImg}
+            id={CategoriesCSS.earphonesImg}
+            src={categoriesEarphonesImg}
+            alt=""
+          />
+        </div>
         <div className={CategoriesCSS.categoriesCardTextContent}>
           <p className={CategoriesCSS.categoriesCardName}>Earphones</p>
           <button

@@ -5,7 +5,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   align-items: center;
 }
 
@@ -38,8 +38,41 @@
   line-height: 166.6%;
 }
 
-.descriptionImg {
-  max-width: 100%;
-  height: auto;
+.descriptionBanner {
+  width: 550px;
+  height: 588px;
+  background-image: url("../assets/shared/desktop/image-best-gear.jpg");
   border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .companyDescription {
+    margin-top: 165px;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .descriptionBanner {
+    width: 100%;
+    max-width: 689px;
+    height: 300px;
+    background-image: url("../assets/shared/tablet/image-best-gear.jpg");
+    background-size: 700px;
+    background-position: center;
+  }
+
+  .textContentTitle {
+    margin-top: 64px;
+    width: 573px;
+    text-align: center;
+  }
+
+  .textContent {
+    max-width: fit-content;
+  }
+
+  .textContentText {
+    width: 574px;
+    text-align: center;
+  }
 }

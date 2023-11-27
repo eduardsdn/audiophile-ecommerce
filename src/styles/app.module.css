@@ -6,9 +6,9 @@
 /* branch responsiveness */
 .container {
   padding-top: 103px;
-  max-width: 1110px;
-  /* padding-left: 10px;
-  padding-right: 10px; */
+  max-width: 1090px;
+  padding-left: 10px;
+  padding-right: 10px;
   margin: 0 auto;
 }
 

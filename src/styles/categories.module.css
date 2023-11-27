@@ -23,26 +23,17 @@
 }
 
 .categoriesCardImg {
-  max-width: 200.947px;
+  /* max-width: 200.947px; */
+  max-width: 70%;
+}
+
+.categiriesCardImgHolder {
   position: absolute;
-  top: -70px;
-}
-
-#headphonesImg {
-  left: 22%;
-  top: -70px;
-}
-
-#speakersImg {
-  width: 200.947px;
-  left: 20%;
-  top: -70px;
-}
-
-#earphonesImg {
-  width: 200.947px;
-  left: 22%;
-  top: -55px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  bottom: 80px;
 }
 
 .categoriesCardTextContent {
