@@ -93,4 +93,8 @@
   #earphonesImg {
     margin-top: -84%;
   }
+
+  .homeProductsTopContent {
+    display: flex;
+  }
 }
