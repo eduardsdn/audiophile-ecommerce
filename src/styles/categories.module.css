@@ -3,7 +3,8 @@
 .categoriesCards {
   /* padding-top: 200px; */
   display: flex;
-  gap: 30px;
+  /* gap: 30px; */
+  gap: 3%;
 }
 
 #categoriesCardsPreview {
@@ -15,16 +16,33 @@
 }
 
 .categoriesCard {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   background-color: var(--gray);
   border-radius: 8px;
   position: relative;
   height: 204px;
-  width: 350px;
+  /* width: 350px; */
+  width: 32%;
 }
 
 .categoriesCardImg {
   /* max-width: 200.947px; */
+  /* margin-top: -70%; */
   max-width: 70%;
+}
+
+#headphonesImg {
+  margin-top: -77%;
+}
+
+#speakersImg {
+  margin-top: -74%;
+}
+
+#earphonesImg {
+  margin-top: -69%;
 }
 
 .categiriesCardImgHolder {
@@ -37,7 +55,8 @@
 }
 
 .categoriesCardTextContent {
-  margin-top: 116px;
+  padding-top: 33%;
+  /* margin-top: 116px; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -52,4 +71,26 @@
   line-height: normal;
   letter-spacing: 1.286px;
   text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .categoriesCardName {
+    font-size: 15px;
+  }
+
+  .categoriesCardTextContent {
+    padding-top: 42%;
+  }
+
+  #headphonesImg {
+    margin-top: -90%;
+  }
+
+  #speakersImg {
+    margin-top: -90%;
+  }
+
+  #earphonesImg {
+    margin-top: -84%;
+  }
 }
