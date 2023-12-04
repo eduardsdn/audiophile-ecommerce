@@ -87,3 +87,9 @@ hr {
   top: -8px;
   left: 0;
 }
+
+@media (max-width: 768px) {
+  .footer {
+    margin-top: 96px;
+  }
+}

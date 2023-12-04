@@ -1,15 +1,15 @@
 @import url("colors.css");
 
 .productPreview {
+  width: 100%;
   margin-top: 160px;
   display: flex;
   gap: 125px;
-  /* flex-wrap: wrap; */
   justify-content: center;
 }
 
 .productPreviewImg {
-  max-width: 540px;
+  width: 540px;
 }
 
 .ProductPreviewContent {
@@ -62,11 +62,19 @@
   flex-direction: row-reverse;
 }
 
-@media (max-width: 768px) {
+.CategoriesHolder {
+  padding-top: 240px;
+}
+
+@media (max-width: 1025px) {
+  .previewsHolder {
+    margin-top: 120px;
+  }
+
   .productPreview,
   #reversed {
-    margin-top: 120px;
     flex-direction: column;
+    margin-top: 0px;
     align-items: center;
     gap: 52px;
   }
@@ -78,10 +86,19 @@
   }
 
   .title {
-    max-width: 290px;
+    margin-top: 0px;
+    max-width: 300px;
   }
 
   .description {
     max-width: 572px;
+  }
+
+  .productPreviewBtn {
+    margin-top: 24px;
+  }
+
+  .CategoriesHolder {
+    padding-top: 0px;
   }
 }

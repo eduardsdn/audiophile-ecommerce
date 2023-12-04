@@ -35,7 +35,9 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <Categories />
+      <div className={HomeCSS.categoriesHolder}>
+        <Categories />
+      </div>
       <div className={HomeCSS.homeProducts}>
         <div className={HomeCSS.homeProductsTop}>
           <img

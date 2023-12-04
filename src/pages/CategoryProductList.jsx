@@ -1,8 +1,8 @@
 import Categories from "../components/Categories";
 import CategotyPageTitle from "../components/CategoryPageTitle";
 import ProductPreview from "../components/ProductPreview";
+import ProductPreviewCSS from "../styles/productPreview.module.css";
 import CompanyDescription from "../components/CompanyDescription";
-import Footer from "../components/Footer";
 
 import React from "react";
 import { useLocation } from "react-router-dom";
@@ -33,19 +33,24 @@ export default function CategoryProductList(props) {
   return (
     <div>
       <CategotyPageTitle categoryTitle={categoryTitle} />
-      {products.map(function (product) {
-        return (
-          <ProductPreview
-            key={product.productId} // Is the key correct?
-            productId={product.productId}
-            img={product.img}
-            title={product.title}
-            description={product.description}
-            isReverse={product.isReverse}
-          />
-        );
-      })}
-      <Categories mountedOn={"preview"}></Categories>
+      <div className={ProductPreviewCSS.previewsHolder}>
+        {products.map(function (product) {
+          return (
+            <ProductPreview
+              key={product.productId} // Is the key correct?
+              productId={product.productId}
+              imgDesktop={product.imgDesktop}
+              imgTablet={product.imgTablet}
+              title={product.title}
+              description={product.description}
+              isReverse={product.isReverse}
+            />
+          );
+        })}
+      </div>
+      <div className={ProductPreviewCSS.CategoriesHolder}>
+        <Categories mountedOn={"preview"}></Categories>
+      </div>
       <CompanyDescription></CompanyDescription>
     </div>
   );
