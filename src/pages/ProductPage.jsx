@@ -3,6 +3,7 @@ import Footer from "../components/Footer";
 import CompanyDescription from "../components/CompanyDescription";
 import Suggestions from "../components/Suggestions";
 import Product from "../components/Product";
+import ProductCSS from "../styles/product.module.css";
 
 import React from "react";
 import { useSelector } from "react-redux";
@@ -40,8 +41,10 @@ export default function ProductPage() {
         inTheBox={product.inTheBox}
         decorImages={product.decorImages}
       />
-      <Suggestions productsData={products} currentProduct={product.productId} />
-      <Categories />
+      {/* <Suggestions productsData={products} currentProduct={product.productId} /> */}
+      <div className={ProductCSS.categoriesHolder}>
+        <Categories />
+      </div>
       <CompanyDescription />
     </div>
   );

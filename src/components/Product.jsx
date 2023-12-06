@@ -61,7 +61,7 @@ export default function Product(props) {
           <img src={props.productImgDesktop} alt="" />
         </picture>
         <div className={ProductCSS.productCardContent}>
-          <p className={ProductCSS.newProduct}>NEW PRODUCT</p>
+          {/* <p className={ProductCSS.newProduct}>NEW PRODUCT</p> */}
           <h1 className={ProductCSS.title}>{props.title}</h1>
           <p className={ProductCSS.description}>{props.description}</p>
           <p className={ProductCSS.price}>{`$ ${props.price}`}</p>

@@ -148,3 +148,47 @@
 img {
   border-radius: 8px;
 }
+
+.categoriesHolder {
+  padding-top: 240px;
+}
+
+@media (max-width: 1025px) {
+  .productCard {
+    justify-content: center;
+    gap: 6%;
+  }
+
+  .productCardImg {
+    max-width: 281px;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .productTextContent {
+    margin-top: 120px;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .productTextContentDescription {
+    max-width: 100%;
+  }
+
+  .inTheBox {
+    width: 65%;
+    display: flex;
+    /* justify-content: center; */
+    gap: 21%;
+  }
+
+  .inTheBoxTitle {
+    justify-self: flex-start;
+  }
+
+  .categoriesHolder {
+    padding-top: 172px;
+  }
+}
