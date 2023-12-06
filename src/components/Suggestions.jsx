@@ -55,14 +55,23 @@ export default function Suggestions(props) {
       <h1 className={SuggestionsCSS.suggestionsTitle}>You may also like</h1>
       <div className={SuggestionsCSS.suggetionsCards}>
         {getRandomSuggestions().map(function (randomSuggestion) {
+          let title = randomSuggestion.title;
+          console.log(randomSuggestion.title);
+          // console.log(randomSuggestion.title.includes("HEADPHONES"));
+          if (randomSuggestion.title.includes("Headphones")) {
+            title = randomSuggestion.title.replace("Headphones", " ");
+          } else if (randomSuggestion.title.includes("EARPHONES")) {
+            title = randomSuggestion.title.replace("EARPHONES", " ");
+          }
+
           return (
             <div className={SuggestionsCSS.suggetionsCard}>
               <img
-                className={SuggestionsCSS.img}
+                className={SuggestionsCSS.suggestionImg}
                 src={randomSuggestion.img}
                 alt=""
               />
-              <h1 className={SuggestionsCSS.title}>{randomSuggestion.title}</h1>
+              <h1 className={SuggestionsCSS.title}>{title}</h1>
               <button
                 className={`${ButtonsCSS.seeProductBtn} ${SuggestionsCSS.suggetionsCardBtn}`}
                 id={ButtonsCSS.orange}

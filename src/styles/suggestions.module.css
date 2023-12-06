@@ -9,7 +9,8 @@
 .suggetionsCards {
   margin-top: 65px;
   display: flex;
-  justify-content: space-between;
+  gap: 3%;
+  /* justify-content: space-between; */
 }
 
 .suggestionsTitle {
@@ -26,10 +27,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* max-height: 413px; */
 }
 
-.img {
-  max-width: 350px;
+.suggestionImg {
+  width: 100%;
 }
 
 .title {
