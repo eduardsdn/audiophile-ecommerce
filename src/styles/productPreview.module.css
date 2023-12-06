@@ -107,3 +107,9 @@
     padding-top: 172px;
   }
 }
+
+@media (max-width: 480px) {
+  .productPreview {
+    margin-top: 70px;
+  }
+}

@@ -41,7 +41,7 @@ export default function ProductPage() {
         inTheBox={product.inTheBox}
         decorImages={product.decorImages}
       />
-      <Suggestions productsData={products} currentProduct={product.productId} />
+      {/* <Suggestions productsData={products} currentProduct={product.productId} /> */}
       <div className={ProductCSS.categoriesHolder}>
         <Categories />
       </div>

@@ -57,7 +57,8 @@ export default function Product(props) {
           alt=""
         /> */}
         <picture className={ProductCSS.productCardImg}>
-          <source media="(max-width:1025px)" srcSet={props.productImgTablet} />
+          <source media="(min-width:1025px)" srcSet={props.productImgDesktop} />
+          <source media="(min-width:560px)" srcSet={props.productImgTablet} />
           <img src={props.productImgDesktop} alt="" />
         </picture>
         <div className={ProductCSS.productCardContent}>
