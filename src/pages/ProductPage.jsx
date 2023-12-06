@@ -31,7 +31,8 @@ export default function ProductPage() {
     <div>
       <Product
         productId={product.productId}
-        productImg={product.img}
+        productImgDesktop={product.img}
+        productImgTablet={product.imgTablet}
         title={product.title}
         description={product.description}
         price={product.price}

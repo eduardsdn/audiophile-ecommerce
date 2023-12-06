@@ -51,11 +51,15 @@ export default function Product(props) {
   return (
     <div className={ProductCSS.product}>
       <div className={ProductCSS.productCard}>
-        <img
+        {/* <img
           className={ProductCSS.productCardImg}
           src={props.productImg}
           alt=""
-        />
+        /> */}
+        <picture className={ProductCSS.productCardImg}>
+          <source media="(max-width:1025px)" srcSet={props.productImgTablet} />
+          <img src={props.productImgDesktop} alt="" />
+        </picture>
         <div className={ProductCSS.productCardContent}>
           <p className={ProductCSS.newProduct}>NEW PRODUCT</p>
           <h1 className={ProductCSS.title}>{props.title}</h1>
@@ -150,7 +154,11 @@ export default function Product(props) {
           <img src={props.decorImages[0]} alt="" />
           <img src={props.decorImages[1]} alt="" />
         </div>
-        <img src={props.decorImages[2]} alt="" />
+        <img
+          className={ProductCSS.productImagesGridRight}
+          src={props.decorImages[2]}
+          alt=""
+        />
       </div>
     </div>
   );
