@@ -98,3 +98,34 @@
     display: flex;
   }
 }
+
+@media (max-width: 480px) {
+  .categoriesCards {
+    flex-direction: column;
+    align-items: center;
+    gap: 68px;
+  }
+
+  .categoriesCard {
+    width: 100%;
+  }
+
+  .categoriesCardTextContent {
+    padding-top: 27%;
+  }
+  .categoriesCardImg {
+    max-width: 40%;
+  }
+
+  #headphonesImg {
+    margin-top: -55%;
+  }
+
+  #speakersImg {
+    margin-top: -50%;
+  }
+
+  #earphonesImg {
+    margin-top: -55%;
+  }
+}
