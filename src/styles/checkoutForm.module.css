@@ -108,3 +108,51 @@ label {
   justify-content: space-between;
   margin-top: 24px;
 }
+
+@media (max-width: 1052px) {
+  .checkoutFormHolder {
+    width: 100%;
+    max-width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 750px) {
+  .billingDetails,
+  .paymentMethodHolder {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .paymentMethodInputs {
+    width: 100%;
+  }
+  .radioHolder {
+    width: 100%;
+  }
+
+  .subTitle {
+    position: relative;
+  }
+
+  .wrappedInputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .textInputHolder {
+    width: 100%;
+    align-items: center;
+  }
+
+  .shortInput,
+  .textInput {
+    width: 100%;
+  }
+  .eMoneyDetails {
+    flex-direction: column;
+    gap: 24px;
+  }
+}

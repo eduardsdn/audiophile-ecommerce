@@ -1,6 +1,14 @@
 .checkout {
   margin-top: 142px;
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   justify-self: center;
+  gap: 30px;
+}
+
+@media (max-width: 1052px) {
+  .checkout {
+    flex-direction: column;
+    align-items: center;
+  }
 }
