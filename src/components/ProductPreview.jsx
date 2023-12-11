@@ -11,13 +11,11 @@ export default function ProductPreview(props) {
       className={ProductPreviewCSS.productPreview}
       id={`${props.isReverse ? ProductPreviewCSS.reversed : ""}`}
     >
-      <img
-        className={ProductPreviewCSS.productPreviewImg}
-        src={props.img}
-        alt=""
-      />
+      <picture className={ProductPreviewCSS.productPreviewImg}>
+        <source media="(max-width:1025px)" srcSet={props.imgTablet} />
+        <img src={props.imgDesktop} alt="" />
+      </picture>
       <div className={ProductPreviewCSS.ProductPreviewContent}>
-        <p className={ProductPreviewCSS.newProduct}>NEW PRODUCT</p>
         <h1 className={ProductPreviewCSS.title}>{props.title}</h1>
         <p className={ProductPreviewCSS.description}>{props.description}</p>
         <button

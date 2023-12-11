@@ -44,6 +44,7 @@
 .navLinks {
   display: flex;
   gap: 34px;
+  /* gap: 3%; */
   font-size: 13px;
   font-style: normal;
   font-weight: 700;
@@ -86,4 +87,52 @@ hr {
   position: absolute;
   top: -8px;
   left: 0;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    margin-top: 96px;
+  }
+
+  .nav {
+    flex-direction: column;
+    align-items: start;
+    gap: 32px;
+  }
+
+  .footerBottom {
+    margin-top: 0px;
+  }
+
+  .footerSocialLinks {
+    position: relative;
+    top: 90px;
+  }
+
+  .footerSocialLinks a {
+    width: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav {
+    align-items: center;
+  }
+  .navLinks {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .footerBottom {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footerTextContent {
+    text-align: center;
+  }
+
+  .footerSocialLinks {
+    top: 28px;
+  }
 }

@@ -21,9 +21,9 @@ export default function CompanyDescription() {
           best place to buy your portable audio equipment.
         </p>
       </div>
-      <img
+      <div
         src={descriptionImg}
-        className={CompanyDescriptionCSS.descriptionImg}
+        className={CompanyDescriptionCSS.descriptionBanner}
         alt=""
       />
     </div>

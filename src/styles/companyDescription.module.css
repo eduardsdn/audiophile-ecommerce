@@ -3,14 +3,13 @@
 .companyDescription {
   margin-top: 165px;
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
-  flex-wrap: wrap;
-  align-items: center;
+  gap: 11%;
 }
 
 .textContent {
-  max-width: 445px;
+  max-width: 45%;
   display: flex;
   flex-direction: column;
   gap: 32px;
@@ -38,8 +37,42 @@
   line-height: 166.6%;
 }
 
-.descriptionImg {
-  max-width: 100%;
-  height: auto;
+.descriptionBanner {
+  width: 550px;
+  height: 588px;
+  background-image: url("../assets/shared/desktop/image-best-gear.jpg");
+  background-position: center;
   border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .companyDescription {
+    margin-top: 96px;
+    flex-direction: column-reverse;
+    gap: 0px;
+  }
+
+  .descriptionBanner {
+    width: 100%;
+    /* max-width: 689px; */
+    height: 300px;
+    background-image: url("../assets/shared/tablet/image-best-gear.jpg");
+    background-size: 700px;
+    background-position: center;
+  }
+
+  .textContentTitle {
+    margin-top: 64px;
+    /* width: 573px; */
+    text-align: center;
+  }
+
+  .textContent {
+    max-width: 573px;
+  }
+
+  .textContentText {
+    /* width: 574px; */
+    text-align: center;
+  }
 }

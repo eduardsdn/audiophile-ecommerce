@@ -1,8 +1,12 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-import xx99_2Img from "../assets/product-xx99-mark-two-headphones/desktop/image-category-page-preview.jpg";
-import xx99_1Img from "../assets/product-xx99-mark-one-headphones/desktop/image-category-page-preview.jpg";
-import xx59Img from "../assets/product-xx59-headphones/desktop/image-category-page-preview.jpg";
+import xx99_2_Img_Desktop from "../assets/product-xx99-mark-two-headphones/desktop/image-category-page-preview.jpg";
+import xx99_1_Img_Desktop from "../assets/product-xx99-mark-one-headphones/desktop/image-category-page-preview.jpg";
+import xx59_Img_Desktop from "../assets/product-xx59-headphones/desktop/image-category-page-preview.jpg";
+
+import xx99_2_Img_Tablet from "../assets/product-xx99-mark-two-headphones/tablet/image-category-page-preview.jpg";
+import xx99_1_Img_Tablet from "../assets/product-xx99-mark-one-headphones/tablet/image-category-page-preview.jpg";
+import xx59_Img_Tablet from "../assets/product-xx59-headphones/tablet/image-category-page-preview.jpg";
 
 import imgDecorXX992_1 from "../assets/product-xx99-mark-two-headphones/desktop/image-gallery-1.jpg";
 import imgDecorXX992_2 from "../assets/product-xx99-mark-two-headphones/desktop/image-gallery-2.jpg";
@@ -19,7 +23,8 @@ import imgDecorXX59_3 from "../assets/product-xx59-headphones/desktop/image-gall
 const initialState = [
   {
     productId: "xx992",
-    img: xx99_2Img,
+    imgDesktop: xx99_2_Img_Desktop,
+    imgTablet: xx99_2_Img_Tablet,
     title: "XX99 Mark II Headphones",
     description:
       "The new XX99 Mark II headphones is the pinnacle of pristine audio. It redefines your premium headphone experience by reproducing the balanced depth and precision of studio-quality sound.",
@@ -53,7 +58,8 @@ const initialState = [
   },
   {
     productId: "xx991",
-    img: xx99_1Img,
+    imgDesktop: xx99_1_Img_Desktop,
+    imgTablet: xx99_1_Img_Tablet,
     title: "XX99 Mark I Headphones",
     description:
       "As the gold standard for headphones, the classic XX99 Mark I offers detailed and accurate audio reproduction for audiophiles, mixing engineers, and music aficionados alike in studios and on the go.",
@@ -83,7 +89,8 @@ const initialState = [
   },
   {
     productId: "xx59",
-    img: xx59Img,
+    imgDesktop: xx59_Img_Desktop,
+    imgTablet: xx59_Img_Tablet,
     title: "XX59 Headphones",
     description:
       "Enjoy your audio almost anywhere and customize it to your specific tastes with the XX59 headphones. The stylish yet durable versatile wireless headset is a brilliant companion at home or on the move.",

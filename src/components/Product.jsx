@@ -24,7 +24,7 @@ export default function Product(props) {
         productId: props.productId,
         price: props.price,
         amount: productAmount,
-        productImg: props.productImg,
+        productImg: props.productImgDesktop,
       })
     );
   }
@@ -51,13 +51,18 @@ export default function Product(props) {
   return (
     <div className={ProductCSS.product}>
       <div className={ProductCSS.productCard}>
-        <img
+        {/* <img
           className={ProductCSS.productCardImg}
           src={props.productImg}
           alt=""
-        />
+        /> */}
+        <picture className={ProductCSS.productCardImg}>
+          <source media="(min-width:1025px)" srcSet={props.productImgDesktop} />
+          <source media="(min-width:560px)" srcSet={props.productImgTablet} />
+          <img src={props.productImgDesktop} alt="" />
+        </picture>
         <div className={ProductCSS.productCardContent}>
-          <p className={ProductCSS.newProduct}>NEW PRODUCT</p>
+          {/* <p className={ProductCSS.newProduct}>NEW PRODUCT</p> */}
           <h1 className={ProductCSS.title}>{props.title}</h1>
           <p className={ProductCSS.description}>{props.description}</p>
           <p className={ProductCSS.price}>{`$ ${props.price}`}</p>
@@ -150,7 +155,11 @@ export default function Product(props) {
           <img src={props.decorImages[0]} alt="" />
           <img src={props.decorImages[1]} alt="" />
         </div>
-        <img src={props.decorImages[2]} alt="" />
+        <img
+          className={ProductCSS.productImagesGridRight}
+          src={props.decorImages[2]}
+          alt=""
+        />
       </div>
     </div>
   );

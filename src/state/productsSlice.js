@@ -6,6 +6,16 @@ import xx59Img from "../assets/product-xx59-headphones/desktop/image-category-pa
 import zx9Img from "../assets/product-zx9-speaker/desktop/image-category-page-preview.jpg";
 import zx7Img from "../assets/product-zx7-speaker/desktop/image-category-page-preview.jpg";
 import yx1Img from "../assets/product-yx1-earphones/desktop/image-category-page-preview.jpg";
+
+import xx99_2Img_Tablet from "../assets/product-xx99-mark-two-headphones/tablet/image-product.jpg";
+import xx99_1Img_Tablet from "../assets/product-xx99-mark-one-headphones/tablet/image-product.jpg";
+import xx59Img_Tablet from "../assets/product-xx59-headphones/tablet/image-product.jpg";
+
+import zx9Img_Tablet from "../assets/product-zx9-speaker/tablet/image-product.jpg";
+import zx7Img_Tablet from "../assets/product-zx7-speaker/tablet/image-product.jpg";
+
+import yx1Img_Tablet from "../assets/product-yx1-earphones/tablet/image-product.jpg";
+
 import imgDecorXX992_1 from "../assets/product-xx99-mark-two-headphones/desktop/image-gallery-1.jpg";
 import imgDecorXX992_2 from "../assets/product-xx99-mark-two-headphones/desktop/image-gallery-2.jpg";
 import imgDecorXX992_3 from "../assets/product-xx99-mark-two-headphones/desktop/image-gallery-3.jpg";
@@ -29,6 +39,7 @@ const initialState = [
   {
     productId: "xx992",
     img: xx99_2Img,
+    imgTablet: xx99_2Img_Tablet,
     title: "XX99 Mark II Headphones",
     description:
       "The new XX99 Mark II headphones is the pinnacle of pristine audio. It redefines your premium headphone experience by reproducing the balanced depth and precision of studio-quality sound.",
@@ -63,6 +74,7 @@ const initialState = [
   {
     productId: "xx991",
     img: xx99_1Img,
+    imgTablet: xx99_1Img_Tablet,
     title: "XX99 Mark I Headphones",
     description:
       "As the gold standard for headphones, the classic XX99 Mark I offers detailed and accurate audio reproduction for audiophiles, mixing engineers, and music aficionados alike in studios and on the go.",
@@ -93,6 +105,7 @@ const initialState = [
   {
     productId: "xx59",
     img: xx59Img,
+    imgTablet: xx59Img_Tablet,
     title: "XX59 Headphones",
     description:
       "Enjoy your audio almost anywhere and customize it to your specific tastes with the XX59 headphones. The stylish yet durable versatile wireless headset is a brilliant companion at home or on the move.",
@@ -123,6 +136,7 @@ const initialState = [
   {
     productId: "zx9",
     img: zx9Img,
+    imgTablet: zx9Img_Tablet,
     title: "ZX9 SPEAKER",
     description:
       "Upgrade your sound system with the all new ZX9 active speaker. It’s a bookshelf speaker system that offers truly wireless connectivity -- creating new possibilities for more pleasing and practical audio setups.",
@@ -157,6 +171,7 @@ const initialState = [
   {
     productId: "zx7",
     img: zx7Img,
+    imgTablet: zx7Img_Tablet,
     title: "ZX7 SPEAKER",
     description:
       "Stream high quality sound wirelessly with minimal loss. The ZX7 bookshelf speaker uses high-end audiophile components that represents the top of the line powered speakers for home or studio use.",
@@ -187,6 +202,7 @@ const initialState = [
   {
     productId: "yx1",
     img: yx1Img,
+    imgTablet: yx1Img_Tablet,
     title: "YX1 WIRELESS EARPHONES",
     description:
       "Tailor your listening experience with bespoke dynamic drivers from the new YX1 Wireless Earphones. Enjoy incredible high-fidelity sound even in noisy environments with its active noise cancellation feature.",

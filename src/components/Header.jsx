@@ -1,23 +1,59 @@
 import HeaderCSS from "../styles/header.module.css";
 import cartImg from "../assets/shared/desktop/icon-cart.svg";
+import iconHamburger from "../assets/shared/tablet/icon-hamburger.svg";
 
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 import CartDropdown from "./CartDropdown";
+import Categories from "./Categories";
+import { isElement } from "react-dom/test-utils";
 
 export default function Header(props) {
   const navigate = useNavigate();
-  const [cartIsShown, setCartIsShown] = useState(false);
+
+  // const [windowWidth, setWindowWidth] = useState([window.innerWidth]);
+  const [isMenuMobile, setIsMenuMobile] = useState(false);
+
+  console.log(isMenuMobile);
+
+  useEffect(() => {
+    const handleWindowResize = () => {
+      if (window.innerWidth <= 480) {
+        setIsMenuMobile(true);
+      } else if (window.innerWidth > 480) {
+        setIsMenuMobile(false);
+      }
+    };
+
+    window.addEventListener("resize", handleWindowResize);
+
+    return () => {
+      window.removeEventListener("resize", handleWindowResize);
+    };
+  }, []);
 
   return (
     <div className={HeaderCSS.navWrapper}>
       <div className={HeaderCSS.headerNavHolder}>
         <nav className={HeaderCSS.nav}>
-          <a href="/" className={HeaderCSS.logo}>
-            audiophile
-          </a>
+          <div className={HeaderCSS.logoHolder}>
+            <img
+              className={HeaderCSS.iconHamburgerMenu}
+              src={iconHamburger}
+              alt=""
+              onClick={() => {
+                props.toggleMenuIsShown();
+                if (props.cartIsShown) {
+                  props.toggleCartIsShown();
+                }
+              }}
+            />
+            <a href="/" className={HeaderCSS.logo}>
+              audiophile
+            </a>
+          </div>
           <ul className={HeaderCSS.navLinks}>
             <li>
               <Link to="/">HOME</Link>
@@ -38,14 +74,22 @@ export default function Header(props) {
             alt=""
             onClick={() => {
               props.toggleCartIsShown();
+              if (props.menuIsShown) {
+                props.toggleMenuIsShown();
+              }
             }}
           />
-          {/* Has to be link to the cart */}
         </nav>
         {props.cartIsShown && (
           <CartDropdown toggleCartIsShown={props.toggleCartIsShown} />
         )}
       </div>
+      {props.menuIsShown ? (
+        <div className={HeaderCSS.dropDownMenu}>
+          <Categories isMenuMobile={isMenuMobile}></Categories>
+        </div>
+      ) : null}
+
       {/* {cartIsShown && <CartDropdown />} */}
     </div>
   );

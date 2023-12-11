@@ -1,7 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-import zx9Img from "../assets/product-zx9-speaker/desktop/image-category-page-preview.jpg";
-import zx7Img from "../assets/product-zx7-speaker/desktop/image-category-page-preview.jpg";
+import zx9_Img_Desktop from "../assets/product-zx9-speaker/desktop/image-category-page-preview.jpg";
+import zx7_Img_Desktop from "../assets/product-zx7-speaker/desktop/image-category-page-preview.jpg";
+
+import zx9_Img_Tablet from "../assets/product-zx9-speaker/tablet/image-category-page-preview.jpg";
+import zx7_Img_Tablet from "../assets/product-zx7-speaker/tablet/image-category-page-preview.jpg";
 
 import imgDecorZX9_1 from "../assets/product-zx9-speaker/desktop/image-gallery-1.jpg";
 import imgDecorZX9_2 from "../assets/product-zx9-speaker/desktop/image-gallery-2.jpg";
@@ -14,7 +17,8 @@ import imgDecorZX7_3 from "../assets/product-zx7-speaker/desktop/image-gallery-3
 const initialState = [
   {
     productId: "zx9",
-    img: zx9Img,
+    imgDesktop: zx9_Img_Desktop,
+    imgTablet: zx9_Img_Tablet,
     title: "ZX9 SPEAKER",
     description:
       "Upgrade your sound system with the all new ZX9 active speaker. It’s a bookshelf speaker system that offers truly wireless connectivity -- creating new possibilities for more pleasing and practical audio setups.",
@@ -48,7 +52,8 @@ const initialState = [
   },
   {
     productId: "zx7",
-    img: zx7Img,
+    imgDesktop: zx7_Img_Desktop,
+    imgTablet: zx7_Img_Tablet,
     title: "ZX7 SPEAKER",
     description:
       "Stream high quality sound wirelessly with minimal loss. The ZX7 bookshelf speaker uses high-end audiophile components that represents the top of the line powered speakers for home or studio use.",

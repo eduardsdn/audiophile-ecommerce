@@ -1,9 +1,10 @@
 @import url("colors.css");
 
 .categoriesCards {
-  padding-top: 200px;
+  /* padding-top: 200px; */
   display: flex;
-  gap: 30px;
+  /* gap: 30px; */
+  gap: 3%;
 }
 
 #categoriesCardsPreview {
@@ -15,38 +16,47 @@
 }
 
 .categoriesCard {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   background-color: var(--gray);
   border-radius: 8px;
   position: relative;
   height: 204px;
-  width: 350px;
+  /* width: 350px; */
+  width: 32%;
 }
 
 .categoriesCardImg {
-  max-width: 200.947px;
-  position: absolute;
-  top: -70px;
+  /* max-width: 200.947px; */
+  /* margin-top: -70%; */
+  max-width: 70%;
 }
 
 #headphonesImg {
-  left: 22%;
-  top: -70px;
+  margin-top: -77%;
 }
 
 #speakersImg {
-  width: 200.947px;
-  left: 20%;
-  top: -70px;
+  margin-top: -74%;
 }
 
 #earphonesImg {
-  width: 200.947px;
-  left: 22%;
-  top: -55px;
+  margin-top: -69%;
+}
+
+.categiriesCardImgHolder {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  bottom: 80px;
 }
 
 .categoriesCardTextContent {
-  margin-top: 116px;
+  padding-top: 33%;
+  /* margin-top: 116px; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -61,4 +71,82 @@
   line-height: normal;
   letter-spacing: 1.286px;
   text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .categoriesCardName {
+    font-size: 15px;
+  }
+
+  .categoriesCardTextContent {
+    padding-top: 42%;
+  }
+
+  #headphonesImg {
+    margin-top: -90%;
+  }
+
+  #speakersImg {
+    margin-top: -90%;
+  }
+
+  #earphonesImg {
+    margin-top: -84%;
+  }
+
+  .homeProductsTopContent {
+    display: flex;
+    overflow: scroll;
+  }
+}
+
+@media (max-width: 480px) {
+  .categoriesCards {
+    flex-direction: column;
+    align-items: center;
+    gap: 68px;
+  }
+
+  .categoriesCard {
+    width: 100%;
+  }
+
+  .categoriesCardTextContent {
+    padding-top: 27%;
+  }
+  .categoriesCardImg {
+    max-width: 40%;
+  }
+
+  #headphonesImg {
+    margin-top: -55%;
+  }
+
+  #speakersImg {
+    margin-top: -50%;
+  }
+
+  #earphonesImg {
+    margin-top: -55%;
+  }
+}
+
+.categoriesCardMenu {
+  height: 160px;
+}
+
+.categoriesTextContentMenu {
+  padding-top: 24%;
+}
+
+#headphonesImgMenu {
+  margin-top: -50%;
+}
+
+#speakersImgMenu {
+  margin-top: -51%;
+}
+
+#earphonesImgMenu {
+  margin-top: -48%;
 }

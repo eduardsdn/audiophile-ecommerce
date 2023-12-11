@@ -35,7 +35,9 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <Categories />
+      <div className={HomeCSS.categoriesHolder}>
+        <Categories />
+      </div>
       <div className={HomeCSS.homeProducts}>
         <div className={HomeCSS.homeProductsTop}>
           <img
@@ -80,11 +82,7 @@ export default function Home() {
           </div>
         </div>
         <div className={HomeCSS.homeProductsBottom}>
-          <img
-            className={HomeCSS.homeProductsBottomImg}
-            src={imageEarphonesYX1}
-            alt=""
-          />
+          <div className={HomeCSS.homeProductsBottomBanner}></div>
           <div className={HomeCSS.homeProductsBottomContent}>
             <h1 className={HomeCSS.homeProductsContentTitle}>YX1 EARPHONES</h1>
             <button

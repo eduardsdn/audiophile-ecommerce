@@ -12,13 +12,13 @@ export default function Categories(props) {
 
   return (
     <div className={CategoriesCSS.categoriesCards}>
-      <div className={CategoriesCSS.categoriesCard}>
-        <img
-          className={CategoriesCSS.categoriesCardImg}
-          id={CategoriesCSS.headphonesImg}
-          src={categoriesHeadphonesImg}
-          alt=""
-        />
+      <div
+        className={`${CategoriesCSS.categoriesCard} ${
+          props.isMenuMobile ? CategoriesCSS.categoriesCardMenu : null
+        }`}
+      >
+        {/* <div className={CategoriesCSS.categiriesCardImgHolder}> */}
+        {/* </div> */}
         <div className={CategoriesCSS.categoriesCardTextContent}>
           <p className={CategoriesCSS.categoriesCardName}>Headphones</p>
           <button
@@ -29,15 +29,30 @@ export default function Categories(props) {
             <img src={linkArrow} alt="" />
           </button>
         </div>
-      </div>
-      <div className={CategoriesCSS.categoriesCard}>
         <img
           className={CategoriesCSS.categoriesCardImg}
-          id={CategoriesCSS.speakersImg}
-          src={categoriesSpeakersImg}
+          id={
+            props.isMenuMobile
+              ? CategoriesCSS.headphonesImgMenu
+              : CategoriesCSS.headphonesImg
+          }
+          src={categoriesHeadphonesImg}
           alt=""
         />
-        <div className={CategoriesCSS.categoriesCardTextContent}>
+      </div>
+      <div
+        className={`${CategoriesCSS.categoriesCard} ${
+          props.isMenuMobile ? CategoriesCSS.categoriesCardMenu : null
+        }`}
+      >
+        {/* <div className={CategoriesCSS.categiriesCardImgHolder}> */}
+
+        {/* </div> */}
+        <div
+          className={`${CategoriesCSS.categoriesCardTextContent} ${
+            props.isMenuMobile ? CategoriesCSS.categoriesTextContentMenu : null
+          }`}
+        >
           <p className={CategoriesCSS.categoriesCardName}>Speakers</p>
           <button
             onClick={() => navigate("/speakers")}
@@ -47,14 +62,24 @@ export default function Categories(props) {
             <img src={linkArrow} alt="" />
           </button>
         </div>
-      </div>
-      <div className={CategoriesCSS.categoriesCard}>
         <img
           className={CategoriesCSS.categoriesCardImg}
-          id={CategoriesCSS.earphonesImg}
-          src={categoriesEarphonesImg}
+          id={
+            props.isMenuMobile
+              ? CategoriesCSS.speakersImgMenu
+              : CategoriesCSS.speakersImg
+          }
+          src={categoriesSpeakersImg}
           alt=""
         />
+      </div>
+      <div
+        className={`${CategoriesCSS.categoriesCard} ${
+          props.isMenuMobile ? CategoriesCSS.categoriesCardMenu : null
+        }`}
+      >
+        {/* <div className={CategoriesCSS.categiriesCardImgHolder}> */}
+        {/* </div> */}
         <div className={CategoriesCSS.categoriesCardTextContent}>
           <p className={CategoriesCSS.categoriesCardName}>Earphones</p>
           <button
@@ -65,6 +90,16 @@ export default function Categories(props) {
             <img src={linkArrow} alt="" />
           </button>
         </div>
+        <img
+          className={CategoriesCSS.categoriesCardImg}
+          id={
+            props.isMenuMobile
+              ? CategoriesCSS.earphonesImgMenu
+              : CategoriesCSS.earphonesImg
+          }
+          src={categoriesEarphonesImg}
+          alt=""
+        />
       </div>
     </div>
   );
