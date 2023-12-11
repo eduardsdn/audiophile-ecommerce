@@ -7,10 +7,10 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
 import CartDropdown from "./CartDropdown";
+import Categories from "./Categories";
 
 export default function Header(props) {
   const navigate = useNavigate();
-  const [cartIsShown, setCartIsShown] = useState(false);
 
   return (
     <div className={HeaderCSS.navWrapper}>
@@ -21,6 +21,12 @@ export default function Header(props) {
               className={HeaderCSS.iconHamburgerMenu}
               src={iconHamburger}
               alt=""
+              onClick={() => {
+                props.toggleMenuIsShown();
+                if (props.cartIsShown) {
+                  props.toggleCartIsShown();
+                }
+              }}
             />
             <a href="/" className={HeaderCSS.logo}>
               audiophile
@@ -46,14 +52,22 @@ export default function Header(props) {
             alt=""
             onClick={() => {
               props.toggleCartIsShown();
+              if (props.menuIsShown) {
+                props.toggleMenuIsShown();
+              }
             }}
           />
-          {/* Has to be link to the cart */}
         </nav>
         {props.cartIsShown && (
           <CartDropdown toggleCartIsShown={props.toggleCartIsShown} />
         )}
       </div>
+      {props.menuIsShown ? (
+        <div className={HeaderCSS.dropDownMenu}>
+          <Categories></Categories>
+        </div>
+      ) : null}
+
       {/* {cartIsShown && <CartDropdown />} */}
     </div>
   );

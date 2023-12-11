@@ -24,7 +24,7 @@ export default function Product(props) {
         productId: props.productId,
         price: props.price,
         amount: productAmount,
-        productImg: props.productImg,
+        productImg: props.productImgDesktop,
       })
     );
   }

@@ -66,6 +66,12 @@
   gap: 42px;
 }
 
+.dropDownMenu {
+  height: 340px;
+  background-color: var(--white);
+  padding: 56px 39px 67px 39px;
+}
+
 @media (max-width: 768px) {
   .iconHamburgerMenu {
     display: block;

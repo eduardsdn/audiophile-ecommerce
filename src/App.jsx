@@ -13,25 +13,36 @@ import React, { useEffect } from "react";
 
 function App() {
   const [cartIsShown, setCartIsShown] = React.useState(false);
+  const [menuIsShown, setMenuIsShown] = React.useState(false);
   const dispatch = useDispatch();
 
   function toggleCartIsShown() {
     setCartIsShown(!cartIsShown);
   }
 
+  function toggleMenuIsShown() {
+    setMenuIsShown(!menuIsShown);
+  }
+
   return (
     <div className={AppCSS.app}>
-      {cartIsShown && (
+      {(cartIsShown || menuIsShown) && (
         <div
-          className={AppCSS.cartBackplate}
+          className={AppCSS.dimmedBackplate}
           onClick={() => {
-            toggleCartIsShown();
+            if (cartIsShown) {
+              toggleCartIsShown();
+            } else if (menuIsShown) {
+              toggleMenuIsShown();
+            }
           }}
         ></div>
       )}
       <Header
         cartIsShown={cartIsShown}
+        menuIsShown={menuIsShown}
         toggleCartIsShown={toggleCartIsShown}
+        toggleMenuIsShown={toggleMenuIsShown}
       ></Header>
       <div className={AppCSS.container}>
         <Routes>
