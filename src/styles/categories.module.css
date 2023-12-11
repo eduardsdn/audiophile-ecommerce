@@ -96,6 +96,7 @@
 
   .homeProductsTopContent {
     display: flex;
+    overflow: scroll;
   }
 }
 
@@ -128,4 +129,24 @@
   #earphonesImg {
     margin-top: -55%;
   }
+}
+
+.categoriesCardMenu {
+  height: 160px;
+}
+
+.categoriesTextContentMenu {
+  padding-top: 24%;
+}
+
+#headphonesImgMenu {
+  margin-top: -50%;
+}
+
+#speakersImgMenu {
+  margin-top: -51%;
+}
+
+#earphonesImgMenu {
+  margin-top: -48%;
 }

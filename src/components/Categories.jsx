@@ -12,7 +12,11 @@ export default function Categories(props) {
 
   return (
     <div className={CategoriesCSS.categoriesCards}>
-      <div className={CategoriesCSS.categoriesCard}>
+      <div
+        className={`${CategoriesCSS.categoriesCard} ${
+          props.isMenuMobile ? CategoriesCSS.categoriesCardMenu : null
+        }`}
+      >
         {/* <div className={CategoriesCSS.categiriesCardImgHolder}> */}
         {/* </div> */}
         <div className={CategoriesCSS.categoriesCardTextContent}>
@@ -27,16 +31,28 @@ export default function Categories(props) {
         </div>
         <img
           className={CategoriesCSS.categoriesCardImg}
-          id={CategoriesCSS.headphonesImg}
+          id={
+            props.isMenuMobile
+              ? CategoriesCSS.headphonesImgMenu
+              : CategoriesCSS.headphonesImg
+          }
           src={categoriesHeadphonesImg}
           alt=""
         />
       </div>
-      <div className={CategoriesCSS.categoriesCard}>
+      <div
+        className={`${CategoriesCSS.categoriesCard} ${
+          props.isMenuMobile ? CategoriesCSS.categoriesCardMenu : null
+        }`}
+      >
         {/* <div className={CategoriesCSS.categiriesCardImgHolder}> */}
 
         {/* </div> */}
-        <div className={CategoriesCSS.categoriesCardTextContent}>
+        <div
+          className={`${CategoriesCSS.categoriesCardTextContent} ${
+            props.isMenuMobile ? CategoriesCSS.categoriesTextContentMenu : null
+          }`}
+        >
           <p className={CategoriesCSS.categoriesCardName}>Speakers</p>
           <button
             onClick={() => navigate("/speakers")}
@@ -48,12 +64,20 @@ export default function Categories(props) {
         </div>
         <img
           className={CategoriesCSS.categoriesCardImg}
-          id={CategoriesCSS.speakersImg}
+          id={
+            props.isMenuMobile
+              ? CategoriesCSS.speakersImgMenu
+              : CategoriesCSS.speakersImg
+          }
           src={categoriesSpeakersImg}
           alt=""
         />
       </div>
-      <div className={CategoriesCSS.categoriesCard}>
+      <div
+        className={`${CategoriesCSS.categoriesCard} ${
+          props.isMenuMobile ? CategoriesCSS.categoriesCardMenu : null
+        }`}
+      >
         {/* <div className={CategoriesCSS.categiriesCardImgHolder}> */}
         {/* </div> */}
         <div className={CategoriesCSS.categoriesCardTextContent}>
@@ -68,7 +92,11 @@ export default function Categories(props) {
         </div>
         <img
           className={CategoriesCSS.categoriesCardImg}
-          id={CategoriesCSS.earphonesImg}
+          id={
+            props.isMenuMobile
+              ? CategoriesCSS.earphonesImgMenu
+              : CategoriesCSS.earphonesImg
+          }
           src={categoriesEarphonesImg}
           alt=""
         />
