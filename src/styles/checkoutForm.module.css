@@ -109,6 +109,12 @@ label {
   margin-top: 24px;
 }
 
+.errorMessage {
+  color: red;
+  font-size: 13px;
+  margin-top: 4px;
+}
+
 @media (max-width: 1052px) {
   .checkoutFormHolder {
     width: 100%;

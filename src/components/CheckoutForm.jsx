@@ -5,33 +5,10 @@ import { DevTool } from "@hookform/devtools";
 
 export default function CheckoutForm({ form, onSubmit }) {
   // const form = useForm();
-  const { register, control, handleSubmit } = form;
+  const { register, control, handleSubmit, formState } = form;
+  const { errors } = formState;
 
-  // console.log("render");
-  // console.log(form.getValues());
-
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    address: "",
-    zipCode: "",
-    city: "",
-    country: "",
-    paymentMethod: "",
-    e_money_num: "",
-    e_money_pin: "",
-  });
-
-  function handleChange(event) {
-    const { name, value, type, checked } = event.target;
-    setFormData((prevFormData) => {
-      return {
-        ...prevFormData,
-        [name]: type === "checkbox" ? checked : value,
-      };
-    });
-  }
+  // const watchPaymentMethod = form.watch(["paymentMethod"])
 
   return (
     <div className={CheckoutFormCSS.checkoutFormHolder}>
@@ -39,6 +16,7 @@ export default function CheckoutForm({ form, onSubmit }) {
       <form
         className={CheckoutFormCSS.CheckoutForm}
         onSubmit={handleSubmit(onSubmit)}
+        noValidate
       >
         <div className={CheckoutFormCSS.billingDetails}>
           <h2 className={CheckoutFormCSS.subTitle}>BILLING DETAILS</h2>
@@ -46,14 +24,19 @@ export default function CheckoutForm({ form, onSubmit }) {
             <div className={CheckoutFormCSS.textInputHolder}>
               <label htmlFor="name">Name</label>
               <input
-                // onChange={handleChange}
                 className={`${CheckoutFormCSS.textInput} ${CheckoutFormCSS.shortInput}`}
                 type="text"
                 id="name"
                 placeholder="Alexei Ward"
-                {...register("name")}
+                {...register("name", {
+                  required: { value: true, message: "Name is required" },
+                })}
               />
+              <p className={CheckoutFormCSS.errorMessage}>
+                {errors.name?.message}
+              </p>
             </div>
+
             <div className={CheckoutFormCSS.textInputHolder}>
               <label htmlFor="email">Email Address</label>
               <input
@@ -61,8 +44,20 @@ export default function CheckoutForm({ form, onSubmit }) {
                 type="email"
                 id="email"
                 placeholder="alexei@mail.com"
-                {...register("email")}
+                {...register("email", {
+                  pattern: {
+                    // value: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/,
+                    messsage: "Invalid email format",
+                  },
+                  required: {
+                    value: true,
+                    message: "Email is required",
+                  },
+                })}
               />
+              <p className={CheckoutFormCSS.errorMessage}>
+                {errors.email?.message}
+              </p>
             </div>
             <div className={CheckoutFormCSS.textInputHolder}>
               <label htmlFor="phone">Phone Number</label>
@@ -71,8 +66,16 @@ export default function CheckoutForm({ form, onSubmit }) {
                 type="tel"
                 id="phone"
                 placeholder="+1 202-555-0136"
-                {...register("phone")}
+                {...register("phone", {
+                  required: {
+                    value: true,
+                    message: "Phone number is required",
+                  },
+                })}
               />
+              <p className={CheckoutFormCSS.errorMessage}>
+                {errors.phone?.message}
+              </p>
             </div>
           </div>
         </div>
@@ -86,8 +89,16 @@ export default function CheckoutForm({ form, onSubmit }) {
               type="text"
               id="address"
               placeholder="1137 Williams Avenue"
-              {...register("address")}
+              {...register("address", {
+                required: {
+                  value: true,
+                  message: "Address is required",
+                },
+              })}
             />
+            <p className={CheckoutFormCSS.errorMessage}>
+              {errors.address?.message}
+            </p>
           </div>
           <div
             className={`${CheckoutFormCSS.wrappedInputs} ${CheckoutFormCSS.shippingInfoWrappedInputs}`}
@@ -98,19 +109,32 @@ export default function CheckoutForm({ form, onSubmit }) {
                 className={`${CheckoutFormCSS.textInput} ${CheckoutFormCSS.shortInput}`}
                 type="number"
                 id="zip"
-                placeholder="10001"
-                {...register("zip")}
+                placeholder="10231"
+                {...register("zip", {
+                  required: { value: true, message: "ZIP code is required" },
+                })}
               />
+              <p className={CheckoutFormCSS.errorMessage}>
+                {errors.zip?.message}
+              </p>
             </div>
             <div className={CheckoutFormCSS.textInputHolder}>
               <label htmlFor="city">City</label>
               <input
                 className={`${CheckoutFormCSS.textInput} ${CheckoutFormCSS.shortInput}`}
                 type="text"
-                id="email"
+                id="city"
                 placeholder="New York"
-                {...register("city")}
+                {...register("city", {
+                  required: {
+                    value: true,
+                    message: "City is required",
+                  },
+                })}
               />
+              <p className={CheckoutFormCSS.errorMessage}>
+                {errors.city?.message}
+              </p>
             </div>
             <div className={CheckoutFormCSS.textInputHolder}>
               <label htmlFor="country">Country</label>
@@ -119,8 +143,16 @@ export default function CheckoutForm({ form, onSubmit }) {
                 type="text"
                 id="country"
                 placeholder="United States"
-                {...register("country")}
+                {...register("country", {
+                  required: {
+                    value: true,
+                    message: "Country is required",
+                  },
+                })}
               />
+              <p className={CheckoutFormCSS.errorMessage}>
+                {errors.country?.message}
+              </p>
             </div>
           </div>
         </div>
@@ -155,37 +187,50 @@ export default function CheckoutForm({ form, onSubmit }) {
                 </label>
               </div>
             </div>
+            <p className={CheckoutFormCSS.errorMessage}>
+              {errors.paymentMethod?.message}
+            </p>
           </div>
-          {formData.paymentMethod === "e-money" ? (
+          {form.getValues().paymentMethod === "e-money" ? (
             <div className={CheckoutFormCSS.eMoneyDetails}>
               <div className={CheckoutFormCSS.textInputHolder}>
                 <label htmlFor="e_money_num">e-Money Number</label>
                 <input
-                  onChange={handleChange}
                   className={`${CheckoutFormCSS.textInput} ${CheckoutFormCSS.shortInput}`}
                   type="num"
-                  name="e_money_num"
-                  value={formData.e_money_num}
-                  id="e_money_num"
+                  name="eMoneyNum"
+                  id="eMoneyNum"
                   placeholder="238521993"
+                  {...register("eMoneyNum", {
+                    required: {
+                      value: true,
+                      message: "e-Money number is required",
+                    },
+                  })}
                 />
+                <p className={CheckoutFormCSS.errorMessage}>
+                  {errors.eMoneyNum?.message}
+                </p>
               </div>
               <div className={CheckoutFormCSS.textInputHolder}>
                 <label htmlFor="e_money_pin">e-Money PIN</label>
                 <input
-                  onChange={handleChange}
                   className={`${CheckoutFormCSS.textInput} ${CheckoutFormCSS.shortInput}`}
                   type="number"
-                  name="e_money_pin"
-                  value={formData.e_money_pin}
-                  id="e_money_pin"
+                  name="eMoneyPin"
+                  id="eMoneyPin"
                   placeholder="6891"
+                  {...register("eMoneyPin", {
+                    required: { value: true, message: "PIN is required" },
+                  })}
                 />
+                <p className={CheckoutFormCSS.errorMessage}>
+                  {errors.eMoneyPin?.message}
+                </p>
               </div>
             </div>
           ) : null}
         </div>
-        <button>asdfasdf</button>
       </form>
       <DevTool control={control} />
     </div>

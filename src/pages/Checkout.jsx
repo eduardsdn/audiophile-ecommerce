@@ -8,8 +8,8 @@ export default function Checkout() {
 
   function onSubmit(data) {
     console.log("Form submitted");
-    // console.log(data);
-    console.log(form.getValues());
+    // console.log(data)
+    console.log(form.getValues().paymentMethod);
   }
 
   return (
