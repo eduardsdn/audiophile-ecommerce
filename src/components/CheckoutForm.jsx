@@ -1,7 +1,15 @@
 import CheckoutFormCSS from "../styles/checkoutForm.module.css";
 import { useState } from "react";
+// import { useForm } from "react-hook-form";
+import { DevTool } from "@hookform/devtools";
 
-export default function CheckoutForm() {
+export default function CheckoutForm({ form, onSubmit }) {
+  // const form = useForm();
+  const { register, control, handleSubmit } = form;
+
+  // console.log("render");
+  // console.log(form.getValues());
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -25,52 +33,45 @@ export default function CheckoutForm() {
     });
   }
 
-  console.log(formData);
-
   return (
     <div className={CheckoutFormCSS.checkoutFormHolder}>
       <h1 className={CheckoutFormCSS.title}>CHECKOUT</h1>
-      <form className={CheckoutFormCSS.CheckoutForm}>
+      <form
+        className={CheckoutFormCSS.CheckoutForm}
+        onSubmit={handleSubmit(onSubmit)}
+      >
         <div className={CheckoutFormCSS.billingDetails}>
           <h2 className={CheckoutFormCSS.subTitle}>BILLING DETAILS</h2>
           <div className={CheckoutFormCSS.wrappedInputs}>
             <div className={CheckoutFormCSS.textInputHolder}>
               <label htmlFor="name">Name</label>
               <input
-                onChange={handleChange}
+                // onChange={handleChange}
                 className={`${CheckoutFormCSS.textInput} ${CheckoutFormCSS.shortInput}`}
                 type="text"
-                name="name"
-                value={formData.name}
                 id="name"
                 placeholder="Alexei Ward"
-                required
+                {...register("name")}
               />
             </div>
             <div className={CheckoutFormCSS.textInputHolder}>
               <label htmlFor="email">Email Address</label>
               <input
-                onChange={handleChange}
                 className={`${CheckoutFormCSS.textInput} ${CheckoutFormCSS.shortInput}`}
                 type="email"
-                name="email"
-                value={formData.email}
                 id="email"
                 placeholder="alexei@mail.com"
-                required
+                {...register("email")}
               />
             </div>
             <div className={CheckoutFormCSS.textInputHolder}>
               <label htmlFor="phone">Phone Number</label>
               <input
-                onChange={handleChange}
                 className={`${CheckoutFormCSS.textInput} ${CheckoutFormCSS.shortInput}`}
                 type="tel"
-                name="phone"
-                value={formData.phone}
                 id="phone"
                 placeholder="+1 202-555-0136"
-                required
+                {...register("phone")}
               />
             </div>
           </div>
@@ -81,14 +82,11 @@ export default function CheckoutForm() {
           <div className={CheckoutFormCSS.textInputHolder}>
             <label htmlFor="address">Address</label>
             <input
-              onChange={handleChange}
               className={CheckoutFormCSS.textInput}
               type="text"
-              name="address"
-              value={formData.address}
               id="address"
               placeholder="1137 Williams Avenue"
-              required
+              {...register("address")}
             />
           </div>
           <div
@@ -97,40 +95,31 @@ export default function CheckoutForm() {
             <div className={CheckoutFormCSS.textInputHolder}>
               <label htmlFor="zip">ZIP Code</label>
               <input
-                onChange={handleChange}
                 className={`${CheckoutFormCSS.textInput} ${CheckoutFormCSS.shortInput}`}
                 type="number"
-                name="zipCode"
-                value={formData.zipCode}
                 id="zip"
                 placeholder="10001"
-                required
+                {...register("zip")}
               />
             </div>
             <div className={CheckoutFormCSS.textInputHolder}>
               <label htmlFor="city">City</label>
               <input
-                onChange={handleChange}
                 className={`${CheckoutFormCSS.textInput} ${CheckoutFormCSS.shortInput}`}
                 type="text"
-                name="city"
-                value={formData.city}
                 id="email"
                 placeholder="New York"
-                required
+                {...register("city")}
               />
             </div>
             <div className={CheckoutFormCSS.textInputHolder}>
               <label htmlFor="country">Country</label>
               <input
-                onChange={handleChange}
                 className={`${CheckoutFormCSS.textInput} ${CheckoutFormCSS.shortInput}`}
-                type="phone"
-                name="country"
-                value={formData.country}
+                type="text"
                 id="country"
                 placeholder="United States"
-                required
+                {...register("country")}
               />
             </div>
           </div>
@@ -143,11 +132,11 @@ export default function CheckoutForm() {
             <div className={CheckoutFormCSS.paymentMethodInputs}>
               <div className={CheckoutFormCSS.radioHolder}>
                 <input
-                  onChange={handleChange}
                   type="radio"
                   id="e-money"
+                  value={"e-money"}
                   name="paymentMethod"
-                  value="e-money"
+                  {...register("paymentMethod")}
                 />
                 <label className={CheckoutFormCSS.radioLabel} htmlFor="e-money">
                   e-Money
@@ -155,11 +144,11 @@ export default function CheckoutForm() {
               </div>
               <div className={CheckoutFormCSS.radioHolder}>
                 <input
-                  onChange={handleChange}
                   type="radio"
                   id="cash"
+                  value={"cash"}
                   name="paymentMethod"
-                  value="cash"
+                  {...register("paymentMethod")}
                 />
                 <label className={CheckoutFormCSS.radioLabel} htmlFor="cash">
                   Cash on Delivery
@@ -196,7 +185,9 @@ export default function CheckoutForm() {
             </div>
           ) : null}
         </div>
+        <button>asdfasdf</button>
       </form>
+      <DevTool control={control} />
     </div>
   );
 }

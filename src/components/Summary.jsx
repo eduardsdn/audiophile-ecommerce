@@ -3,12 +3,15 @@ import ButtonsCSS from "../styles/buttons.module.css";
 import { useSelector } from "react-redux/es/hooks/useSelector";
 import CartProductCard from "./CartProductCard";
 
-export default function Summary() {
+export default function Summary({ form, onSubmit }) {
   const cart = useSelector((state) => state.cart);
   const shipping = 50;
   const total = getTotal();
   const vat = calculateVat();
   const grandTotal = calculateGrandTotal();
+
+  const { handleSubmit } = form;
+  // console.log(form);
 
   function getTotal() {
     let total = 0; // if there are NO products in the cart set total to 0
@@ -73,6 +76,7 @@ export default function Summary() {
       <button
         className={`${ButtonsCSS.seeProductBtn} ${ButtonsCSS.checkoutBtn} ${SummaryCSS.continueBtn}`}
         id={ButtonsCSS.orange}
+        onClick={handleSubmit(onSubmit)}
       >
         CONTINUE&PAY
       </button>
