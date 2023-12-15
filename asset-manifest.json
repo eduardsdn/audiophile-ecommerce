@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/audiophile-ecommerce/static/css/main.068a3164.css",
-    "main.js": "/audiophile-ecommerce/static/js/main.1b0d37ee.js",
+    "main.js": "/audiophile-ecommerce/static/js/main.7eb1d5cb.js",
     "static/media/image-speaker-zx9.png": "/audiophile-ecommerce/static/media/image-speaker-zx9.153cd899b91a08b22b1a.png",
     "static/media/Manrope-Regular.ttf": "/audiophile-ecommerce/static/media/Manrope-Regular.a9b9e09fe6b69741f316.ttf",
     "static/media/Manrope-Bold.ttf": "/audiophile-ecommerce/static/media/Manrope-Bold.47f6d7143da9d8c0e480.ttf",
@@ -26,10 +26,10 @@
     "static/media/icon-arrow-right.svg": "/audiophile-ecommerce/static/media/icon-arrow-right.357b9db81a798d76397efa2f4ad3409f.svg",
     "static/media/icon-hamburger.svg": "/audiophile-ecommerce/static/media/icon-hamburger.f8a9f0cf12d419a7d18556f98d81a47e.svg",
     "main.068a3164.css.map": "/audiophile-ecommerce/static/css/main.068a3164.css.map",
-    "main.1b0d37ee.js.map": "/audiophile-ecommerce/static/js/main.1b0d37ee.js.map"
+    "main.7eb1d5cb.js.map": "/audiophile-ecommerce/static/js/main.7eb1d5cb.js.map"
   },
   "entrypoints": [
     "static/css/main.068a3164.css",
-    "static/js/main.1b0d37ee.js"
+    "static/js/main.7eb1d5cb.js"
   ]
 }
