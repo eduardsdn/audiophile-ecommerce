@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/audiophile-ecommerce/static/css/main.068a3164.css",
+    "main.js": "/audiophile-ecommerce/static/js/main.0b5d35e4.js",
+    "static/media/image-speaker-zx9.png": "/audiophile-ecommerce/static/media/image-speaker-zx9.153cd899b91a08b22b1a.png",
+    "static/media/Manrope-Regular.ttf": "/audiophile-ecommerce/static/media/Manrope-Regular.a9b9e09fe6b69741f316.ttf",
+    "static/media/Manrope-Bold.ttf": "/audiophile-ecommerce/static/media/Manrope-Bold.47f6d7143da9d8c0e480.ttf",
+    "static/media/image-best-gear.jpg": "/audiophile-ecommerce/static/media/image-best-gear.4d4a28e9e7c9ab158dd8.jpg",
+    "static/media/image-hero.jpg": "/audiophile-ecommerce/static/media/image-hero.fb7f46173fa4c819c755.jpg",
+    "static/media/image-category-page-preview.jpg": "/audiophile-ecommerce/static/media/image-category-page-preview.74e2f27bf0076604f473.jpg",
+    "static/media/image-gallery-3.jpg": "/audiophile-ecommerce/static/media/image-gallery-3.402d4e805943fb31ef40.jpg",
+    "static/media/image-header.jpg": "/audiophile-ecommerce/static/media/image-header.13f7f18f9ae7b105ca12.jpg",
+    "static/media/image-category-thumbnail-headphones.png": "/audiophile-ecommerce/static/media/image-category-thumbnail-headphones.fbd401d9c735a217286f.png",
+    "static/media/image-category-thumbnail-speakers.png": "/audiophile-ecommerce/static/media/image-category-thumbnail-speakers.bbb1a70b6ebc42d18df7.png",
+    "static/media/image-category-thumbnail-earphones.png": "/audiophile-ecommerce/static/media/image-category-thumbnail-earphones.6e8830d475e04b7b9627.png",
+    "static/media/image-gallery-2.jpg": "/audiophile-ecommerce/static/media/image-gallery-2.988992ea3225e6cd0070.jpg",
+    "static/media/image-speaker-zx7.jpg": "/audiophile-ecommerce/static/media/image-speaker-zx7.3d4940e89ebadd9beb50.jpg",
+    "static/media/image-product.jpg": "/audiophile-ecommerce/static/media/image-product.229fae34cb81b846dee9.jpg",
+    "static/media/image-gallery-1.jpg": "/audiophile-ecommerce/static/media/image-gallery-1.51bc54acb23ef4776d86.jpg",
+    "static/media/icon-instagram.svg": "/audiophile-ecommerce/static/media/icon-instagram.8d0df55595e16bac2d486efccdc6b4b3.svg",
+    "static/media/icon-cart.svg": "/audiophile-ecommerce/static/media/icon-cart.5e1893a62995fc7b443abe7bee68063e.svg",
+    "static/media/icon-twitter.svg": "/audiophile-ecommerce/static/media/icon-twitter.5dc7711ff2433b3b89ee7742a407e3bd.svg",
+    "static/media/icon-facebook.svg": "/audiophile-ecommerce/static/media/icon-facebook.e9773e52bc64ea377cb95af7ccb6877e.svg",
+    "index.html": "/audiophile-ecommerce/index.html",
+    "static/media/pattern-circles.svg": "/audiophile-ecommerce/static/media/pattern-circles.f4df3610b83b818abbbecd009a5b11d3.svg",
+    "static/media/icon-arrow-right.svg": "/audiophile-ecommerce/static/media/icon-arrow-right.357b9db81a798d76397efa2f4ad3409f.svg",
+    "static/media/icon-hamburger.svg": "/audiophile-ecommerce/static/media/icon-hamburger.f8a9f0cf12d419a7d18556f98d81a47e.svg",
+    "main.068a3164.css.map": "/audiophile-ecommerce/static/css/main.068a3164.css.map",
+    "main.0b5d35e4.js.map": "/audiophile-ecommerce/static/js/main.0b5d35e4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.068a3164.css",
+    "static/js/main.0b5d35e4.js"
+  ]
+}
