@@ -105,8 +105,9 @@ label {
 
 .eMoneyDetails {
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
   margin-top: 24px;
+  gap: 16px;
 }
 
 .errorMessage {
@@ -159,6 +160,5 @@ label {
   }
   .eMoneyDetails {
     flex-direction: column;
-    gap: 24px;
   }
 }

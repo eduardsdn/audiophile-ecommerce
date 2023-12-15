@@ -1,14 +1,12 @@
 import CheckoutFormCSS from "../styles/checkoutForm.module.css";
 import { useState } from "react";
-// import { useForm } from "react-hook-form";
 import { DevTool } from "@hookform/devtools";
 
 export default function CheckoutForm({ form, onSubmit }) {
-  // const form = useForm();
   const { register, control, handleSubmit, formState } = form;
   const { errors } = formState;
 
-  // const watchPaymentMethod = form.watch(["paymentMethod"])
+  const watchPaymentMethod = form.watch(["paymentMethod"]);
 
   return (
     <div className={CheckoutFormCSS.checkoutFormHolder}>
@@ -46,7 +44,7 @@ export default function CheckoutForm({ form, onSubmit }) {
                 placeholder="alexei@mail.com"
                 {...register("email", {
                   pattern: {
-                    // value: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/,
+                    value: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/,
                     messsage: "Invalid email format",
                   },
                   required: {
