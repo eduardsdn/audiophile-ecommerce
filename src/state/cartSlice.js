@@ -22,19 +22,23 @@ const cartSlice = createSlice({
         );
         state.products[indexOfExistingProduct].amount += action.payload.amount;
         state.numberOfItems += action.payload.amount; //increase numberOfItems
+        state.total += action.payload.price;
       } else {
         state.products.push(action.payload);
         state.numberOfItems += action.payload.amount; //increase numberOfItems
+        state.total += action.payload.price;
       } // otherwise, if this product does not exist in the cart push the whole product object provided by action payload
 
       // console.log(current(state));
     },
     addProductInsideCart(state, action) {
+      console.log(action.payload);
       const indexOfProductInCart = state.products.findIndex(
         (product) => product.productId === action.payload.productId // find index of product in the cart and increase its amount by 1
       );
       state.products[indexOfProductInCart].amount++;
       state.numberOfItems++; //increase numberOfItems
+      state.total += action.payload.price;
     },
     removeProductInsideCart(state, action) {
       const indexOfProductInCart = state.products.findIndex(
@@ -42,7 +46,13 @@ const cartSlice = createSlice({
       );
       if (action.payload.amount < 2) {
         state.products.splice(indexOfProductInCart, 1);
-      } else state.products[indexOfProductInCart].amount--;
+        state.numberOfItems = state.numberOfItems - 1;
+        state.total -= action.payload.price;
+      } else {
+        state.products[indexOfProductInCart].amount--;
+        state.numberOfItems = state.numberOfItems - 1;
+        state.total -= action.payload.price;
+      }
     },
     removeAllProducts(state) {
       return {

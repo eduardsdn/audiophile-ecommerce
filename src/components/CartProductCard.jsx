@@ -33,6 +33,7 @@ export default function CartProductCard(props) {
                 removeProductInsideCart({
                   productId: props.productId,
                   amount: props.amount,
+                  price: props.price,
                 })
               );
             }}
@@ -54,6 +55,7 @@ export default function CartProductCard(props) {
               dispatch(
                 addProductInsideCart({
                   productId: props.productId,
+                  price: props.price,
                 })
               );
               console.log(cart);

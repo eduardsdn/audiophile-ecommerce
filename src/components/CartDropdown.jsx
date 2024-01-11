@@ -31,22 +31,22 @@ export default function CartDropdown(props) {
   //   return numberOfProducts; // return number of products
   // }
 
-  function getTotal() {
-    let total = 0; // if there are NO products in the cart set total to 0
-    if (cart.products.length !== 0) {
-      // if there ARE products in the cart calculate total
-      let productsTotals = cart.products.map(
-        (product) => product.amount * product.price // get total for every individual product type in the cart
-      );
-      total = productsTotals.reduce(
-        (accumulator, currentValue) => accumulator + currentValue // sum all of individual totals
-      );
-    }
-    return total;
-  }
+  // function getTotal() {
+  //   let total = 0; // if there are NO products in the cart set total to 0
+  //   if (cart.products.length !== 0) {
+  //     // if there ARE products in the cart calculate total
+  //     let productsTotals = cart.products.map(
+  //       (product) => product.amount * product.price // get total for every individual product type in the cart
+  //     );
+  //     total = productsTotals.reduce(
+  //       (accumulator, currentValue) => accumulator + currentValue // sum all of individual totals
+  //     );
+  //   }
+  //   return total;
+  // }
 
   // let numberOfItemsInCart = countProducts();
-  let total = getTotal();
+  // let total = getTotal();
 
   return (
     <div className={CartDropdownCSS.cartDropdown}>
@@ -78,7 +78,7 @@ export default function CartDropdown(props) {
       </div>
       <div className={CartDropdownCSS.total}>
         <p className={CartDropdownCSS.totalText}>TOTAL</p>
-        <p className={CartDropdownCSS.totalNumber}>$ {total}</p>
+        <p className={CartDropdownCSS.totalNumber}>$ {cart.total}</p>
       </div>
       <button
         className={`${ButtonsCSS.seeProductBtn} ${CartDropdownCSS.checkoutBtn}`}
