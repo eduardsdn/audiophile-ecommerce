@@ -50,9 +50,9 @@ export default function Header(props) {
                 }
               }}
             />
-            <a href="/" className={HeaderCSS.logo}>
+            <Link to="/" className={HeaderCSS.logo}>
               audiophile
-            </a>
+            </Link>
           </div>
           <ul className={HeaderCSS.navLinks}>
             <li>
@@ -89,8 +89,6 @@ export default function Header(props) {
           <Categories isMenuMobile={isMenuMobile}></Categories>
         </div>
       ) : null}
-
-      {/* {cartIsShown && <CartDropdown />} */}
     </div>
   );
 }

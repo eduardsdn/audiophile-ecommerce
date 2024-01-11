@@ -11,9 +11,9 @@ export default function Footer() {
       <div className={FooterCSS.footerContentHolder}>
         <hr />
         <nav className={FooterCSS.nav}>
-          <a href="/" className={FooterCSS.logo}>
+          <Link to="/" className={FooterCSS.logo}>
             audiophile
-          </a>
+          </Link>
           <ul className={FooterCSS.navLinks}>
             <li>
               <Link to="/">HOME</Link>

@@ -11,29 +11,31 @@ import { removeAllProducts } from "../state/cartSlice";
 export default function CartDropdown(props) {
   const cart = useSelector((state) => state.cart);
   // const products = useSelector((state) => state.products);
+  const state = useSelector((state) => state.cart);
+  console.log(state);
+  console.log(cart);
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
-  let numberOfItemsInCart = countProducts(); // PUT INSIDE STATE???
-  let total = getTotal();
-
-  function countProducts() {
-    let productsAmounts = cart.map(({ productId, price, ...amount }) => amount); // get array of amounts
-    const initialValue = 0;
-    const numberOfProducts = productsAmounts.reduce(
-      //sum array of amounts
-      (accumulator, currentValue) => accumulator + currentValue.amount,
-      initialValue
-    );
-    return numberOfProducts; // return number of products
-  }
+  // function countProducts() {
+  //   let productsAmounts = cart.products.map(
+  //     ({ productId, price, ...amount }) => amount
+  //   );
+  //   const initialValue = 0;
+  //   const numberOfProducts = productsAmounts.reduce(
+  //     //sum array of amounts
+  //     (accumulator, currentValue) => accumulator + currentValue.amount,
+  //     initialValue
+  //   );
+  //   return numberOfProducts; // return number of products
+  // }
 
   function getTotal() {
     let total = 0; // if there are NO products in the cart set total to 0
-    if (cart.length !== 0) {
+    if (cart.products.length !== 0) {
       // if there ARE products in the cart calculate total
-      let productsTotals = cart.map(
+      let productsTotals = cart.products.map(
         (product) => product.amount * product.price // get total for every individual product type in the cart
       );
       total = productsTotals.reduce(
@@ -43,14 +45,15 @@ export default function CartDropdown(props) {
     return total;
   }
 
-  console.log(cart);
+  // let numberOfItemsInCart = countProducts();
+  let total = getTotal();
 
   return (
     <div className={CartDropdownCSS.cartDropdown}>
       <div className={CartDropdownCSS.top}>
         <h1
           className={CartDropdownCSS.title}
-        >{`CART (${numberOfItemsInCart})`}</h1>
+        >{`CART (${cart.numberOfItems})`}</h1>
         <button
           className={CartDropdownCSS.removeAllBtn}
           onClick={() => {
@@ -61,7 +64,7 @@ export default function CartDropdown(props) {
         </button>
       </div>
       <div className={CartDropdownCSS.cartProductCards}>
-        {cart.map((product) => {
+        {cart.products.map((product) => {
           return (
             <CartProductCard
               productId={product.productId}
@@ -77,12 +80,12 @@ export default function CartDropdown(props) {
         <p className={CartDropdownCSS.totalText}>TOTAL</p>
         <p className={CartDropdownCSS.totalNumber}>$ {total}</p>
       </div>
-
       <button
         className={`${ButtonsCSS.seeProductBtn} ${CartDropdownCSS.checkoutBtn}`}
         id={ButtonsCSS.orange}
         onClick={() => {
-          if (cart.length > 0) {
+          console.log(cart.numberOfItems);
+          if (cart.numberOfItems > 0) {
             // If cart has products checkout is available
             props.toggleCartIsShown();
             navigate("/checkout");

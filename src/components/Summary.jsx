@@ -15,9 +15,9 @@ export default function Summary({ form, onSubmit }) {
 
   function getTotal() {
     let total = 0; // if there are NO products in the cart set total to 0
-    if (cart.length !== 0) {
+    if (cart.products.length !== 0) {
       // if there ARE products in the cart calculate total
-      let productsTotals = cart.map(
+      let productsTotals = cart.products.map(
         (product) => product.amount * product.price // get total for every individual product type in the cart
       );
       total = productsTotals.reduce(
@@ -43,7 +43,7 @@ export default function Summary({ form, onSubmit }) {
         <h1 className={SummaryCSS.title}>Summary</h1>
       </div>
       <div className={SummaryCSS.cartProductCards}>
-        {cart.map((product) => {
+        {cart.products.map((product) => {
           return (
             <CartProductCard
               productId={product.productId}
