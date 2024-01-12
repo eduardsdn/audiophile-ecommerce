@@ -29,6 +29,7 @@ export default function CartDropdown(props) {
         {cart.products.map((product) => {
           return (
             <CartProductCard
+              key={product.productId}
               productId={product.productId}
               img={product.productImg}
               title={product.title}

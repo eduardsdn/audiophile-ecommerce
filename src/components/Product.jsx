@@ -12,7 +12,6 @@ import { addProduct } from "../state/cartSlice";
 export default function Product(props) {
   const [productAmount, setProductAmount] = useState(1);
   const dispatch = useDispatch();
-  const cart = useSelector((state) => state.cart);
 
   function onAddToCartClick() {
     dispatch(
@@ -48,23 +47,16 @@ export default function Product(props) {
   return (
     <div className={ProductCSS.product}>
       <div className={ProductCSS.productCard}>
-        {/* <img
-          className={ProductCSS.productCardImg}
-          src={props.productImg}
-          alt=""
-        /> */}
         <picture className={ProductCSS.productCardImg}>
           <source media="(min-width:1025px)" srcSet={props.productImgDesktop} />
           <source media="(min-width:560px)" srcSet={props.productImgTablet} />
           <img src={props.productImgDesktop} alt="" />
         </picture>
         <div className={ProductCSS.productCardContent}>
-          {/* <p className={ProductCSS.newProduct}>NEW PRODUCT</p> */}
           <h1 className={ProductCSS.title}>{props.title}</h1>
           <p className={ProductCSS.description}>{props.description}</p>
           <p className={ProductCSS.price}>{`$ ${props.price}`}</p>
           <div className={ProductCSS.productCardInterface}>
-            {/* <input type="number" /> */}
             <div className={ButtonsCSS.inputStepper}>
               <button
                 id={ButtonsCSS.decrement}
@@ -134,7 +126,7 @@ export default function Product(props) {
           <ul className={ProductCSS.inTheBoxList}>
             {props.inTheBox.map(function (listItem) {
               return (
-                <li className={ProductCSS.inTheBoxItem}>
+                <li className={ProductCSS.inTheBoxItem} key={listItem.itemName}>
                   <span className={ProductCSS.inTheBoxItemAmount}>
                     {listItem.amount}x
                   </span>

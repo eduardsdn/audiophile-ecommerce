@@ -31,6 +31,7 @@ export default function Summary({ form, onSubmit }) {
         {cart.products.map((product) => {
           return (
             <CartProductCard
+              key={product.productId}
               productId={product.productId}
               img={product.productImg}
               title={product.title}
