@@ -11,7 +11,6 @@ const cartSlice = createSlice({
   initialState,
   reducers: {
     addProduct(state, action) {
-      console.log(state.products);
       if (
         state.products.filter(
           (product) => product.productId === action.payload.productId // if there already exist such product in the cart
@@ -21,15 +20,13 @@ const cartSlice = createSlice({
           (product) => product.productId === action.payload.productId // find index of existing product and increase its amount in the cart by amount provided by action payload
         );
         state.products[indexOfExistingProduct].amount += action.payload.amount;
-        state.numberOfItems += action.payload.amount; //increase numberOfItems
-        state.total += action.payload.price;
+        state.numberOfItems += action.payload.amount; //increase numberOfItems by procided amount
+        state.total += action.payload.price * action.payload.amount; //increase total by price of an item times provided amount
       } else {
         state.products.push(action.payload);
         state.numberOfItems += action.payload.amount; //increase numberOfItems
-        state.total += action.payload.price;
+        state.total += action.payload.price * action.payload.amount; //increase total by price of an item times provided amount
       } // otherwise, if this product does not exist in the cart push the whole product object provided by action payload
-
-      // console.log(current(state));
     },
     addProductInsideCart(state, action) {
       console.log(action.payload);
@@ -54,12 +51,8 @@ const cartSlice = createSlice({
         state.total -= action.payload.price;
       }
     },
-    removeAllProducts(state) {
-      return {
-        products: [],
-        numberOfItems: 0,
-        total: 0,
-      };
+    removeAllProducts() {
+      return initialState;
     },
   },
 });

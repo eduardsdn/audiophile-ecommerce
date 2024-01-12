@@ -1,7 +1,5 @@
 import Categories from "../components/Categories";
-import Footer from "../components/Footer";
 import CompanyDescription from "../components/CompanyDescription";
-import Suggestions from "../components/Suggestions";
 import Product from "../components/Product";
 import ProductCSS from "../styles/product.module.css";
 
@@ -13,13 +11,10 @@ export default function ProductPage() {
   const { productId } = useParams();
   const { pathname } = useLocation();
 
-  const products = useSelector((state) => state.products);
-
   const product = useSelector((state) =>
     state.products.find((product) => product.productId === productId)
   );
 
-  // console.log(product);
   React.useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
@@ -41,7 +36,6 @@ export default function ProductPage() {
         inTheBox={product.inTheBox}
         decorImages={product.decorImages}
       />
-      {/* <Suggestions productsData={products} currentProduct={product.productId} /> */}
       <div className={ProductCSS.categoriesHolder}>
         <Categories />
       </div>

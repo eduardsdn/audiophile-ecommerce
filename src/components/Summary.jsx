@@ -6,26 +6,11 @@ import CartProductCard from "./CartProductCard";
 export default function Summary({ form, onSubmit }) {
   const cart = useSelector((state) => state.cart);
   const shipping = 50;
-  const total = getTotal();
+  const total = cart.total;
   const vat = calculateVat();
   const grandTotal = calculateGrandTotal();
 
   const { handleSubmit } = form;
-  // console.log(form);
-
-  function getTotal() {
-    let total = 0; // if there are NO products in the cart set total to 0
-    if (cart.products.length !== 0) {
-      // if there ARE products in the cart calculate total
-      let productsTotals = cart.products.map(
-        (product) => product.amount * product.price // get total for every individual product type in the cart
-      );
-      total = productsTotals.reduce(
-        (accumulator, currentValue) => accumulator + currentValue // sum all of individual totals
-      );
-    }
-    return total;
-  }
 
   function calculateVat() {
     const vat = Math.round((total / 100) * 20);

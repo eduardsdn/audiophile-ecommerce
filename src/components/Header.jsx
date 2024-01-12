@@ -3,20 +3,13 @@ import cartImg from "../assets/shared/desktop/icon-cart.svg";
 import iconHamburger from "../assets/shared/tablet/icon-hamburger.svg";
 
 import { Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 
 import CartDropdown from "./CartDropdown";
 import Categories from "./Categories";
-import { isElement } from "react-dom/test-utils";
 
 export default function Header(props) {
-  const navigate = useNavigate();
-
-  // const [windowWidth, setWindowWidth] = useState([window.innerWidth]);
   const [isMenuMobile, setIsMenuMobile] = useState(false);
-
-  console.log(isMenuMobile);
 
   useEffect(() => {
     const handleWindowResize = () => {
