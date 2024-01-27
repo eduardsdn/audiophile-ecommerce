@@ -27,6 +27,10 @@ export default function Header(props) {
     };
   }, []);
 
+  // function toggleMenuMode(menuIsMobile) {
+  //   setIsMenuMobile(menuIsMobile);
+  // }
+
   return (
     <div className={HeaderCSS.navWrapper}>
       <div className={HeaderCSS.headerNavHolder}>
@@ -79,7 +83,10 @@ export default function Header(props) {
       </div>
       {props.menuIsShown ? (
         <div className={HeaderCSS.dropDownMenu}>
-          <Categories isMenuMobile={isMenuMobile}></Categories>
+          <Categories
+            isMenuMobile={isMenuMobile}
+            toggleMenuIsShown={props.toggleMenuIsShown}
+          ></Categories>
         </div>
       ) : null}
     </div>

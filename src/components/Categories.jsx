@@ -17,12 +17,13 @@ export default function Categories(props) {
           props.isMenuMobile ? CategoriesCSS.categoriesCardMenu : null
         }`}
       >
-        {/* <div className={CategoriesCSS.categiriesCardImgHolder}> */}
-        {/* </div> */}
         <div className={CategoriesCSS.categoriesCardTextContent}>
           <p className={CategoriesCSS.categoriesCardName}>Headphones</p>
           <button
-            onClick={() => navigate("/headphones")}
+            onClick={() => {
+              navigate("/headphones");
+              props.toggleMenuIsShown();
+            }}
             className={ButtonsCSS.categoriesCardButton}
           >
             shop
@@ -55,7 +56,10 @@ export default function Categories(props) {
         >
           <p className={CategoriesCSS.categoriesCardName}>Speakers</p>
           <button
-            onClick={() => navigate("/speakers")}
+            onClick={() => {
+              navigate("/speakers");
+              props.toggleMenuIsShown();
+            }}
             className={ButtonsCSS.categoriesCardButton}
           >
             shop
@@ -83,7 +87,10 @@ export default function Categories(props) {
         <div className={CategoriesCSS.categoriesCardTextContent}>
           <p className={CategoriesCSS.categoriesCardName}>Earphones</p>
           <button
-            onClick={() => navigate("/earphones")}
+            onClick={() => {
+              navigate("/earphones");
+              props.toggleMenuIsShown();
+            }}
             className={ButtonsCSS.categoriesCardButton}
           >
             shop
