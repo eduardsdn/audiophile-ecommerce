@@ -85,6 +85,7 @@ export default function Header(props) {
         <div className={HeaderCSS.dropDownMenu}>
           <Categories
             isMenuMobile={isMenuMobile}
+            menuIsShown={props.menuIsShown}
             toggleMenuIsShown={props.toggleMenuIsShown}
           ></Categories>
         </div>

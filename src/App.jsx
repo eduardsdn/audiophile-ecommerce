@@ -8,13 +8,11 @@ import Checkout from "./pages/Checkout";
 
 import AppCSS from "./styles/app.module.css";
 import { Route, Routes } from "react-router-dom";
-import { useDispatch } from "react-redux";
-import React, { useEffect } from "react";
+import React from "react";
 
 function App() {
   const [cartIsShown, setCartIsShown] = React.useState(false);
   const [menuIsShown, setMenuIsShown] = React.useState(false);
-  const dispatch = useDispatch();
 
   function toggleCartIsShown() {
     setCartIsShown(!cartIsShown);

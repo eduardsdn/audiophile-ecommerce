@@ -22,7 +22,9 @@ export default function Categories(props) {
           <button
             onClick={() => {
               navigate("/headphones");
-              props.toggleMenuIsShown();
+              if (props.toggleMenuIsShown) {
+                props.toggleMenuIsShown();
+              }
             }}
             className={ButtonsCSS.categoriesCardButton}
           >
@@ -58,7 +60,9 @@ export default function Categories(props) {
           <button
             onClick={() => {
               navigate("/speakers");
-              props.toggleMenuIsShown();
+              if (props.toggleMenuIsShown) {
+                props.toggleMenuIsShown();
+              }
             }}
             className={ButtonsCSS.categoriesCardButton}
           >
@@ -89,7 +93,9 @@ export default function Categories(props) {
           <button
             onClick={() => {
               navigate("/earphones");
-              props.toggleMenuIsShown();
+              if (props.toggleMenuIsShown) {
+                props.toggleMenuIsShown();
+              }
             }}
             className={ButtonsCSS.categoriesCardButton}
           >
