@@ -14,10 +14,14 @@ export default function Categories(props) {
     <div className={CategoriesCSS.categoriesCards}>
       <div
         className={`${CategoriesCSS.categoriesCard} ${
-          props.isMenuMobile ? CategoriesCSS.categoriesCardMenu : null
+          props.isMenuMobile ? CategoriesCSS.categoriesCardMenuMode : null
         }`}
       >
-        <div className={CategoriesCSS.categoriesCardTextContent}>
+        <div
+          className={`${CategoriesCSS.categoriesCardTextContent} ${
+            props.isMenuMobile ? CategoriesCSS.categoriesTextContentMenu : null
+          }`}
+        >
           <p className={CategoriesCSS.categoriesCardName}>Headphones</p>
           <button
             onClick={() => {
@@ -27,6 +31,9 @@ export default function Categories(props) {
               }
             }}
             className={ButtonsCSS.categoriesCardButton}
+            id={
+              props.isMenuMobile ? ButtonsCSS.categoriesCardButtonMobile : null
+            }
           >
             shop
             <img src={linkArrow} alt="" />
@@ -45,12 +52,9 @@ export default function Categories(props) {
       </div>
       <div
         className={`${CategoriesCSS.categoriesCard} ${
-          props.isMenuMobile ? CategoriesCSS.categoriesCardMenu : null
+          props.isMenuMobile ? CategoriesCSS.categoriesCardMenuMode : null
         }`}
       >
-        {/* <div className={CategoriesCSS.categiriesCardImgHolder}> */}
-
-        {/* </div> */}
         <div
           className={`${CategoriesCSS.categoriesCardTextContent} ${
             props.isMenuMobile ? CategoriesCSS.categoriesTextContentMenu : null
@@ -65,6 +69,9 @@ export default function Categories(props) {
               }
             }}
             className={ButtonsCSS.categoriesCardButton}
+            id={
+              props.isMenuMobile ? ButtonsCSS.categoriesCardButtonMobile : null
+            }
           >
             shop
             <img src={linkArrow} alt="" />
@@ -83,12 +90,16 @@ export default function Categories(props) {
       </div>
       <div
         className={`${CategoriesCSS.categoriesCard} ${
-          props.isMenuMobile ? CategoriesCSS.categoriesCardMenu : null
+          props.isMenuMobile ? CategoriesCSS.categoriesCardMenuMode : null
         }`}
       >
         {/* <div className={CategoriesCSS.categiriesCardImgHolder}> */}
         {/* </div> */}
-        <div className={CategoriesCSS.categoriesCardTextContent}>
+        <div
+          className={`${CategoriesCSS.categoriesCardTextContent} ${
+            props.isMenuMobile ? CategoriesCSS.categoriesTextContentMenu : null
+          }`}
+        >
           <p className={CategoriesCSS.categoriesCardName}>Earphones</p>
           <button
             onClick={() => {
@@ -98,6 +109,9 @@ export default function Categories(props) {
               }
             }}
             className={ButtonsCSS.categoriesCardButton}
+            id={
+              props.isMenuMobile ? ButtonsCSS.categoriesCardButtonMobile : null
+            }
           >
             shop
             <img src={linkArrow} alt="" />

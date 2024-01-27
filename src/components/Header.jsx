@@ -27,6 +27,8 @@ export default function Header(props) {
     };
   }, []);
 
+  console.log(props.menuIsShown);
+
   // function toggleMenuMode(menuIsMobile) {
   //   setIsMenuMobile(menuIsMobile);
   // }

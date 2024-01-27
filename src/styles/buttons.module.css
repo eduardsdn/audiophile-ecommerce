@@ -53,6 +53,10 @@
   text-decoration: none;
 }
 
+#categoriesCardButtonMobile {
+  margin-top: 5px;
+}
+
 .categoriesCardButton:hover {
   color: var(--darkOrange);
 }
