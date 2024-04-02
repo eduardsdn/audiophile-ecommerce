@@ -2,6 +2,7 @@
 
 .app {
   background-color: var(--offWhite);
+  overflow-x: hidden;
 }
 /* branch responsiveness */
 .container {
